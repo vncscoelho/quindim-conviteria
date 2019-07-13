@@ -1,5 +1,5 @@
 ---
-name: Offset (fosco)
-value: 4
+name: Glossy (fotográfico)
+value: 0.35
 ---
 
