@@ -1,0 +1,178 @@
+backend:
+    name: github
+    repo: vncscoelho/quindim-conviteria
+media_folder: static/uploads
+public_folder: /uploads
+media_library:
+    name: cloudinary
+    config:
+        cloud_name: dkaanqsro
+        api_key: 717135722972966
+collections:
+    - label: Produtos
+      name: products
+      folder: products
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - label: Categoria
+            name: category
+            widget: relation
+            collection: categories
+            valueField: name
+            searchFields: name
+
+          - label: Modelo (nome)
+            name: name
+            widget: string
+
+          - label: Coleção
+            name: collection
+            widget: relation
+            collection: collections
+            valueField: name
+            searchFields: name
+            required: false
+
+          - label: 'Valor Base'
+            name: base_value
+            widget: number
+            valueType: float
+            required: false
+
+          - label: 'Combo'
+            name: is_combo
+            widget: boolean
+            required: false
+
+          - label: Descrição
+            name: description
+            widget: text
+            required: false
+
+          - label: 'Opções de Base'
+            name: base_paper_type
+            widget: list
+            fields:
+                - label: 'Tipo de Papel'
+                  name: 'base_paper_type_option'
+                  widget: 'relation'
+                  collection: 'paper_types'
+                  valueField: 'name'
+                  searchFields: 'name'
+
+                - label: 'Papel padrão / Sem valor'
+                  name: 'default_paper'
+                  widget: 'boolean'
+
+          - label: 'Opções de Envelope'
+            name: envelope_paper_type
+            widget: list
+            default: null
+            fields:
+                - label: 'Tipo de Papel'
+                  name: 'envelope_paper_type_option'
+                  widget: 'relation'
+                  collection: 'paper_types'
+                  valueField: 'name'
+                  searchFields: 'name'
+
+                - label: 'Papel padrão / Sem valor'
+                  name: 'default_paper'
+                  widget: 'boolean'
+
+          - label: 'Adicionais'
+            name: extras
+            widget: list
+            fields:
+                - label: 'Opção de Adicional'
+                  name: 'extra_option'
+                  widget: 'relation'
+                  collection: 'extras'
+                  valueField: 'name'
+                  searchFields: 'name'
+
+          - label: 'Galeria de Imagens'
+            name: 'gallery'
+            widget: 'list'
+            field: { label: 'Imagem', name: image, widget: image }
+
+    - label: 'Configurações'
+      name: settings
+      folder: settings
+      identifier_field: banner_local
+      create: false
+      slug: '{{slug}}'
+      fields:
+          - label: 'Local'
+            name: 'banner_local'
+            widget: 'hidden'
+            allow_multiple: false,
+            edit: false
+            default: 'Banner da Home'
+
+          - label: 'Imagem do Banner'
+            name: 'banner_img'
+            widget: 'image'
+            allow_multiple: false
+
+    - label: 'Categorias de Produtos'
+      name: categories
+      folder: categories
+      identifier_field: name
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - label: Nome
+            name: name
+            widget: string
+
+          - label: Tipo
+            name: type
+            widget: select
+            options:
+                - Convites
+                - Papelaria
+
+    - label: 'Coleções'
+      name: collections
+      folder: collections
+      identifier_field: name
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - label: Nome
+            name: name
+            widget: string
+
+    - label: 'Tipos de Papel'
+      name: paper_types
+      folder: paper_types
+      identifier_field: name
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - label: Nome
+            name: name
+            widget: string
+
+          - label: Preço
+            name: value
+            widget: number
+            valueType: float
+
+    - label: 'Adicionais'
+      name: extras
+      folder: extras
+      identifier_field: name
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - label: Nome
+            name: name
+            widget: string
+
+          - label: Preço
+            name: value
+            widget: number
+            valueType: float
