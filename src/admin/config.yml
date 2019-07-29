@@ -84,6 +84,23 @@ collections:
                   widget: 'boolean'
                   required: false
 
+          - label: 'Versões'
+            name: version
+            widget: list
+            fields:
+                - label: 'Opção de Adicional'
+                  name: 'version_option'
+                  widget: 'relation'
+                  collection: 'extras'
+                  valueField: 'name'
+                  searchFields: 'name'
+
+                - label: Preço (opcional)
+                  name: value
+                  widget: number
+                  valueType: float
+                  required: false
+
           - label: 'Adicionais'
             name: extras
             widget: list
