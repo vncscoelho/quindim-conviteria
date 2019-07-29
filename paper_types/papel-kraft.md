@@ -1,5 +1,5 @@
 ---
-name: Perolado
-value: 1.8
+name: Linho (texturizado)
+value: 0.3
 ---
 
