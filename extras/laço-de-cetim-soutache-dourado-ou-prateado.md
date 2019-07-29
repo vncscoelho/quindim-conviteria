@@ -1,5 +1,5 @@
 ---
-name: Laço de cetim + soutache dourado ou prateado
-value: 0.8
+name: Laço chanel de cetim + renda
+value: 1.5
 ---
 
