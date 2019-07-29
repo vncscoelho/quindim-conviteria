@@ -1,4 +1,4 @@
 ---
-name: Chuva de Prata
+name: Chuva de Arroz - Clássicos
 ---
 
