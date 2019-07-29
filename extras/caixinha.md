@@ -1,5 +1,5 @@
 ---
-name: Caixinha
-value: 0.5
+name: Laço chanel simples com meia pérola
+value: 0.4
 ---
 
