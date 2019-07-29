@@ -1,5 +1,5 @@
 ---
-name: Papel Kraft
-value: 6.5
+name: Perolado
+value: 1.8
 ---
 
