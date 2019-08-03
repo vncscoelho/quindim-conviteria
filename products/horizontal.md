@@ -34,5 +34,7 @@ extras:
 gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564838395/sample.jpg
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564838754/studio-gorman-manly2890-1600x1067_sxgpcq.jpg
 ---
 
