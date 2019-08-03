@@ -107,7 +107,7 @@ collections:
                   widget: list
                   fields:
                       - label: 'Opção de Adicional'
-                        name: 'version_option'
+                        name: 'configurable_list_option'
                         widget: 'relation'
                         collection: 'extras'
                         valueField: 'name'
