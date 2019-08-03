@@ -6,6 +6,9 @@ public_folder: /uploads
 media_library:
     name: cloudinary
     config:
+        default_transformations:
+            - fetch_format: auto
+              quality: jpegmini
         cloud_name: dkaanqsro
         api_key: 717135722972966
 collections:
@@ -39,6 +42,13 @@ collections:
             name: base_value
             widget: number
             valueType: float
+            required: false
+
+          - label: 'Desconto (em %)'
+            name: discount
+            widget: number
+            valueType: float
+            default: 0
             required: false
 
           - label: 'Combo'
@@ -84,22 +94,30 @@ collections:
                   widget: 'boolean'
                   required: false
 
-          - label: 'Versões'
-            name: version
+          - label: 'Configuráveis'
+            name: configurables
             widget: list
             fields:
-                - label: 'Opção de Adicional'
-                  name: 'version_option'
-                  widget: 'relation'
-                  collection: 'extras'
-                  valueField: 'name'
-                  searchFields: 'name'
+                - label: 'Nome do Configurável'
+                  name: 'configurable_name'
+                  widget: string
 
-                - label: Preço (opcional)
-                  name: value
-                  widget: number
-                  valueType: float
-                  required: false
+                - label: 'Opções do Configurável'
+                  name: configurable_list
+                  widget: list
+                  fields:
+                      - label: 'Opção de Adicional'
+                        name: 'version_option'
+                        widget: 'relation'
+                        collection: 'extras'
+                        valueField: 'name'
+                        searchFields: 'name'
+
+                      - label: Preço
+                        name: value
+                        widget: number
+                        valueType: float
+                        required: false
 
           - label: 'Adicionais'
             name: extras
@@ -112,10 +130,10 @@ collections:
                   valueField: 'name'
                   searchFields: 'name'
 
-          - label: 'Galeria de Imagens'
+          - label: 'Imagens do Produto'
             name: 'gallery'
-            widget: 'list'
-            field: { label: 'Imagem', name: image, widget: image }
+            widget: list
+            field: { label: 'Imagem', name: 'product_img', widget: 'image' }
 
     - label: 'Configurações'
       name: settings
