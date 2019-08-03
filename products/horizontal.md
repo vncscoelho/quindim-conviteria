@@ -1,4 +1,4 @@
----
+﻿---
 category: Casamentos
 name: Horizontal
 collection: Chuva de Arroz - Clássicos
@@ -25,7 +25,7 @@ envelope_paper_type:
 configurables:
   - configurable_list:
       - value: 1
-        version_option: Convite individual
+        configurable_list_option: Convite individual
     configurable_name: Laços
 extras:
   - extra_option: Laço tradicional simples (5mm)
