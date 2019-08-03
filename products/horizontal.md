@@ -22,6 +22,11 @@ envelope_paper_type:
     envelope_paper_type_option: Offset (fosco)
   - default_paper: false
     envelope_paper_type_option: Linho (texturizado) envelope
+configurables:
+  - configurable_list:
+      - value: 1
+        version_option: Convite individual
+    configurable_name: Laços
 extras:
   - extra_option: Laço tradicional simples (5mm)
   - extra_option: Laço tradicional expeço (15mm)
