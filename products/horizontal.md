@@ -3,7 +3,6 @@ category: Casamentos
 name: Horizontal
 collection: Chuva de Arroz - Clássicos
 base_value: 4
-discount: ''
 is_combo: true
 description: >-
   Convite com semi-envelope tamanho 14cm x 19cm confeccionado em papel 180g.
@@ -31,8 +30,7 @@ extras:
   - extra_option: Laço chanel de cetim + renda
   - extra_option: Cordão de juta
   - extra_option: Cordão de algodão
-galleryImages:
-  - >-
-    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564838395/sample.jpg
+gallery:
+  - 'https://res.cloudinary.com/dkaanqsro/image/upload/v1564838395/sample.jpg'
 ---
 
