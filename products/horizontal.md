@@ -24,19 +24,24 @@ envelope_paper_type:
     envelope_paper_type_option: Linho (texturizado) envelope
 configurables:
   - configurable_list:
-      - configurable_list_option: Convite individual
+      - configurable_list_option: Laço tradicional simples (5mm)
         value: 1
-    configurable_name: Laços
+      - configurable_list_option: Laço tradicional expeço (15mm)
+      - configurable_list_option: Laço chanel simples com meia pérola
+      - configurable_list_option: Laço chanel duplo com meia pérola
+      - configurable_list_option: Laço de cetim + soutache dourado ou prateado
+      - configurable_list_option: Laço chanel de cetim + renda
+      - configurable_list_option: Cordão de juta
+      - configurable_list_option: Cordão de algodão
+    configurable_name: Tipo de acabamento
 extras:
-  - extra_option: Laço tradicional simples (5mm)
-  - extra_option: Laço tradicional expeço (15mm)
-  - extra_option: Laço chanel simples com meia pérola
-  - extra_option: Laço chanel duplo com meia pérola
-  - extra_option: Laço de cetim + soutache dourado ou prateado
-  - extra_option: Laço chanel de cetim + renda
-  - extra_option: Cordão de juta
-  - extra_option: Cordão de algodão
+  - extra_option: Tag com nome do convidado
+  - extra_option: Convite individual
+  - extra_option: Mini envelope para presente em dinheiro
 gallery:
-  - 'https://res.cloudinary.com/dkaanqsro/image/upload/v1564838395/sample.jpg'
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927481/Casamentos/Modelo_Horizontal_1_syw4um.png
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927488/Casamentos/Modelo_Horizontal_2_hfifr0.png
 ---
 
