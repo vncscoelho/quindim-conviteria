@@ -26,11 +26,9 @@ configurables:
   - configurable_list:
       - configurable_list_option: Tamanho grande
         value: 0
-    configurable_name: Tamanho Grande
-  - configurable_list:
       - configurable_list_option: Tamanho pequeno
         value: -1.3
-    configurable_name: Tamanho Pequeno
+    configurable_name: Tamanho
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
       - configurable_list_option: Laço tradicional expeço (15mm)
