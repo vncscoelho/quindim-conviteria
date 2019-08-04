@@ -37,5 +37,10 @@ extras:
   - extra_option: Tag com nome do convidado
   - extra_option: Convite individual
   - extra_option: Mini envelope para presente em dinheiro
+gallery:
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927493/Casamentos/Modelo_Horizontal_estampado_1_sp5q9o.png
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927488/Casamentos/Modelo_Horizontal_2_hfifr0.png
 ---
 
