@@ -40,6 +40,10 @@ extras:
   - extra_option: Mini envelope para presente em dinheiro
 gallery:
   - >-
-    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564838754/studio-gorman-manly2890-1600x1067_sxgpcq.jpg
+    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927449/Casamentos/Modelo_Luva_1_dwmhwa.png
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927437/Casamentos/Modelo_Luva_3_jw2qan.png
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927427/Casamentos/Modelo_Luva_2_acm6zv.png
 ---
 
