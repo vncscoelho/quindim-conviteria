@@ -6,9 +6,6 @@ public_folder: /uploads
 media_library:
     name: cloudinary
     config:
-        default_transformations:
-            - fetch_format: auto
-              quality: jpegmini
         cloud_name: dkaanqsro
         api_key: 717135722972966
 collections:

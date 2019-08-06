@@ -27,7 +27,8 @@ module.exports = {
             use: '@gridsome/source-filesystem',
             options: {
                 path: 'products/**/*.md',
-                typeName: 'Products'
+                typeName: 'Products',
+                route: '/produto/:name'
             }
         },
         {
