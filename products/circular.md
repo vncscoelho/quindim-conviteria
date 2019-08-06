@@ -46,8 +46,8 @@ extras:
   - extra_option: Mini envelope para presente em dinheiro
 gallery:
   - >-
-    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564932444/Casamentos/Modelo_Circular_1_xozhai.png
+    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1565018752/Casamentos/Modelo-Circular-1_avwzau.jpg
   - >-
-    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564932448/Casamentos/Modelo_Circular_2_qssfkp.png
+    https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1565018993/Casamentos/Modelo-Circular-2_ct8vd1.jpg
 ---
 
