@@ -1,5 +1,4 @@
 ---
-ref: '1565446230'
 category: Casamentos
 name: Circular
 collection: Chuva de Arroz - Clássicos
@@ -48,5 +47,6 @@ gallery:
     https://res.cloudinary.com/dkaanqsro/image/upload/v1565018993/Casamentos/Modelo-Circular-2_ct8vd1.jpg
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1565018752/Casamentos/Modelo-Circular-1_avwzau.jpg
+uid: '1565446579'
 ---
 
