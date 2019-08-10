@@ -3,7 +3,7 @@ category: Casamentos
 name: Luva
 collection: Chuva de Arroz - Clássicos
 base_value: 5
-discount: ''
+discount: 0
 is_combo: true
 description: >
   Convite com envelope luva tamanho 13cm x 18cm confeccionado em papel 180g.
