@@ -13,13 +13,11 @@ description: >-
   com aplicação de meia pérola.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
-    default_paper: true
   - base_paper_type_option: Glossy (fotográfico)
   - base_paper_type_option: Linho (texturizado) envelope
   - base_paper_type_option: Perolado
 envelope_paper_type:
-  - default_paper: true
-    envelope_paper_type_option: Offset (fosco)
+  - envelope_paper_type_option: Offset (fosco)
   - envelope_paper_type_option: Linho (texturizado)
 configurables:
   - configurable_list:
@@ -44,5 +42,6 @@ gallery:
     https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564930949/Casamentos/Modelo_Diagonal_3_zgy6rs.png
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564930941/Casamentos/Modelo_Diagonal_2_e2gp2b.png
+uid: '1565446654'
 ---
 
