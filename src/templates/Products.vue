@@ -6,16 +6,18 @@
         <ShopSidebar class="col-sm-2 col-12"/>
         <div class="col-sm-10 col-12 row" v-if="product">
           <div class="product__gallery col-sm-7 col-12">
-            <carousel
-              :perPage="1"
-              paginationColor="#ebbda8"
-              paginationActiveColor="#fcf8fa"
-              :paginationPadding="0"
-            >
-              <Slide v-for="(image, index) in gallery" :key="index">
-                <img :src="image">
-              </Slide>
-            </carousel>
+            <ClientOnly>
+              <carousel
+                :perPage="1"
+                paginationColor="#ebbda8"
+                paginationActiveColor="#fcf8fa"
+                :paginationPadding="0"
+              >
+                <slide v-for="(image, index) in gallery" :key="index">
+                  <img :src="image">
+                </slide>
+              </carousel>
+            </ClientOnly>
           </div>
           <div class="product__info col-sm-5 col-12">
             <h2 class="product__name">{{product.name}}</h2>
@@ -149,15 +151,20 @@ query Extras {
 import Layout from "~/layouts/Default.vue";
 import Header from "~/components/Header.vue";
 import ShopSidebar from "~/components/ShopSidebar.vue";
-import { Carousel, Slide } from "vue-carousel";
 
 export default {
   components: {
     Layout,
     Header,
     ShopSidebar,
-    Carousel,
-    Slide
+    Carousel: () =>
+      import("vue-carousel")
+        .then(m => m.Carousel)
+        .catch(),
+    Slide: () =>
+      import("vue-carousel")
+        .then(m => m.Slide)
+        .catch()
   },
   data() {
     return {
