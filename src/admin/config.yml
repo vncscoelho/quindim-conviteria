@@ -3,6 +3,10 @@ backend:
     repo: vncscoelho/quindim-conviteria
 media_folder: static/uploads
 public_folder: /uploads
+slug:
+    encoding: 'ascii'
+    clean_accents: true
+    sanitize_replacement: '-'
 media_library:
     name: cloudinary
     config:
@@ -12,9 +16,10 @@ collections:
     - label: Produtos
       name: products
       folder: products
-      identifier_field: name
+      identifier_field: uid
       create: true
-      slug: '{{slug}}'
+      slug: '{{category}}-{{collection}}-{{name}}'
+      summary: '{{category}} / {{collection}} / {{name}} [REF {{uid}}]'
       fields:
           - label: Categoria
             name: category
@@ -55,7 +60,7 @@ collections:
 
           - label: Descrição
             name: description
-            widget: text
+            widget: markdown
             required: false
 
           - label: 'Opções de Base'
@@ -69,9 +74,10 @@ collections:
                   valueField: 'name'
                   searchFields: 'name'
 
-                - label: 'Papel padrão / Sem valor'
-                  name: 'default_paper'
-                  widget: 'boolean'
+                - label: Preço (sobrepõe o valor original)
+                  name: value
+                  widget: number
+                  valueType: float
                   required: false
 
           - label: 'Opções de Envelope'
@@ -86,9 +92,11 @@ collections:
                   valueField: 'name'
                   searchFields: 'name'
 
-                - label: 'Papel padrão / Sem valor'
-                  name: 'default_paper'
-                  widget: 'boolean'
+                - label: Preço (sobrepõe o valor original)
+                  name: value
+                  widget: number
+                  valueType: float
+                  default: null
                   required: false
 
           - label: 'Configuráveis'
@@ -110,10 +118,11 @@ collections:
                         valueField: 'name'
                         searchFields: 'name'
 
-                      - label: Preço
+                      - label: Preço (sobrepõe o valor original)
                         name: value
                         widget: number
                         valueType: float
+                        default: null
                         required: false
 
           - label: 'Adicionais'
@@ -127,10 +136,22 @@ collections:
                   valueField: 'name'
                   searchFields: 'name'
 
+                - label: Preço (sobrepõe o valor original)
+                  name: value
+                  widget: number
+                  valueType: float
+                  default: null
+                  required: false
+
           - label: 'Imagens do Produto'
             name: 'gallery'
             widget: list
             field: { label: 'Imagem', name: 'product_img', widget: 'image' }
+
+          - label: Referência
+            name: uid
+            widget: datetime
+            format: x
 
     - label: 'Configurações'
       name: settings
