@@ -14,13 +14,11 @@ description: >-
   aplicação de meia pérola.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
-    default_paper: true
   - base_paper_type_option: Glossy (fotográfico)
   - base_paper_type_option: Linho (texturizado) envelope
   - base_paper_type_option: Perolado
 envelope_paper_type:
-  - default_paper: true
-    envelope_paper_type_option: Offset (fosco)
+  - envelope_paper_type_option: Offset (fosco)
   - envelope_paper_type_option: Linho (texturizado)
 configurables:
   - configurable_list:
@@ -42,5 +40,6 @@ gallery:
     https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927493/Casamentos/Modelo_Horizontal_estampado_1_sp5q9o.png
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927488/Casamentos/Modelo_Horizontal_2_hfifr0.png
+uid: '1565446675'
 ---
 
