@@ -1,0 +1,364 @@
+<template>
+  <Layout class="product">
+    <Header/>
+    <section class="product__wrapper container-fluid">
+      <div class="row">
+        <ShopSidebar class="col-sm-2 col-12"/>
+        <div class="col-sm-10 col-12 row" v-if="product">
+          <div class="product__gallery col-sm-7 col-12">
+            <carousel
+              :perPage="1"
+              paginationColor="#ebbda8"
+              paginationActiveColor="#fcf8fa"
+              :paginationPadding="0"
+            >
+              <Slide v-for="(image, index) in gallery" :key="index">
+                <img :src="image">
+              </Slide>
+            </carousel>
+          </div>
+          <div class="product__info col-sm-5 col-12">
+            <h2 class="product__name">{{product.name}}</h2>
+            <span class="product__collection">{{product.collection}}</span>
+
+            <p class="product__price">
+              <span class="product__price-currency">R$</span>
+              <span class="product__price-value">{{checkout.finalPrice | money(true)}}</span>
+            </p>
+
+            <div class="product__configuration">
+              <div
+                class="input-group"
+                v-for="(configurable, index) in product.configurables"
+                :key="index"
+              >
+                <label class="product__configuration-title">{{configurable.configurable_name}}</label>
+                <select v-model="checkout.configurables[configurable.configurable_name]">
+                  <option
+                    v-for="(option, index) in configurable.configurable_list"
+                    :key="index"
+                    :value="option"
+                  >{{option.configurable_list_option}} {{option.price | money}}</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label class="product__configuration-title">Papel (interior)</label>
+                <select v-model="checkout.configurables.base_paper_type">
+                  <option
+                    v-for="(paper_type, index) in product.base_paper_type"
+                    :key="index"
+                    :value="paper_type"
+                  >{{paper_type.base_paper_type_option}} {{paper_type.price | money}}</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label class="product__configuration-title">Papel (envelope)</label>
+                <select v-model="checkout.configurables.envelope_paper_type">
+                  <option
+                    v-for="(paper_type, index) in product.envelope_paper_type"
+                    :key="index"
+                    :value="paper_type"
+                  >{{paper_type.envelope_paper_type_option}} {{paper_type.price | money}}</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label class="product__configuration-title">Adicionais</label>
+                <template v-for="(extra, index) in product.extras">
+                  <label :key="index">
+                    <input type="checkbox" :value="extra" v-model="checkout.configurables.extras">
+                    {{extra.extra_option}} {{extra.price | money}}
+                  </label>
+                </template>
+              </div>
+              <button class="button button-primary">Adicionar ao carrinho</button>
+              <p class="product__description">
+                <strong>Descrição do produto:</strong>
+                <span>{{product.description}}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </Layout>
+</template>
+
+<page-query>
+query Product($id: String!) {
+  products(id: $id) {
+      id
+      uid
+      name
+      category
+      collection
+      base_value
+      discount
+      is_combo
+      description
+      base_paper_type {
+        base_paper_type_option
+        value
+      }
+      envelope_paper_type {
+        envelope_paper_type_option
+        value
+      }
+      configurables {
+        configurable_name
+        configurable_list {
+          configurable_list_option
+          value
+        }
+      }
+      extras {
+        extra_option
+      }
+      gallery
+  }
+}
+</page-query>
+
+<static-query>
+query Extras {
+  extras: allExtras {
+    edges {
+      node {
+        id
+        name
+        value
+      }
+    }
+  }
+  paper_types: allPaperTypes {
+    edges {
+      node {
+        id
+        name
+        value
+      }
+    }
+  }
+}
+</static-query>
+
+
+<script>
+import Layout from "~/layouts/Default.vue";
+import Header from "~/components/Header.vue";
+import ShopSidebar from "~/components/ShopSidebar.vue";
+import { Carousel, Slide } from "vue-carousel";
+
+export default {
+  components: {
+    Layout,
+    Header,
+    ShopSidebar,
+    Carousel,
+    Slide
+  },
+  data() {
+    return {
+      product: [],
+      checkout: []
+    };
+  },
+  computed: {
+    mainPhoto() {
+      return this.$page.products.gallery[0];
+    },
+    gallery() {
+      return this.$page.products.gallery;
+    },
+    allExtras() {
+      return [
+        ...this.$static.extras.edges.map(extra => extra.node),
+        ...this.$static.paper_types.edges.map(paper_type => paper_type.node)
+      ];
+    }
+  },
+  filters: {
+    money(value, noCurrency) {
+      const formatedValue = parseFloat(value)
+        .toFixed(2)
+        .replace(".", ",");
+
+      if (noCurrency) return formatedValue;
+      else if (value > 0) return `(+ R$ ${formatedValue})`;
+      else if (value < 0) return `(- R$ ${formatedValue})`;
+
+      return "";
+    }
+  },
+  methods: {
+    attachPrices(targets) {
+      return targets.map(item => {
+        item.name = "cavalo";
+        item.data.forEach(option => {
+          const currentExtra = this.allExtras.find(
+            extra => extra.name === option[item.key]
+          );
+
+          if (option.default_paper) {
+            option.price = 0;
+          } else if (option.value || option.value === 0) {
+            option.price = option.value;
+          } else if (currentExtra) {
+            option.price = currentExtra.value;
+          }
+        });
+      });
+    },
+    changePrice(value) {}
+  },
+  watch: {
+    "checkout.configurables": {
+      handler: function(value) {
+        const { extras, ...selects } = value,
+          extrasValue = extras.reduce((acc, cur) => {
+            acc = acc + cur.price;
+            return acc;
+          }, 0),
+          selectsValue = Object.keys(selects).reduce((acc, cur) => {
+            acc = acc + selects[cur].price;
+            return acc;
+          }, 0),
+          checkout = this.checkout;
+
+        checkout.finalPrice = checkout.value + extrasValue + selectsValue;
+      },
+      deep: true
+    }
+  },
+  created() {
+    this.product = this.$page.products;
+
+    this.checkout = {
+      name: this.product.name,
+      category: this.product.category,
+      value: this.product.base_value,
+      finalPrice: this.product.base_value,
+      discount: this.product.discount,
+      configurables: {
+        base_paper_type: this.product.base_paper_type[0],
+        envelope_paper_type: this.product.envelope_paper_type[0],
+        extras: [],
+        ...this.product.configurables.reduce((acc, cur) => {
+          console.log(cur);
+          Object.assign(acc, {
+            [cur.configurable_name]: cur.configurable_list[0]
+          });
+          return acc;
+        }, {})
+      }
+    };
+
+    this.attachPrices([
+      { data: this.product.base_paper_type, key: "base_paper_type_option" },
+      {
+        data: this.product.envelope_paper_type,
+        key: "envelope_paper_type_option"
+      },
+      { data: this.product.extras, key: "extra_option" },
+      ...this.product.configurables.map(item => ({
+        data: item.configurable_list,
+        key: "configurable_list_option"
+      }))
+    ]);
+  },
+  metaInfo() {
+    return {
+      title: "teste"
+    };
+  }
+};
+</script>
+
+<style lang="less">
+.product {
+  .header {
+    padding: 4vh 8vw;
+
+    &__menu a {
+      color: @brown;
+    }
+  }
+
+  &__wrapper {
+    background: @lightpink;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .container {
+      margin: 0 auto;
+    }
+  }
+
+  &__gallery {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__name,
+  &__price span {
+    font-family: @headfont;
+  }
+
+  &__name {
+    font-size: 2.8em;
+    margin-bottom: 0;
+  }
+
+  &__collection {
+    font-style: italic;
+    color: @lightbrown;
+    font-size: 0.9em;
+  }
+
+  &__configuration {
+    font-size: 0.9em;
+    &-title {
+      font-weight: bold;
+    }
+  }
+
+  &__price {
+    &-value {
+      font-size: 2em;
+    }
+
+    &-currency {
+      font-size: 1em;
+      padding-right: 4px;
+    }
+  }
+
+  &__description {
+    margin-top: 12px;
+
+    strong {
+      display: block;
+    }
+  }
+
+  .VueCarousel-pagination {
+    margin-top: 12px;
+
+    .VueCarousel-dot {
+      margin: 4px;
+    }
+    .VueCarousel-dot:focus {
+      outline: none;
+    }
+
+    .VueCarousel-dot.VueCarousel-dot--active {
+      border: #ebbda8 solid 8px;
+      border-radius: 99px;
+    }
+  }
+}
+</style>
+

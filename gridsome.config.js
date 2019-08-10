@@ -28,7 +28,7 @@ module.exports = {
             options: {
                 path: 'products/**/*.md',
                 typeName: 'Products',
-                route: '/produto/:name'
+                route: '/produto/:uid/:name'
             }
         },
         {
