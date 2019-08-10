@@ -13,15 +13,12 @@ description: >-
   aplicação de meia pérola.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
-    default_paper: true
   - base_paper_type_option: Glossy (fotográfico)
   - base_paper_type_option: Linho (texturizado)
   - base_paper_type_option: Perolado
 envelope_paper_type:
-  - default_paper: true
-    envelope_paper_type_option: Offset (fosco)
-  - default_paper: false
-    envelope_paper_type_option: Linho (texturizado) envelope
+  - envelope_paper_type_option: Offset (fosco)
+  - envelope_paper_type_option: Linho (texturizado) envelope
 configurables:
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
@@ -43,5 +40,6 @@ gallery:
     https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927481/Casamentos/Modelo_Horizontal_1_syw4um.png
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/f_auto,q_jpegmini/v1564927488/Casamentos/Modelo_Horizontal_2_hfifr0.png
+uid: '1565446796'
 ---
 
