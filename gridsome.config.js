@@ -35,7 +35,8 @@ module.exports = {
             use: '@gridsome/source-filesystem',
             options: {
                 path: 'categories/**/*.md',
-                typeName: 'Categories'
+                typeName: 'Categories',
+                route: '/categoria/:name'
             }
         },
         {
@@ -49,7 +50,8 @@ module.exports = {
             use: '@gridsome/source-filesystem',
             options: {
                 path: 'collections/**/*.md',
-                typeName: 'Collections'
+                typeName: 'Collections',
+                route: '/colecoes/:name'
             }
         },
         {
