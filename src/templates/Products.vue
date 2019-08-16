@@ -1,6 +1,6 @@
 <template>
   <Layout class="product-internal">
-    <SiteHeader/>
+    <SiteHeader class="internal"/>
     <section class="product-internal__wrapper container-fluid">
       <div class="row">
         <ShopSidebar class="col-sm-2 col-12"/>
@@ -278,14 +278,6 @@ export default {
 
 <style lang="less">
 .product-internal {
-  .header {
-    padding: 4vh 8vw;
-
-    &__menu a {
-      color: @brown;
-    }
-  }
-
   &__wrapper {
     background: @lightpink;
     padding-top: 40px;

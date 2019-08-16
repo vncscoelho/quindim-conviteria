@@ -14,7 +14,7 @@
               <span>x</span> Fechar
             </a>
           </header>
-          <table class="cart__list" v-if="cart.length > 0">
+          <table class="cart__list" v-if="hasProducts">
             <thead>
               <tr>
                 <th class="cart__list-model">Modelo</th>
@@ -37,7 +37,9 @@
                 </td>
                 <td class="cart__list-quantity">
                   <input type="number" v-model="product.quantity" class="input-quantity" min="1">
-                  <a href="#" @click.prevent="removeItem(product.uid)" class="remove-item">Remover</a>
+                  <div>
+                    <a href="#" @click.prevent="removeItem(product.uid)" class="remove-item">Remover</a>
+                  </div>
                 </td>
                 <td
                   class="cart__list-price"
@@ -47,7 +49,7 @@
           </table>
           <p v-else>Não há itens no carrinho.</p>
         </div>
-        <div class="cart__submit" v-if="cart.length > 0">
+        <div class="cart__submit" v-if="hasProducts">
           <p
             class="cart__submit-text"
           >Digite seu e-mail ou telefone e escolha como deseja continuar com o seu pedido.</p>
@@ -72,6 +74,11 @@ export default {
       show: false
     };
   },
+  computed: {
+    hasProducts() {
+      return Object.keys(this.cart).length > 0;
+    }
+  },
   methods: {
     cfgFormmater(value, key) {
       if (key === "base_paper_type")
@@ -88,8 +95,10 @@ export default {
           .join("<br>")}`;
     },
     removeItem(uid) {
-      this.$delete(this.cart, uid);
-      localStorage.setItem("cart", JSON.stringify(this.cart));
+      if (process.isClient) {
+        this.$delete(this.cart, uid);
+        localStorage.setItem("cart", JSON.stringify(this.cart));
+      }
     },
     toggleCart() {
       this.show = !this.show;
@@ -98,12 +107,13 @@ export default {
   watch: {
     cart: {
       handler(value) {
-        localStorage.setItem("cart", JSON.stringify(this.cart));
+        if (process.isClient)
+          localStorage.setItem("cart", JSON.stringify(this.cart));
       },
       deep: true
     }
   },
-  created() {
+  mounted() {
     this.cart = localStorage.getItem("cart")
       ? JSON.parse(localStorage.getItem("cart"))
       : {};
@@ -179,7 +189,6 @@ export default {
 
     .input-quantity {
       width: 75px;
-      display: block;
     }
 
     &-model {

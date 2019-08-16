@@ -7,7 +7,7 @@
       <a href="#">Como funciona</a>
       <a href="#">Contato</a>
     </nav>
-    <ShopCart @close="toggleCart"/>
+    <ShopCart/>
   </header>
 </template>
 
@@ -27,6 +27,14 @@ export default {
   display: flex;
   align-items: center;
   font-family: "Poppins";
+
+  &.internal {
+    padding: 4vh 8vw;
+
+    .header__menu a {
+      color: @darkbrown;
+    }
+  }
 
   &__menu {
     text-align: center;

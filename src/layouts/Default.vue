@@ -1,8 +1,10 @@
 <template>
-  <main>
-    <slot/>
-    <SiteFooter/>
-  </main>
+  <transition name="fade" appear>
+    <main>
+      <slot/>
+      <SiteFooter/>
+    </main>
+  </transition>
 </template>
 
 <static-query>
@@ -131,5 +133,15 @@ input {
     display: block;
     width: 100%;
   }
+}
+
+.fade-enter-active,
+.fade-leave {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+fade-leave-to {
+  opacity: 0;
 }
 </style>

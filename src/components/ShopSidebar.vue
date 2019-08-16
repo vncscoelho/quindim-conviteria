@@ -9,7 +9,7 @@
             @click.prevent="$emit('changeCategory', category.name)"
             :to="`${type}/${category.name}` | url"
           >{{category.name}}</a>
-          <!-- <router-link :to="`${type}/${category.name}` | url">{{category.name}}</router-link> -->
+          <router-link :to="`${type}/${category.name}` | url">{{category.name}}</router-link>
         </li>
       </ul>
     </section>
