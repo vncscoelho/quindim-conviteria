@@ -1,11 +1,11 @@
 <template>
-  <Layout class="product">
-    <Header/>
-    <section class="product__wrapper container-fluid">
+  <Layout class="product-internal">
+    <SiteHeader/>
+    <section class="product-internal__wrapper container-fluid">
       <div class="row">
         <ShopSidebar class="col-sm-2 col-12"/>
         <div class="col-sm-10 col-12 row" v-if="product">
-          <div class="product__gallery col-sm-7 col-12">
+          <div class="product-internal__gallery col-sm-7 col-12">
             <ClientOnly>
               <carousel
                 :perPage="1"
@@ -19,22 +19,24 @@
               </carousel>
             </ClientOnly>
           </div>
-          <div class="product__info col-sm-5 col-12">
-            <h2 class="product__name">{{product.name}}</h2>
-            <span class="product__collection">{{product.collection}}</span>
+          <div class="product-internal__info col-sm-5 col-12">
+            <h2 class="product-internal__name">{{product.name}}</h2>
+            <span class="product-internal__collection">{{product.collection}}</span>
 
-            <p class="product__price">
-              <span class="product__price-currency">R$</span>
-              <span class="product__price-value">{{checkout.finalPrice | money(true)}}</span>
+            <p class="product-internal__price">
+              <span class="product-internal__price-currency">R$</span>
+              <span class="product-internal__price-value">{{checkout.finalPrice | money(true)}}</span>
             </p>
 
-            <div class="product__configuration">
+            <div class="product-internal__configuration">
               <div
                 class="input-group"
                 v-for="(configurable, index) in product.configurables"
                 :key="index"
               >
-                <label class="product__configuration-title">{{configurable.configurable_name}}</label>
+                <label
+                  class="product-internal__configuration-title"
+                >{{configurable.configurable_name}}</label>
                 <select v-model="checkout.configurables[configurable.configurable_name]">
                   <option
                     v-for="(option, index) in configurable.configurable_list"
@@ -45,7 +47,7 @@
               </div>
 
               <div class="input-group">
-                <label class="product__configuration-title">Papel (interior)</label>
+                <label class="product-internal__configuration-title">Papel (interior)</label>
                 <select v-model="checkout.configurables.base_paper_type">
                   <option
                     v-for="(paper_type, index) in product.base_paper_type"
@@ -56,7 +58,7 @@
               </div>
 
               <div class="input-group">
-                <label class="product__configuration-title">Papel (envelope)</label>
+                <label class="product-internal__configuration-title">Papel (envelope)</label>
                 <select v-model="checkout.configurables.envelope_paper_type">
                   <option
                     v-for="(paper_type, index) in product.envelope_paper_type"
@@ -67,7 +69,7 @@
               </div>
 
               <div class="input-group">
-                <label class="product__configuration-title">Adicionais</label>
+                <label class="product-internal__configuration-title">Adicionais</label>
                 <template v-for="(extra, index) in product.extras">
                   <label :key="index">
                     <input type="checkbox" :value="extra" v-model="checkout.configurables.extras">
@@ -75,8 +77,8 @@
                   </label>
                 </template>
               </div>
-              <button class="button button-primary">Adicionar ao carrinho</button>
-              <p class="product__description">
+              <button class="button button-primary" @click="addToCart">Adicionar ao carrinho</button>
+              <p class="product-internal__description">
                 <strong>Descrição do produto:</strong>
                 <span>{{product.description}}</span>
               </p>
@@ -149,13 +151,13 @@ query Extras {
 
 <script>
 import Layout from "~/layouts/Default.vue";
-import Header from "~/components/Header.vue";
+import SiteHeader from "~/components/SiteHeader.vue";
 import ShopSidebar from "~/components/ShopSidebar.vue";
 
 export default {
   components: {
     Layout,
-    Header,
+    SiteHeader,
     ShopSidebar,
     Carousel: () =>
       import("vue-carousel")
@@ -186,19 +188,6 @@ export default {
       ];
     }
   },
-  filters: {
-    money(value, noCurrency) {
-      const formatedValue = parseFloat(value)
-        .toFixed(2)
-        .replace(".", ",");
-
-      if (noCurrency) return formatedValue;
-      else if (value > 0) return `(+ R$ ${formatedValue})`;
-      else if (value < 0) return `(- R$ ${formatedValue})`;
-
-      return "";
-    }
-  },
   methods: {
     attachPrices(targets) {
       return targets.map(item => {
@@ -218,7 +207,9 @@ export default {
         });
       });
     },
-    changePrice(value) {}
+    addToCart() {
+      this.$root.$emit("addToCart", JSON.parse(JSON.stringify(this.checkout)));
+    }
   },
   watch: {
     "checkout.configurables": {
@@ -243,11 +234,13 @@ export default {
     this.product = this.$page.products;
 
     this.checkout = {
+      uid: this.product.uid,
       name: this.product.name,
       category: this.product.category,
       value: this.product.base_value,
       finalPrice: this.product.base_value,
       discount: this.product.discount,
+      quantity: 1,
       configurables: {
         base_paper_type: this.product.base_paper_type[0],
         envelope_paper_type: this.product.envelope_paper_type[0],
@@ -284,7 +277,7 @@ export default {
 </script>
 
 <style lang="less">
-.product {
+.product-internal {
   .header {
     padding: 4vh 8vw;
 

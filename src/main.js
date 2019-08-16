@@ -8,6 +8,19 @@ export default function(Vue, { router, head, isClient }) {
     require('bootstrap-css-only');
     // Set default layout as a global component
     Vue.component('Layout', DefaultLayout);
+
+    Vue.filter('money', function(value, noCurrency) {
+        const formatedValue = parseFloat(value)
+            .toFixed(2)
+            .replace('.', ',');
+
+        if (noCurrency) return formatedValue;
+        else if (value > 0) return `(+ R$ ${formatedValue})`;
+        else if (value < 0) return `(- R$ ${formatedValue})`;
+
+        return '';
+    });
+
     /* Fontes */
     head.link.push({
         rel: 'stylesheet',

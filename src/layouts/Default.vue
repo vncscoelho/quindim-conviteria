@@ -1,6 +1,7 @@
 <template>
   <main>
     <slot/>
+    <SiteFooter/>
   </main>
 </template>
 
@@ -11,6 +12,16 @@ query {
   }
 }
 </static-query>
+
+<script>
+import SiteFooter from "../components/SiteFooter";
+export default {
+  components: {
+    SiteFooter
+  }
+};
+</script>
+
 
 <style lang="less">
 main {
@@ -46,11 +57,10 @@ a {
   }
 }
 
-.input-group {
-  select {
-    padding: 8px 12px;
-    border: 2px solid @darkpink;
-  }
+select,
+input {
+  padding: 8px 12px;
+  border: 2px solid @darkpink;
 }
 
 .button {
@@ -60,7 +70,7 @@ a {
   transition: 150ms all linear;
   letter-spacing: 0.5px;
   border: 0;
-  font-weight: bold;
+  font-weight: 600;
 
   &-primary {
     background-color: @pink;
@@ -89,6 +99,7 @@ a {
 
   &-heading {
     font-family: @headfont;
+    font-size: 2em;
     color: @darkbrown;
   }
 

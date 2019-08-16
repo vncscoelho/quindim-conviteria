@@ -4,7 +4,12 @@
       <h3 class="shop-sidebar__title">{{type}}</h3>
       <ul class="shop-sidebar__categories">
         <li v-for="category in categories[type]" :key="category.id">
-          <router-link :to="`${type}/${category.name}` | url">{{category.name}}</router-link>
+          <a
+            href="#"
+            @click.prevent="$emit('changeCategory', category.name)"
+            :to="`${type}/${category.name}` | url"
+          >{{category.name}}</a>
+          <!-- <router-link :to="`${type}/${category.name}` | url">{{category.name}}</router-link> -->
         </li>
       </ul>
     </section>
@@ -13,7 +18,7 @@
 
 <static-query>
 query Categories {
-  categories: allCategories(sortBy: "type", order: ASC) {
+  categories: allCategories(sort: [{by: "type", order: ASC}, {by: "id", order: DESC}]) {
     edges {
         node {
             id

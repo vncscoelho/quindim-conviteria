@@ -7,12 +7,20 @@
       <a href="#">Como funciona</a>
       <a href="#">Contato</a>
     </nav>
-    <aside class="header__cart">
-      Carrinho
-      <span class="cart-counter">0</span>
-    </aside>
+    <ShopCart @close="toggleCart"/>
   </header>
 </template>
+
+<script>
+import ShopCart from "./ShopCart";
+
+export default {
+  components: {
+    ShopCart
+  }
+};
+</script>
+
 
 <style lang="less" scoped>
 .header {
@@ -31,24 +39,6 @@
       &:last-of-type {
         margin: 0;
       }
-    }
-  }
-
-  &__cart {
-    flex-basis: 200px;
-    text-align: right;
-    color: @darkpink;
-
-    .cart-counter {
-      vertical-align: middle;
-      text-align: center;
-      line-height: 35px;
-      border-radius: 99px;
-      width: 35px;
-      height: 35px;
-      background-color: @darkpink;
-      color: #fff;
-      display: inline-block;
     }
   }
 }

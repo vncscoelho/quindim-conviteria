@@ -6,7 +6,7 @@
       </div>
       <!-- Header -->
       <div class="banner__content">
-        <Header/>
+        <SiteHeader/>
         <div class="banner__cta">
           <h1 class="banner__cta-text">
             Nós somos uma conviteria especializada
@@ -54,7 +54,7 @@
         </ul>
       </div>
     </section>
-    <Shop :products="products"/>
+    <Shop :products="products" @changeCategory="changeCategory"/>
   </Layout>
 </template>
 
@@ -107,7 +107,7 @@ query Data {
 </page-query>
 
 <script>
-import Header from "../components/Header";
+import SiteHeader from "../components/SiteHeader";
 import Shop from "../components/Shop.vue";
 
 export default {
@@ -115,13 +115,13 @@ export default {
     title: "Quindim Conviteria"
   },
   components: {
-    Header,
+    SiteHeader,
     Shop
   },
   data() {
     return {
       currentProducts: [],
-      currentCategory: null
+      currentCategory: "Casamentos"
     };
   },
   computed: {
@@ -129,7 +129,15 @@ export default {
       return this.$page.settings.edges[0].node.banner_img;
     },
     products() {
-      return this.$page.products.edges.map(product => product.node);
+      return this.$page.products.edges
+        .map(product => product.node)
+        .filter(product => product.category === this.currentCategory);
+    }
+  },
+  methods: {
+    changeCategory(category) {
+      console.log(category);
+      this.currentCategory = category;
     }
   },
   created() {
@@ -180,11 +188,20 @@ export default {
     margin: auto 0;
     font-family: @headfont;
 
+    .button {
+      margin-top: 20px;
+    }
+
     &-text {
       font-size: 2.4em;
       line-height: 1.2;
     }
   }
+}
+
+.shop {
+  background: @lightpink;
+  padding: 80px 0;
 }
 
 .policy {
