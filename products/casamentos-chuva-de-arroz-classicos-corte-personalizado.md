@@ -5,7 +5,16 @@ collection: Chuva de Arroz - Clássicos
 base_value: 8
 discount: 0
 is_combo: false
-description: "Convite com semi-envelope com corte personalizado tamanho grande (12,5cm x 18,5cm) ou pequeno (9cm x 14cm) interior confeccionado em papel offset 240g e exterior em papel perolado 120g.\r\n\nVersão da foto: Interior em papel offset e exterior em papel perolado. Acabamento com laço chanel simples e aplicação de meia pérola."
+description: >-
+  Convite com semi-envelope com corte personalizado tamanho grande (12,5cm x
+  18,5cm) ou pequeno (9cm x 14cm) interior confeccionado em papel offset 240g e
+  exterior em papel perolado 120g.
+
+
+
+
+  Versão da foto: Interior em papel offset e exterior em papel perolado.
+  Acabamento com laço chanel simples e aplicação de meia pérola.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
