@@ -12,7 +12,9 @@ base_paper_type:
   - base_paper_type_option: Glossy (fotográfico)
     value: ''
   - base_paper_type_option: Linho (texturizado)
-envelope_paper_type: []
+envelope_paper_type:
+  - envelope_paper_type_option: Kraft
+    value: 0
 configurables:
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
