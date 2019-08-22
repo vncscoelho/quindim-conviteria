@@ -1,7 +1,7 @@
 ---
 category: Casamentos
 name: Arabesco
-collection: Renda Encantada - Vintages
+collection: Chuva de Arroz - Clássicos
 base_value: 4.9
 discount: 0
 is_combo: false
