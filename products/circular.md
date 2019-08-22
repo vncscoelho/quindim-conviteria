@@ -10,6 +10,8 @@ description: >-
   (9cm x 14cm) confeccionado em papel 180g.
 
 
+
+
   Versão da foto: Interior e exterior em papel offset com faixa em papel
   estampado e laço tradicional simples. Tamanho grande.
 base_paper_type:
