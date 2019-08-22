@@ -10,6 +10,8 @@ description: >-
   papel 180g.
 
 
+
+
   Versão da foto: Interior e exterior em papel offset com laço chanel duplo com
   aplicação de meia pérola.
 base_paper_type:
