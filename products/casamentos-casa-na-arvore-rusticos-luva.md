@@ -5,7 +5,15 @@ collection: Casa na Árvore - Rústicos
 base_value: 4.8
 discount: 0
 is_combo: false
-description: "Convite com envelope tamanho 13cm x 18cm. Interior confeccionado em papel 180g e exterior em papel kraft 120g.\r\n\nVersão da foto: Interior em papel glossy e envelope em papel vegetal com laço tradicional simples e tag com nome do convidado."
+description: >-
+  Convite com envelope tamanho 13cm x 18cm. Interior confeccionado em papel 180g
+  e exterior em papel kraft 120g.
+
+
+
+
+  Versão da foto: Interior em papel glossy e envelope em papel vegetal com laço
+  tradicional simples e tag com nome do convidado.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
