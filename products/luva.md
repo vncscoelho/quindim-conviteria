@@ -5,8 +5,10 @@ collection: Chuva de Arroz - Clássicos
 base_value: 5
 discount: 0
 is_combo: false
-description: >
+description: >-
   Convite com envelope luva tamanho 13cm x 18cm confeccionado em papel 180g.
+
+
 
 
   Versão da foto: Interior em papel offset e envelope em papel linho. Acabamento
