@@ -5,7 +5,15 @@ collection: Chuva de Arroz - Clássicos
 base_value: 4.9
 discount: 0
 is_combo: false
-description: "Convite com semi-envelope tamanho grande (13cm x 19cm) ou pequeno (9cm x 14cm) confeccionado em papel 180g.\r\n\n\rVersão da foto: Interior e exterior em papel offset com laço chanel simples e aplicação de meia pérola."
+description: >-
+  Convite com semi-envelope tamanho grande (13cm x 19cm) ou pequeno (9cm x 14cm)
+  confeccionado em papel 180g.
+
+
+
+
+  Versão da foto: Interior e exterior em papel offset com laço chanel simples e
+  aplicação de meia pérola.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
