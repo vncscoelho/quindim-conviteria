@@ -5,8 +5,9 @@ base_value: 7.5
 discount: 0
 is_combo: false
 description: >-
-  Convite com semi-envelope tamanho 12cm x 18cm. Interior em papel glossy
-  fotográfico 180g; semi-envelope em papel color 180g. Acabamento com laço.
+  Convite com semi-envelope tamanho grande (12cm x 18cm) ou pequeno (9cm x
+  14cm). Interior em papel glossy fotográfico 180g; semi-envelope em papel color
+  180g. Acabamento com laço.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
