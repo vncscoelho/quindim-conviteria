@@ -21,7 +21,7 @@ configurables:
       - configurable_list_option: Tamanho grande
         value: 0
       - configurable_list_option: Tamanho pequeno
-        value: -1.6
+        value: -1.7
     configurable_name: Tamanho
 extras:
   - extra_option: Tag com nome do convidado
