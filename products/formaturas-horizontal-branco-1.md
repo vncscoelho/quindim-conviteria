@@ -36,6 +36,7 @@ configurables:
     configurable_name: Tipo de acabamento
 extras:
   - extra_option: Impressão no envelope
+  - extra_option: Tag com símbolo do curso
   - extra_option: Tag com nome do convidado
   - extra_option: Convite individual
   - extra_option: Mini envelope para presente em dinheiro
