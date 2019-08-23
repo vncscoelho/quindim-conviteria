@@ -4,7 +4,12 @@ name: Ticket
 base_value: 4.5
 discount: 0
 is_combo: false
-description: "Convite em formato personalizado ticket com picote, tamanho 20cm x 7cm. Confeccionado em papel 180g.\r\n\n\n\nVersão da foto: papel glossy."
+description: >-
+  Convite em formato personalizado ticket com picote, tamanho grande (20cm x
+  7cm) ou tamanho pequeno (16,5cm x 5cm). Confeccionado em papel 180g.
+
+
+  Versão da foto: papel glossy.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
