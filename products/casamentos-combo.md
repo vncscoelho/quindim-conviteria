@@ -4,7 +4,71 @@ name: Combo casamento
 base_value: ''
 discount: 10
 is_combo: true
-description: "Os combos foram desenvolvidos para facilitar a organização do\r evento e oferecer um conjunto de possibilidades por um preço\r mais acessível. Você pode compor o combo com os itens que\r preferir e o desconto varia de 5% a 10% de acordo com a\r quantidade final.\r\n\n\\* O convite é peça obrigatória em todos os combos.\r\n\n\\* O desconto para o combo de casamento é aplicado para compras\r com no mínimo 5 itens diferentes.\r\n\nAlgumas sugestões de itens que podem ser combinados:\r\n\nConvite\r\n\nCardápio\r\n\nMarcador de mesa\r\n\nToppers\r\n\nCaketopper\r\n\nChuva de arroz\r\n\nLágrimas de alegria\r\n\nCaixa para bem-casado\r\n\nPlacas para cadeira\r\n\nCaixa convite para padrinhos e madrinhas\r\n\nCaixa convite para aias e pajens\r\n\nManual para padrinhos e madrinhas\r\n\nCaderno de votos\r\n\nFolha timbrada para recados\r\n\nKit toalete"
+description: >-
+  Os combos foram desenvolvidos para facilitar a organização do  evento e
+  oferecer um conjunto de possibilidades por um preço  mais acessível. Você pode
+  compor o combo com os itens que  preferir e o desconto varia de 5% a 10% de
+  acordo com a  quantidade final.
+
+
+  \* O convite é peça obrigatória em todos os combos.
+
+
+  \* O desconto para o combo de casamento é aplicado para compras  com no mínimo
+  5 itens diferentes.
+
+
+  \* A produção e entrega de todos os itens é feita em uma única remessa.
+  Pedidos de um mesmo evento feitos em períodos distintos de forma avulsa não
+  configuram combo e não garantem desconto.
+
+
+  Algumas sugestões de itens que podem ser combinados:
+
+
+  Convite
+
+
+  Cardápio
+
+
+  Marcador de mesa
+
+
+  Toppers
+
+
+  Caketopper
+
+
+  Chuva de arroz
+
+
+  Lágrimas de alegria
+
+
+  Caixa para bem-casado
+
+
+  Placas para cadeira
+
+
+  Caixa convite para padrinhos e madrinhas
+
+
+  Caixa convite para aias e pajens
+
+
+  Manual para padrinhos e madrinhas
+
+
+  Caderno de votos
+
+
+  Folha timbrada para recados
+
+
+  Kit toalete
 gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566768697/Combo_casamento_n6hyns.jpg
