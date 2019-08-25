@@ -27,8 +27,6 @@ extras: []
 gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566773978/Papelaria%20infantil/Tags_tcwzcs.jpg
-  - >-
-    https://res.cloudinary.com/dkaanqsro/image/upload/v1566773987/Papelaria%20infantil/Marcador_de_mesa_2_inf_s4myxy.jpg
 uid: '1566770367062'
 ---
 
