@@ -1,7 +1,7 @@
 ---
 category: Adulto
 name: Caixa convite dupla
-base_value: 10
+base_value: 19
 discount: 0
 is_combo: false
 description: >-
