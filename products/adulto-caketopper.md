@@ -8,9 +8,7 @@ description: >-
   Topo de bolo com recorte personalizado tamanho médio 15cm. Confeccionado em
   papel glossy fotográfico 220g ou color 180g com hastes de madeira.
 base_paper_type: []
-configurables:
-  - configurable_list: []
-    configurable_name: Tamanho
+configurables: []
 gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566769973/Papelaria%20adulto/Caketopper_jxfxqx.jpg
