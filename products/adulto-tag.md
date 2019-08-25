@@ -7,6 +7,9 @@ is_combo: false
 description: >-
   Tag em formato personalizado tamanho pequeno (3cm), médio (5cm) ou grande
   (8cm). Confeccionada em papel 180g.
+
+
+  \*Quantidade mínima: 10 unidades.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
