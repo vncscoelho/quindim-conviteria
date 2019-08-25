@@ -11,7 +11,7 @@ configurables: []
 extras: []
 gallery:
   - >-
-    https://res.cloudinary.com/dkaanqsro/image/upload/v1566768697/Combo_formatura_wfe1do.jpg
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1566768698/Combo_infantil_iifp7s.jpg
 uid: '1566595240099'
 ---
 
