@@ -4,7 +4,43 @@ name: Combo formatura
 base_value: ''
 discount: 10
 is_combo: false
-description: "Os combos foram desenvolvidos para facilitar a organização do\r evento e oferecer um conjunto de possibilidades por um preço\r mais acessível. Você pode compor o combo com os itens que\r preferir e o desconto varia de 5% a 10% de acordo com a\r quantidade final.\r\n\n\\* O convite é peça obrigatória em todos os combos.\r\n\n\\* O desconto para o combo de formatura é aplicado para compras\r com no mínimo 3 itens diferentes.\r\n\nAlgumas sugestões de itens que podem ser combinados:\r\n\nConvite\r\n\nCardápio\r\n\nMarcador de mesa\r\n\nToppers\r\n\nTags\r\n\nAdesivos"
+description: >-
+  Os combos foram desenvolvidos para facilitar a organização do  evento e
+  oferecer um conjunto de possibilidades por um preço  mais acessível. Você pode
+  compor o combo com os itens que  preferir e o desconto varia de 5% a 10% de
+  acordo com a  quantidade final.
+
+
+  \* O convite é peça obrigatória em todos os combos.
+
+
+  \* O desconto para o combo de formatura é aplicado para compras
+   com no mínimo 3 itens diferentes.
+
+  \* A produção e entrega de todos os itens é feita em uma única remessa.
+  Pedidos de um mesmo evento feitos em períodos distintos de forma avulsa não
+  configuram combo e não garantem desconto.
+
+
+  Algumas sugestões de itens que podem ser combinados:
+
+
+  Convite
+
+
+  Cardápio
+
+
+  Marcador de mesa
+
+
+  Toppers
+
+
+  Tags
+
+
+  Adesivos
 base_paper_type: []
 envelope_paper_type: []
 configurables: []
