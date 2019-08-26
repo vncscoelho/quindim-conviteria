@@ -19,8 +19,17 @@ collections:
       identifier_field: uid
       create: true
       slug: '{{category}}-{{collection}}-{{name}}'
-      summary: '{{category}} / {{collection}} / {{name}} [REF {{uid}}]'
+      summary: '{{name}} [Cat: {{category}}] [Col: {{collection}}] [Ref: {{uid}}]'
       fields:
+          - label: Referência (obrigatório)
+            hint: Deve ser único para cada produto.
+            name: uid
+            widget: datetime
+            format: x
+            dateFormat: L
+            timeFormat: H:mm:ss
+            required: true
+
           - label: Categoria
             name: category
             widget: relation
@@ -50,7 +59,7 @@ collections:
             name: discount
             widget: number
             valueType: float
-            default: 0
+            default: null
             required: false
 
           - label: 'Combo'
@@ -149,11 +158,6 @@ collections:
             widget: list
             field: { label: 'Imagem', name: 'product_img', widget: 'image' }
 
-          - label: Referência
-            name: uid
-            widget: datetime
-            format: x
-
     - label: 'Configurações'
       name: settings
       folder: settings
@@ -217,6 +221,7 @@ collections:
             name: value
             widget: number
             valueType: float
+            default: null
 
     - label: 'Adicionais'
       name: extras
@@ -233,3 +238,4 @@ collections:
             name: value
             widget: number
             valueType: float
+            default: null

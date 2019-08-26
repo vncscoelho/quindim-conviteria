@@ -9,8 +9,7 @@ base_paper_type: []
 configurables: []
 extras: []
 gallery:
-  - >-
-    https://res.cloudinary.com/dkaanqsro/image/upload/v1566773978/Papelaria%20infantil/Topo_de_bolo_composto_wlhbye.jpg
-uid: '1566770367062'
+    - >-
+        https://res.cloudinary.com/dkaanqsro/image/upload/v1566773978/Papelaria%20infantil/Topo_de_bolo_composto_wlhbye.jpg
+uid: '156637703367062'
 ---
-
