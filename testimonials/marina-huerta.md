@@ -15,6 +15,6 @@ testimonial: >-
 
   minha empresa. Responsabilidade, dedicação e profissionalismo vocês têm de
   sobra!
-order: 2
+order: 5
 ---
 
