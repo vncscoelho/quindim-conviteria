@@ -239,3 +239,31 @@ collections:
             widget: number
             valueType: float
             default: null
+
+    - label: 'Depoimentos'
+      name: testimonials
+      folder: testimonials
+      identifier_field: author
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - label: Author
+            name: author
+            widget: string
+
+          - label: Depoimento
+            name: testimonial
+            widget: text
+
+          - label: 'Foto'
+            name: 'photo'
+            widget: 'image'
+            required: false
+            allow_multiple: false
+
+          - label: Ordem
+            name: order
+            widget: number
+            valueType: int
+            required: false
+            hint: 'Os números maiores aparecerão entre os 4 da página inicial.'

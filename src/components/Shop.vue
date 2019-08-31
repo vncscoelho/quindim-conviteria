@@ -1,29 +1,37 @@
 <template>
   <div class="shop container_fluid">
     <div class="row col-12">
-      <ShopSidebar class="col-12 col-sm-3" @changeCategory="$emit('changeCategory', $event)"/>
+      <ShopSidebar
+        class="col-12 col-sm-3"
+        @changeCategory="$emit('changeCategory', $event)"
+        :hideLinks="onHome"
+      />
       <div class="col-12 col-sm-9 row">
-        <div class="product col-4" v-for="product in products" :key="product.id">
-          <a :href="`/produto/${product.uid}/${slug(product.name)}`" class="product__thumbnail">
-            <img
-              v-if="product.gallery.length > 0"
-              :src="product.gallery[0]"
-              :alt="`${product.name}`"
-            >
-            <img
-              v-if="product.gallery.length > 1"
-              :src="product.gallery[1]"
-              :alt="`${product.name}`"
-              class="product__thumbnail--hover"
-            >
-          </a>
-          <span
-            class="product__collection"
-          >{{!product.is_combo ? product.collection : "Combo com desconto"}}</span>
-          <h3 class="product__name">
-            <a :href="`/produto/${product.uid}/${slug(product.name)}`">{{product.name}}</a>
-          </h3>
-        </div>
+        <template v-for="product in products">
+          <transition name="fade" appear :key="product.id">
+            <div class="product col-4" :key="product.id">
+              <a :href="`/produto/${product.uid}/${url(product.name)}`" class="product__thumbnail">
+                <img
+                  v-if="product.gallery.length > 0"
+                  :src="product.gallery[0]"
+                  :alt="`${product.name}`"
+                >
+                <img
+                  v-if="product.gallery.length > 1"
+                  :src="product.gallery[1]"
+                  :alt="`${product.name}`"
+                  class="product__thumbnail--hover"
+                >
+              </a>
+              <span
+                class="product__collection"
+              >{{!product.is_combo ? product.collection : "Combo com desconto"}}</span>
+              <h3 class="product__name">
+                <a :href="`/produto/${product.uid}/${url(product.name)}`">{{product.name}}</a>
+              </h3>
+            </div>
+          </transition>
+        </template>
       </div>
     </div>
   </div>
@@ -66,6 +74,10 @@ export default {
       default() {
         return [];
       }
+    },
+    onHome: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -77,8 +89,12 @@ export default {
     }
   },
   methods: {
-    slug(value) {
-      return value.toLowerCase().replace(" ", "-");
+    url(value) {
+      return value
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[" "]/g, "-")
+        .toLowerCase();
     }
   }
 };

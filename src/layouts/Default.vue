@@ -39,6 +39,10 @@ a {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 .icon {
   background: url("../assets/img/list_icons.png") no-repeat;
   background-position: 0 0;
@@ -123,6 +127,11 @@ input {
       }
     }
   }
+}
+
+.shop {
+  background: @lightpink;
+  padding: 80px 0;
 }
 
 .input-group {

@@ -54,11 +54,39 @@
         </ul>
       </div>
     </section>
-    <Shop :products="products" @changeCategory="changeCategory"/>
+    <Shop :products="products" @changeCategory="changeCategory" :onHome="true"/>
+    <section class="section testimonials">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-title">DEPOIMENTOS</span>
+          <h2 class="section-heading">Essas são as histórias de nossos clientes.</h2>
+          <p class="section-text">Queremos a sua aqui também!</p>
+        </div>
+        <div class="row justify-content-between">
+          <div
+            class="testimonials__item col-5"
+            v-for="(testimonial, key) in testimonials"
+            :key="key"
+          >
+            <p class="testimonials__text">{{testimonial.testimonial}}</p>
+            <div class="testimonials__author">
+              <div class="testimonials__author-photo">
+                <img :src="testimonial.photo" alt>
+              </div>
+              <p class="testimonials__author-name">{{testimonial.author}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center testimonials__cta">
+          <button class="button button-primary">Veja todos os depoimentos</button>
+        </div>
+      </div>
+    </section>
   </Layout>
 </template>
 
-<page-query>
+<static-query>
 query Data {
   settings: allSettings {
     edges {
@@ -103,8 +131,19 @@ query Data {
         }
     }
   }
+
+  testimonials: allTestimonials {
+    edges {
+      node {
+        id
+        author
+        testimonial
+        order
+      }
+    }
+  }
 }
-</page-query>
+</static-query>
 
 <script>
 import SiteHeader from "../components/SiteHeader";
@@ -126,12 +165,20 @@ export default {
   },
   computed: {
     banner_img() {
-      return this.$page.settings.edges[0].node.banner_img;
+      return this.$static.settings.edges[0].node.banner_img;
     },
     products() {
-      return this.$page.products.edges
+      return this.$static.products.edges
         .map(product => product.node)
         .filter(product => product.category === this.currentCategory);
+    },
+    testimonials() {
+      console.log(
+        this.$static.testimonials.edges.map(testimonial => testimonial.node)
+      );
+      return this.$static.testimonials.edges
+        .map(testimonial => testimonial.node)
+        .sort((a, b) => b.order - a.order);
     }
   },
   methods: {
@@ -199,11 +246,6 @@ export default {
   }
 }
 
-.shop {
-  background: @lightpink;
-  padding: 80px 0;
-}
-
 .policy {
   text-align: center;
   position: relative;
@@ -211,13 +253,58 @@ export default {
   &__bg {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: -2%;
     transform: translateY(-50%);
 
     &.right {
       transform: scaleX(-1) translateY(-50%);
       right: 0;
+      top: 99%;
       left: auto;
+    }
+  }
+}
+
+.testimonials {
+  background: @lightyellow;
+  &__cta {
+    margin-top: 80px;
+  }
+  &__text {
+    font-size: 0.9em;
+
+    &:before {
+      content: "“";
+      font-weight: bold;
+    }
+
+    &:after {
+      font-weight: bold;
+      content: "”";
+    }
+  }
+  &__item {
+    margin-top: 40px;
+
+    &:nth-of-type(2n) {
+      margin-top: 120px;
+    }
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+    &-name {
+      margin: 0;
+      font-family: @headfont;
+      font-style: italic;
+      font-size: 1.25em;
+    }
+    &-photo {
+      width: 45px;
+      height: 45px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: lightblue;
     }
   }
 }

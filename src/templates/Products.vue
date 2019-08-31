@@ -46,7 +46,7 @@
                 </select>
               </div>
 
-              <div class="input-group">
+              <div class="input-group" v-if="checkout.configurables.base_paper_type">
                 <label class="product-internal__configuration-title">Papel (interior)</label>
                 <select v-model="checkout.configurables.base_paper_type">
                   <option
@@ -57,7 +57,7 @@
                 </select>
               </div>
 
-              <div class="input-group">
+              <div class="input-group" v-if="checkout.configurables.envelope_paper_type">
                 <label class="product-internal__configuration-title">Papel (envelope)</label>
                 <select v-model="checkout.configurables.envelope_paper_type">
                   <option
@@ -220,7 +220,9 @@ export default {
             return acc;
           }, 0),
           selectsValue = Object.keys(selects).reduce((acc, cur) => {
-            acc = acc + selects[cur].price;
+            if (selects[cur]) {
+              acc = acc + selects[cur].price;
+            }
             return acc;
           }, 0),
           checkout = this.checkout;
@@ -246,7 +248,6 @@ export default {
         envelope_paper_type: this.product.envelope_paper_type[0],
         extras: [],
         ...this.product.configurables.reduce((acc, cur) => {
-          console.log(cur);
           Object.assign(acc, {
             [cur.configurable_name]: cur.configurable_list[0]
           });

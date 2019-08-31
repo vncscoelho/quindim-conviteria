@@ -4,12 +4,12 @@
       <h3 class="shop-sidebar__title">{{type}}</h3>
       <ul class="shop-sidebar__categories">
         <li v-for="category in categories[type]" :key="category.id">
-          <a
-            href="#"
-            @click.prevent="$emit('changeCategory', category.name)"
-            :to="`${type}/${category.name}` | url"
-          >{{category.name}}</a>
-          <router-link :to="`${type}/${category.name}` | url">{{category.name}}</router-link>
+          <router-link :to="`/categoria/${category.name}` | url" v-if="!hideLinks">{{category.name}}</router-link>
+          <button
+            type="button"
+            @click="$emit('changeCategory', category.name)"
+            v-else
+          >{{category.name}}</button>
         </li>
       </ul>
     </section>
@@ -32,6 +32,12 @@ query Categories {
 
 <script>
 export default {
+  props: {
+    hideLinks: {
+      type: Boolean,
+      default: true
+    }
+  },
   computed: {
     categories() {
       return this.$static.categories.edges.reduce((acc, cur) => {

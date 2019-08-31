@@ -1,11 +1,13 @@
 <template>
   <header class="header">
-    <img src="../assets/img/logo.svg" alt="Quindim Conviteria" class="header__logo" fill="red">
+    <a href="/">
+      <img src="../assets/img/logo.svg" alt="Quindim Conviteria" class="header__logo" fill="red">
+    </a>
     <nav class="header__menu">
-      <a href="#">Catálogo</a>
-      <a href="#">Sobre nós</a>
-      <a href="#">Como funciona</a>
-      <a href="#">Contato</a>
+      <a href="/categoria/casamentos">Catálogo</a>
+      <a href="/sobre-nos">Sobre nós</a>
+      <a href="/como-funciona">Como funciona</a>
+      <a href="/contato">Contato</a>
     </nav>
     <ShopCart/>
   </header>

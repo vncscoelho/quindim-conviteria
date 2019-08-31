@@ -22,7 +22,9 @@
     <hr>
     <div class="row footer__copy">
       <div class="col-6">Copyright Quindim Conviteria 2019. Todos os direitos reservados.</div>
-      <div class="col-6 text-right">Desenv. por Vinicius Coelho</div>
+      <div class="col-6 text-right">
+        <a href="http://viniciuscoelho.com">Desenv. por Vinicius Coelho</a>
+      </div>
     </div>
   </footer>
 </template>
@@ -32,6 +34,16 @@
   padding: 80px 40px 40px 40px;
   background: #fff;
   color: @lightbrown;
+
+  a {
+    display: block;
+    color: @darkpink;
+    margin-top: 8px;
+
+    &:first-of-type {
+      margin: 0;
+    }
+  }
 
   .row {
     display: flex;
@@ -43,14 +55,6 @@
     font-family: @headfont;
     line-height: 1;
     color: @darkbrown;
-  }
-
-  &__contacts {
-    a {
-      display: block;
-      color: @darkpink;
-      margin-top: 8px;
-    }
   }
 
   &__logo {
