@@ -1,1 +1,10 @@
-Nosso propósito é oferecer convites artesanais feitos com muito amor e cuidado, respeitando a flexibilidade de combinações e possibilidades, para que cada cliente encontre o que mais combina com a sua personalidade.
+<template>
+  <div>a</div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+</style>
