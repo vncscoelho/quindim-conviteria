@@ -13,6 +13,6 @@ testimonial: >-
   prazo e os produtos extremamente caprichados em cada detalhe. Foi uma enorme
 
   satisfação poder ter tidos os serviços da Quindim na minha festa.
-order: 1
+order: 5
 ---
 
