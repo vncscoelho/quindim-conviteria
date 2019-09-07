@@ -9,14 +9,14 @@
         <p>Entre em contato e iremos te ajudar!</p>
 
         <p class="footer__contacts">
-          <a href="#">contato@quindimconviteria.com.br</a>
-          <a href="#">(55) 9999 9999</a>
+          <a href="mailto:contato@quindimconviteria.com.br">contato@quindimconviteria.com.br</a>
+          <a href="tel:5555981256350">(55) 98125-6350</a>
           <a href="#">Facebook</a>
           <a href="#">Instagram</a>
         </p>
       </div>
       <div class="footer__logo">
-        <g-image src="~/assets/img/logo-footer.png"/>
+        <g-image immediate src="~/assets/img/logo-footer.png"/>
       </div>
     </div>
     <hr>

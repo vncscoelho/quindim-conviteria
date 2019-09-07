@@ -18,9 +18,8 @@
       </div>
     </section>
 
-    <section class="policy section">
-      <g-image class="policy__bg" src="~/assets/img/policy_bg.png"/>
-      <g-image class="policy__bg right" src="~/assets/img/policy_bg.png"/>
+    <section class="text-center section">
+      <ornaments/>
       <div class="container">
         <span class="section-title">COMO FUNCIONA</span>
         <h2 class="section-heading">
@@ -62,18 +61,20 @@
           <h2 class="section-heading">Essas são as histórias de nossos clientes.</h2>
           <p class="section-text">Queremos a sua aqui também!</p>
         </div>
-        <div class="row justify-content-between">
+        <div class="row justify-content-between text-center">
           <div
-            class="testimonials__item col-5"
+            :class="['testimonials__item', { 'row justify-content-center' : key === 2}, {'col-5' : key !== 2}]"
             v-for="(testimonial, key) in testimonials"
             :key="key"
           >
-            <p class="testimonials__text">{{testimonial.testimonial}}</p>
-            <div class="testimonials__author">
-              <div class="testimonials__author-photo">
-                <img :src="testimonial.photo" alt>
+            <div :class="{ 'col-6' : key === 2}">
+              <p class="testimonials__text">{{testimonial.testimonial}}</p>
+              <div class="testimonials__author">
+                <div class="testimonials__author-photo">
+                  <img :src="testimonial.photo" alt>
+                </div>
+                <p class="testimonials__author-name">{{testimonial.author}}</p>
               </div>
-              <p class="testimonials__author-name">{{testimonial.author}}</p>
             </div>
           </div>
         </div>
@@ -132,7 +133,7 @@ query Data {
     }
   }
 
-  testimonials: allTestimonials {
+  testimonials: allTestimonials(limit:3) {
     edges {
       node {
         id
@@ -146,16 +147,18 @@ query Data {
 </static-query>
 
 <script>
-import SiteHeader from "../components/SiteHeader";
 import Shop from "../components/Shop.vue";
+import Ornaments from "../components/Ornaments.vue";
+import SiteHeader from "../components/SiteHeader";
 
 export default {
   metaInfo: {
     title: "Quindim Conviteria"
   },
   components: {
-    SiteHeader,
-    Shop
+    Shop,
+    Ornaments,
+    SiteHeader
   },
   data() {
     return {
@@ -173,9 +176,6 @@ export default {
         .filter(product => product.category === this.currentCategory);
     },
     testimonials() {
-      console.log(
-        this.$static.testimonials.edges.map(testimonial => testimonial.node)
-      );
       return this.$static.testimonials.edges
         .map(testimonial => testimonial.node)
         .sort((a, b) => b.order - a.order);
@@ -183,12 +183,8 @@ export default {
   },
   methods: {
     changeCategory(category) {
-      console.log(category);
       this.currentCategory = category;
     }
-  },
-  created() {
-    console.log(this);
   }
 };
 </script>
@@ -242,69 +238,6 @@ export default {
     &-text {
       font-size: 2.4em;
       line-height: 1.2;
-    }
-  }
-}
-
-.policy {
-  text-align: center;
-  position: relative;
-
-  &__bg {
-    position: absolute;
-    left: 0;
-    top: -2%;
-    transform: translateY(-50%);
-
-    &.right {
-      transform: scaleX(-1) translateY(-50%);
-      right: 0;
-      top: 99%;
-      left: auto;
-    }
-  }
-}
-
-.testimonials {
-  background: @lightyellow;
-  &__cta {
-    margin-top: 80px;
-  }
-  &__text {
-    font-size: 0.9em;
-
-    &:before {
-      content: "“";
-      font-weight: bold;
-    }
-
-    &:after {
-      font-weight: bold;
-      content: "”";
-    }
-  }
-  &__item {
-    margin-top: 40px;
-
-    &:nth-of-type(2n) {
-      margin-top: 120px;
-    }
-  }
-  &__author {
-    display: flex;
-    align-items: center;
-    &-name {
-      margin: 0;
-      font-family: @headfont;
-      font-style: italic;
-      font-size: 1.25em;
-    }
-    &-photo {
-      width: 45px;
-      height: 45px;
-      margin-right: 8px;
-      border-radius: 50%;
-      background: lightblue;
     }
   }
 }

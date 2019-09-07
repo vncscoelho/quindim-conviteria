@@ -20,6 +20,12 @@ import SiteFooter from "../components/SiteFooter";
 export default {
   components: {
     SiteFooter
+  },
+  beforeCreate() {
+    console.log(new Date().getSeconds());
+  },
+  mounted() {
+    console.log(new Date().getSeconds());
   }
 };
 </script>
@@ -64,6 +70,7 @@ img {
 }
 
 select,
+textarea,
 input {
   padding: 8px 12px;
   border: 2px solid @darkpink;
@@ -97,6 +104,7 @@ input {
   padding: 80px 10px;
   font-family: @textfont;
   color: #333;
+  position: relative;
 
   &-title {
     letter-spacing: 1px;
@@ -134,6 +142,48 @@ input {
   padding: 80px 0;
 }
 
+.testimonials {
+  background: @lightyellow;
+  &__cta {
+    margin-top: 80px;
+  }
+  &__text {
+    font-size: 0.9em;
+
+    &:before {
+      content: "“";
+      font-weight: bold;
+    }
+
+    &:after {
+      font-weight: bold;
+      content: "”";
+    }
+  }
+  &__item {
+    margin-top: 60px;
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-name {
+      margin: 0;
+      font-family: @headfont;
+      font-style: italic;
+      font-size: 1.25em;
+    }
+    &-photo {
+      width: 45px;
+      height: 45px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: lightblue;
+    }
+  }
+}
+
 .input-group {
   margin-bottom: 8px;
 
@@ -146,11 +196,11 @@ input {
 
 .fade-enter-active,
 .fade-leave {
-  transition: opacity 0.5s;
+  transition: opacity 750ms;
 }
 
 .fade-enter,
-fade-leave-to {
+.fade-leave-to {
   opacity: 0;
 }
 </style>

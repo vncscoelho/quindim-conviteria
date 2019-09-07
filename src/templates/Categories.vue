@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <SiteHeader class="internal"/>
+    <SiteHeader internal/>
     <section class="internal__header">
       <span>{{$page.categories.type}}</span>
       <h2>{{$page.categories.name}}</h2>

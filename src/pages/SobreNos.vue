@@ -1,12 +1,13 @@
 <template>
   <Layout>
-    <SiteHeader class="internal about-us"/>
+    <SiteHeader internal class="about-us"/>
     <section class="section about-us__cta text-center">
       <span class="section-title">SOBRE NÓS</span>
       <h2 class="section-heading">Convites artesanais feitos com muito amor e cuidado.</h2>
     </section>
-    <section class="about-us__img text-center">
-      <g-image src="~/assets/img/desi.png"/>
+    <section class="text-center about-us__img-holder">
+      <Ornaments/>
+      <g-image class="about-us__img" src="~/assets/img/desi.png"/>
     </section>
     <section class="section about-us__story">
       <div class="container">
@@ -35,13 +36,15 @@
 </template>
 
 <script>
+import Ornaments from "../components/Ornaments";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
 export default {
   components: {
-    SiteFooter,
-    SiteHeader
+    Ornaments,
+    SiteHeader,
+    SiteFooter
   }
 };
 </script>
@@ -49,15 +52,16 @@ export default {
 <style lang="less">
 .about-us {
   &__cta {
-    background: @lightyellow;
+    background: @lightpink;
+  }
+  &__img-holder {
+    position: relative;
   }
   &__img {
-    img {
-      width: 100%;
-    }
+    width: 100%;
   }
   &__story {
-    background: @lightpink;
+    background: @lightyellow;
     h3 {
       font-family: @headfont;
       font-size: 3em;

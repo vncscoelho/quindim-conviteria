@@ -1,6 +1,6 @@
 <template>
   <Layout class="product-internal">
-    <SiteHeader class="internal"/>
+    <SiteHeader internal/>
     <section class="product-internal__wrapper container-fluid">
       <div class="row">
         <ShopSidebar class="col-sm-2 col-12"/>
@@ -14,7 +14,7 @@
                 :paginationPadding="0"
               >
                 <slide v-for="(image, index) in gallery" :key="index">
-                  <img :src="image">
+                  <g-image :src="image"/>
                 </slide>
               </carousel>
             </ClientOnly>

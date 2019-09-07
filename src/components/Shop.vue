@@ -11,17 +11,17 @@
           <transition name="fade" appear :key="product.id">
             <div class="product col-4" :key="product.id">
               <a :href="`/produto/${product.uid}/${url(product.name)}`" class="product__thumbnail">
-                <img
+                <g-image
                   v-if="product.gallery.length > 0"
                   :src="product.gallery[0]"
                   :alt="`${product.name}`"
-                >
-                <img
+                />
+                <g-image
                   v-if="product.gallery.length > 1"
                   :src="product.gallery[1]"
                   :alt="`${product.name}`"
                   class="product__thumbnail--hover"
-                >
+                />
               </a>
               <span
                 class="product__collection"

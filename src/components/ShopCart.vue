@@ -117,7 +117,6 @@ export default {
     this.cart = localStorage.getItem("cart")
       ? JSON.parse(localStorage.getItem("cart"))
       : {};
-    console.warn(JSON.parse(localStorage.getItem("cart")));
     this.$root.$on("addToCart", product => {
       this.$set(this.cart, product.uid, product);
       localStorage.setItem("cart", JSON.stringify(this.cart));
