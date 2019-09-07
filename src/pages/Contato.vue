@@ -11,11 +11,13 @@
       <div class="container">
         <form
           name="contact-form"
+          action="contact-form"
           class="col-12 col-sm-8"
           ref="form"
           @submit.prevent="sendMail"
           method="POST"
           data-netlify="true"
+          netlify-honeypot="_honey"
         >
           <label>
             <span>Seu e-mail</span>
@@ -38,7 +40,6 @@
             <textarea type="email" name="mensagem"></textarea>
           </label>
           <input type="text" name="_honey" style="display:none">
-          <input type="hidden" name="_captcha" value="false">
           <button class="button button-primary">Enviar</button>
           <span v-if="success" class="m-3 alert alert-success">E-mail enviado com sucesso!</span>
         </form>
@@ -78,7 +79,7 @@ export default {
   methods: {
     sendMail() {
       const form = this.$refs.form;
-      fetch(form.attributes.action, {
+      fetch(form.attributes.action.value, {
         method: "POST",
         body: new FormData(this.$refs.form)
       }).then(({ status }) => {
