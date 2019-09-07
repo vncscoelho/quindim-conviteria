@@ -11,7 +11,7 @@
       <div class="container">
         <form
           name="contact-form"
-          action="contact-form"
+          action="/"
           class="col-12 col-sm-8"
           ref="form"
           @submit.prevent="sendMail"
