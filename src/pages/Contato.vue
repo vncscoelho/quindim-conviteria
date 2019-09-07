@@ -10,26 +10,29 @@
       <p class="section-title">ENVIE UMA MENSAGEM</p>
       <div class="container">
         <form
-          name="contact-form"
-          action="/"
+          name="Form de Contato"
           class="col-12 col-sm-8"
           ref="form"
           @submit.prevent="sendMail"
           method="POST"
           data-netlify="true"
-          netlify-honeypot="_honey"
+          netlify-honeypot="isSpam"
         >
           <label>
+            <span>Seu Nome</span>
+            <input type="text" name="Nome" v-model="form['Nome']">
+          </label>
+          <label>
             <span>Seu e-mail</span>
-            <input type="email" name="Email">
+            <input type="email" name="Email" v-model="form['Email']">
           </label>
           <label>
             <span>Sua cidade</span>
-            <input type="text" name="Cidade">
+            <input type="text" name="Cidade" v-model="form['Cidade']">
           </label>
           <label>
             <span>Assunto</span>
-            <select name="Assunto">
+            <select name="Assunto" v-model="form['Assunto']">
               <option value="Dúvida" selected>Dúvida</option>
               <option value="Entrega">Entrega</option>
               <option value="Sugestão">Sugestão</option>
@@ -37,9 +40,10 @@
           </label>
           <label>
             <span>Mensagem</span>
-            <textarea type="email" name="mensagem"></textarea>
+            <textarea type="email" name="Mensagem" v-model="form['Mensagem']"></textarea>
           </label>
-          <input type="text" name="_honey" style="display:none">
+          <input type="text" name="isSpam" style="display:none" v-model="form['isSpam']">
+          <input name="form-name" value="Form de Contato" type="hidden">
           <button class="button button-primary">Enviar</button>
           <span v-if="success" class="m-3 alert alert-success">E-mail enviado com sucesso!</span>
         </form>
@@ -73,18 +77,34 @@ export default {
   },
   data() {
     return {
-      success: false
+      success: false,
+      form: {
+        Nome: "",
+        Email: "",
+        Cidade: "",
+        Assunto: "Dúvida",
+        Mensagem: "",
+        isSpam: ""
+      }
     };
   },
   methods: {
     sendMail() {
       const form = this.$refs.form;
-      fetch(form.attributes.action.value, {
+      fetch("/", {
         method: "POST",
-        body: new FormData(this.$refs.form)
+        body: this.encode({ "form-name": "Form de Contato", ...this.form }),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }).then(({ status }) => {
         if (status === 200) this.success = true;
       });
+    },
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
     }
   }
 };
