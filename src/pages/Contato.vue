@@ -9,7 +9,14 @@
       <ornaments/>
       <p class="section-title">ENVIE UMA MENSAGEM</p>
       <div class="container">
-        <form class="col-12 col-sm-8" ref="form" @submit.prevent="sendMail" method="POST" data-netlify="true">
+        <form
+          name="contact-form"
+          class="col-12 col-sm-8"
+          ref="form"
+          @submit.prevent="sendMail"
+          method="POST"
+          data-netlify="true"
+        >
           <label>
             <span>Seu e-mail</span>
             <input type="email" name="Email">
@@ -56,7 +63,7 @@
 
 <script>
 import SiteHeader from "../components/SiteHeader";
-import Ornaments from "../components/Ornaments"
+import Ornaments from "../components/Ornaments";
 
 export default {
   components: {
@@ -70,7 +77,7 @@ export default {
   },
   methods: {
     sendMail() {
-      const form = this.$refs.form
+      const form = this.$refs.form;
       fetch(form.attributes.action, {
         method: "POST",
         body: new FormData(this.$refs.form)
