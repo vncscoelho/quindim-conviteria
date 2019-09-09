@@ -1,4 +1,5 @@
 ---
+uid: '1565446654'
 category: Casamentos
 name: Diagonal
 collection: Chuva de Arroz - Clássicos
@@ -15,7 +16,7 @@ base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
   - base_paper_type_option: Glossy (fotográfico)
-  - base_paper_type_option: Linho (texturizado) envelope
+  - base_paper_type_option: Linho (texturizado)
   - base_paper_type_option: Perolado
 envelope_paper_type:
   - envelope_paper_type_option: Offset (fosco)
@@ -44,6 +45,5 @@ gallery:
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566514241/Casamentos/Modelo_Diagonal_1_kd2y6x.jpg
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566514240/Casamentos/Modelo_Diagonal_2_ajoah1.jpg
-uid: '1565446654'
 ---
 
