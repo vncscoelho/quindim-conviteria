@@ -38,6 +38,6 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566594168/Formaturas/Horizontal_color_h4j5l8.jpg
   - >-
-    https://res.cloudinary.com/dkaanqsro/image/upload/v1566594168/Formaturas/Horizontal_color_2_wbo2dj.jpg
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1568137143/Formaturas/Horizontal_color_2_eh6tap.jpg
 ---
 
