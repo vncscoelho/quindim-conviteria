@@ -1,6 +1,7 @@
 ---
+uid: '15667703670562'
 category: Infantil
-name: Letras 3D básicas
+name: Letra 3D básica
 base_value: 8.5
 discount: 0
 is_combo: false
@@ -9,9 +10,9 @@ base_paper_type: []
 configurables: []
 extras: []
 gallery:
-    - >-
-        https://res.cloudinary.com/dkaanqsro/image/upload/v1566773984/Papelaria%20infantil/Letra_3D_b%C3%A1sica_2_t3ufhv.jpg
-    - >-
-        https://res.cloudinary.com/dkaanqsro/image/upload/v1566773985/Papelaria%20infantil/Letra_3D_b%C3%A1sica_fdx2jm.jpg
-uid: '15667703670562'
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1566773984/Papelaria%20infantil/Letra_3D_b%C3%A1sica_2_t3ufhv.jpg
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1566773985/Papelaria%20infantil/Letra_3D_b%C3%A1sica_fdx2jm.jpg
 ---
+
