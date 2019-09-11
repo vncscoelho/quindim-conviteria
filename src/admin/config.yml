@@ -53,13 +53,14 @@ collections:
             name: base_value
             widget: number
             valueType: float
+            default: null
             required: false
 
           - label: 'Desconto (em %)'
             name: discount
             widget: number
             valueType: float
-            default: null
+            default: 0
             required: false
 
           - label: 'Combo'
@@ -88,6 +89,7 @@ collections:
                   name: value
                   widget: number
                   valueType: float
+                  default: null
                   required: false
 
           - label: 'Opções de Envelope'
