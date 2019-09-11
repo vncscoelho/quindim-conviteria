@@ -30,6 +30,12 @@ collections:
             timeFormat: H:mm:ss
             required: true
 
+          - label: Ordem
+            hint: Quanto maior o número, primeiro na listagem irá aparecer.
+            name: order
+            widget: float
+            default: 0
+
           - label: Categoria
             name: category
             widget: relation
@@ -189,6 +195,12 @@ collections:
           - label: Nome
             name: name
             widget: string
+
+          - label: Ordem
+            hint: Quanto maior o número, primeiro na listagem irá aparecer.
+            name: order
+            widget: float
+            default: 0
 
           - label: Tipo
             name: type

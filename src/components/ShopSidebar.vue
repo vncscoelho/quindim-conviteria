@@ -19,7 +19,7 @@
 
 <static-query>
 query Categories {
-  categories: allCategories(sort: [{by: "type", order: ASC}, {by: "id", order: DESC}]) {
+  categories: allCategories(sort: [{by: "order", order: DESC}, {by: "id", order: DESC}, {by: "type", order: ASC}]) {
     edges {
         node {
             id
