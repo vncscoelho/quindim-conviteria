@@ -9,27 +9,23 @@
         <SiteHeader/>
         <div class="banner__cta">
           <h1 class="banner__cta-text">
-            Nós somos uma conviteria especializada
-            <br>em convites e papelaria criativa para
-            <br>casamentos, formaturas e festas.
+            Convites e papelaria para
+            <br>celebrações doces e criativas.
           </h1>
-          <a href class="button button-primary">Veja como funciona</a>
+          <a href="#como-funciona" class="button button-primary">Como funciona</a>
         </div>
       </div>
     </section>
 
-    <section class="text-center section">
+    <section class="text-center section" id="como-funciona">
       <ornaments/>
       <div class="container">
         <span class="section-title">COMO FUNCIONA</span>
         <h2 class="section-heading">
-          Entendemos que este é um dia muito
-          <br>importante em sua vida.
+          Vamos criar uma experiência personalizada
+          <br>que complemente você e sua história?
         </h2>
-        <p class="section-text">
-          Então queremos te conhecer e criar uma experiência personalizada
-          <br>que complemente você e sua história.
-        </p>
+
         <ul class="section-list">
           <li class="col-xs-12 col-md-6">
             <span class="icon"></span>
@@ -40,7 +36,10 @@
           </li>
           <li class="col-xs-12 col-md-6">
             <span class="icon two"></span>
-            <p>A arte exposta aqui é apenas para mostruário, desenvolveremos uma arte personalizada para seu convite. Saiba mais aqui.</p>
+            <p>
+              A arte exposta nos modelos encontrados aqui é apenas para mostruário, a criação da
+              identidade visual do seu convite é desenvolvida de forma personalizada.
+            </p>
           </li>
           <li class="col-xs-12 col-md-6">
             <span class="icon three"></span>
@@ -48,7 +47,10 @@
           </li>
           <li class="col-xs-12 col-md-6">
             <span class="icon four"></span>
-            <p>Receba sua encomenda em sua casa, feita com muito afeto e dedicação, em todo o Brasil.</p>
+            <p>
+              Receba sua encomenda em casa, em qualquer lugar do Brasil, feita com todo o afeto e
+              dedicação.
+            </p>
           </li>
         </ul>
       </div>
@@ -58,7 +60,7 @@
       <div class="container">
         <div class="text-center">
           <span class="section-title">DEPOIMENTOS</span>
-          <h2 class="section-heading">Essas são as histórias de nossos clientes.</h2>
+          <h2 class="section-heading">Histórias de clientes que passaram por aqui.</h2>
           <p class="section-text">Queremos a sua aqui também!</p>
         </div>
         <div class="row justify-content-between text-center">
@@ -70,9 +72,6 @@
             <div :class="{ 'col-6' : key === 2}">
               <p class="testimonials__text">{{testimonial.testimonial}}</p>
               <div class="testimonials__author">
-                <div class="testimonials__author-photo">
-                  <img :src="testimonial.photo" alt>
-                </div>
                 <p class="testimonials__author-name">{{testimonial.author}}</p>
               </div>
             </div>
@@ -80,7 +79,7 @@
         </div>
 
         <div class="text-center testimonials__cta">
-          <button class="button button-primary">Veja todos os depoimentos</button>
+          <a href="/sobre#depoimentos" class="button button-primary">Veja todos os depoimentos</a>
         </div>
       </div>
     </section>

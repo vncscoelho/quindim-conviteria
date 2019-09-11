@@ -6,7 +6,7 @@
           Ainda não achou o convite perfeito
           <br>para esse dia tão importante na sua vida?
         </p>
-        <p>Entre em contato e iremos te ajudar!</p>
+        <p>Entre em contato!</p>
 
         <p class="footer__contacts">
           <a href="mailto:contato@quindimconviteria.com.br">contato@quindimconviteria.com.br</a>

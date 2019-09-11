@@ -7,60 +7,95 @@
 
     <transition name="cart">
       <aside class="cart__expanded col-12 col-sm-12 col-md-6" v-if="show">
-        <div class="cart__wrapper">
-          <header class="cart__header">
-            <h3>Carrinho</h3>
-            <a href="#" @click.prevent="toggleCart">
-              <span>x</span> Fechar
-            </a>
-          </header>
-          <table class="cart__list" v-if="hasProducts">
-            <thead>
-              <tr>
-                <th class="cart__list-model">Modelo</th>
-                <th class="cart__list-quantity">Quantidade</th>
-                <th class="cart__list-price">Preço</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(product, key) in cart" :key="key" class="cart__list-item">
-                <td>
-                  <p class="cart__list-item-title">{{product.name}}</p>
-                  <p>
-                    <span
-                      class="cart__list-description"
-                      v-for="(cfg, index) in product.configurables"
-                      :key="index"
-                      v-html="cfgFormmater(cfg, index)"
-                    />
-                  </p>
-                </td>
-                <td class="cart__list-quantity">
-                  <input type="number" v-model="product.quantity" class="input-quantity" min="1">
-                  <div>
-                    <a href="#" @click.prevent="removeItem(product.uid)" class="remove-item">Remover</a>
-                  </div>
-                </td>
-                <td
-                  class="cart__list-price"
-                >R$ {{(product.finalPrice * (product.quantity > 0 ? product.quantity : 1)) | money(true)}}</td>
-              </tr>
-            </tbody>
-          </table>
-          <p v-else>Não há itens no carrinho.</p>
-        </div>
-        <div class="cart__submit" v-if="hasProducts">
-          <p
-            class="cart__submit-text"
-          >Digite seu e-mail ou telefone e escolha como deseja continuar com o seu pedido.</p>
-          <div class="input-group">
-            <input type="text" placeholder="E-mail ou telefone">
+        <template v-if="!submitting">
+          <div class="cart__wrapper">
+            <header class="cart__header">
+              <h3>Carrinho</h3>
+              <a href="#" @click.prevent="toggleCart">
+                <span>x</span> Fechar
+              </a>
+            </header>
+            <table class="cart__list" v-if="hasProducts">
+              <thead>
+                <tr>
+                  <th class="cart__list-model">Modelo</th>
+                  <th class="cart__list-quantity">Quantidade</th>
+                  <th class="cart__list-price">Preço</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(product, key) in cart" :key="key" class="cart__list-item">
+                  <td>
+                    <p class="cart__list-item-title">{{product.name}}</p>
+                    <p>
+                      <span
+                        class="cart__list-description"
+                        v-for="(cfg, index) in product.configurables"
+                        :key="index"
+                        v-html="cfgFormmater(cfg, index)"
+                      />
+                    </p>
+                  </td>
+                  <td class="cart__list-quantity">
+                    <input type="number" v-model="product.quantity" class="input-quantity" min="1">
+                    <div>
+                      <a
+                        href="#"
+                        @click.prevent="removeItem(product.uid)"
+                        class="remove-item"
+                      >Remover</a>
+                    </div>
+                  </td>
+                  <td
+                    class="cart__list-price"
+                  >R$ {{(product.finalPrice * (product.quantity > 0 ? product.quantity : 1)) | money(true)}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <p v-else>Não há itens no carrinho.</p>
           </div>
-          <div class="cart__submit-buttons">
-            <button class="button">Whatsapp</button>
-            <button class="button">E-mail</button>
+          <a
+            href="#"
+            class="cart__submit"
+            v-if="hasProducts"
+            @click.prevent="submitting = true"
+          >Finalizar pedido</a>
+        </template>
+        <template v-else>
+          <div class="cart__wrapper submitting">
+            <header class="cart__header">
+              <h3>Insira seus dados</h3>
+              <a href="#" @click.prevent="submitting = false">
+                <span><</span> Voltar
+              </a>
+            </header>
+            <p>Preencha seus dados de acordo e como deseja dar continuidade ao seu pedido: via Whatsapp ou E-mail. Escolha o que preferir!</p>
+            <form action class="form">
+              <label>
+                <span>Seu Nome</span>
+                <input type="text" name="Nome" v-model="form['Nome']">
+              </label>
+              <label>
+                <span>Seu e-mail</span>
+                <input type="email" name="Email" v-model="form['Email']">
+              </label>
+              <label>
+                <span>Seu telefone</span>
+                <input type="tel" name="Telefone" v-model="form['Telefone']">
+              </label>
+              <div class="submit-type">
+                <label>Desejo continuar o pedido via:</label>
+                <label>
+                  <input type="radio" name="submitType" v-model="submitType" :value="true"> E-mail
+                </label>
+                <label>
+                  <input type="radio" name="submitType" v-model="submitType" :value="false"> Whatsapp
+                </label>
+              </div>
+            </form>
           </div>
-        </div>
+          <a href="#" class="cart__submit" @click.prevent="submitOrder">Enviar</a>
+        </template>
       </aside>
     </transition>
   </div>
@@ -71,7 +106,14 @@ export default {
   data() {
     return {
       cart: {},
-      show: false
+      show: false,
+      submitting: false,
+      form: {
+        Nome: "",
+        Email: "",
+        Telefone: ""
+      },
+      submitType: true
     };
   },
   computed: {
@@ -102,6 +144,44 @@ export default {
     },
     toggleCart() {
       this.show = !this.show;
+    },
+    submitOrder() {
+      const order = Object.keys(this.cart).map(index => {
+        const item = this.cart[index];
+        const configurables = Object.keys(item.configurables)
+          .map(key => {
+            const cfg = item.configurables[key];
+            if (key !== "extras") {
+              console.log(cfg);
+              const title =
+                key === "base_paper_type"
+                  ? "Base"
+                  : key === "envelope_paper_type"
+                  ? "Envelope"
+                  : key;
+              const option =
+                key === "base_paper_type"
+                  ? "base_paper_type_option"
+                  : key === "envelope_paper_type"
+                  ? "envelope_paper_type_option"
+                  : "configurable_list_option";
+              return `* ${title}: ${cfg[option]} - R$ ${cfg.price}`;
+            }
+          })
+          .join("\n");
+        const extras = item.configurables.extras
+          .map(extra => `+ ${extra.extra_option}: ${extra.price}`)
+          .join("\n");
+        return `
+        [${item.category}] ${item.name}\n
+        ${configurables}\n
+        ${extras}\n
+        Qtd: ${item.quantity}\n
+        Total: ${item.finalPrice}\n
+        \n----------\n
+        `;
+      });
+      console.log(order);
     }
   },
   watch: {
@@ -229,25 +309,16 @@ export default {
 
   &__submit {
     padding: 40px;
+    text-align: center;
+    color: @brown;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background 150ms linear;
 
-    input {
-      width: 100%;
-      border-color: @lightbrown;
-    }
-
-    &-buttons {
-      display: flex;
-      width: 100%;
-
-      .button {
-        width: 100%;
-        margin-right: 8px;
-        background: @lightpink;
-
-        &:last-of-type {
-          margin: 0;
-        }
-      }
+    &:hover {
+      background: @lightpink;
+      color: @darkbrown;
+      text-decoration: none;
     }
   }
 
@@ -282,6 +353,19 @@ export default {
 .cart-leave-to {
   transform: translateX(1000px);
   opacity: 0;
+}
+
+.submitting {
+  background: @lightyellow;
+  .submit-type {
+    input {
+      display: inline-block;
+      width: auto;
+    }
+    label {
+      margin-top: 8px;
+    }
+  }
 }
 </style>
 

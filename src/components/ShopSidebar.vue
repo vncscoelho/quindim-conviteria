@@ -7,6 +7,7 @@
           <router-link :to="`/categoria/${category.name}` | url" v-if="!hideLinks">{{category.name}}</router-link>
           <button
             type="button"
+            class="shop-sidebar__button"
             @click="$emit('changeCategory', category.name)"
             v-else
           >{{category.name}}</button>
@@ -72,6 +73,13 @@ export default {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: @darkpink;
+  }
+
+  &__button {
+    border: 0;
+    background: none;
+    padding: 0;
+    color: @brown;
   }
 
   &__categories {

@@ -111,11 +111,13 @@ export default {
 
   &__thumbnail {
     margin-bottom: 8px;
-    display: block;
     border-radius: 3px;
     overflow: hidden;
     position: relative;
     max-height: 268px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       .product__thumbnail--hover {

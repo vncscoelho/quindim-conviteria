@@ -1,6 +1,7 @@
 <template>
   <transition name="fade" appear>
     <main>
+      <AlertBar/>
       <slot/>
       <SiteFooter/>
     </main>
@@ -17,15 +18,12 @@ query {
 
 <script>
 import SiteFooter from "../components/SiteFooter";
+import AlertBar from "../components/AlertBar";
+
 export default {
   components: {
-    SiteFooter
-  },
-  beforeCreate() {
-    console.log(new Date().getSeconds());
-  },
-  mounted() {
-    console.log(new Date().getSeconds());
+    SiteFooter,
+    AlertBar
   }
 };
 </script>
@@ -74,6 +72,27 @@ textarea,
 input {
   padding: 8px 12px;
   border: 2px solid @darkpink;
+}
+
+.form {
+  .section-title {
+    display: block;
+    text-align: center;
+  }
+  form {
+    margin: 0 auto;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+
+    input,
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 .button {
@@ -144,6 +163,7 @@ input {
 
 .testimonials {
   background: @lightyellow;
+  cursor: grab;
   &__cta {
     margin-top: 80px;
   }
@@ -167,12 +187,13 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: @darkpink;
 
     &-name {
       margin: 0;
       font-family: @headfont;
       font-style: italic;
-      font-size: 1.25em;
+      font-size: 1.5em;
     }
     &-photo {
       width: 45px;

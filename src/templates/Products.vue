@@ -3,7 +3,7 @@
     <SiteHeader internal/>
     <section class="product-internal__wrapper container-fluid">
       <div class="row">
-        <ShopSidebar class="col-sm-2 col-12"/>
+        <ShopSidebar class="col-sm-2 col-12" :hideLinks="false"/>
         <div class="col-sm-10 col-12 row" v-if="product">
           <div class="product-internal__gallery col-sm-7 col-12">
             <ClientOnly>

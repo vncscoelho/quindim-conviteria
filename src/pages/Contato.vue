@@ -45,7 +45,6 @@
           <input type="text" name="isSpam" style="display:none" v-model="form['isSpam']">
           <input name="form-name" value="Form de Contato" type="hidden">
           <button class="button button-primary">Enviar</button>
-          <span v-if="success" class="m-3 alert alert-success">E-mail enviado com sucesso!</span>
         </form>
       </div>
     </section>
@@ -77,7 +76,6 @@ export default {
   },
   data() {
     return {
-      success: false,
       form: {
         Nome: "",
         Email: "",
@@ -96,7 +94,11 @@ export default {
         body: this.encode({ "form-name": "Form de Contato", ...this.form }),
         headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }).then(({ status }) => {
-        if (status === 200) this.success = true;
+        if (status === 200)
+          this.$root.$emit("alert", {
+            type: "success",
+            message: "Mensagem enviada com sucesso."
+          });
       });
     },
     encode(data) {
@@ -111,26 +113,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.form {
-  .section-title {
-    display: block;
-    text-align: center;
-  }
-  form {
-    margin: 0 auto;
-  }
-  label {
-    display: block;
-
-    input,
-    select,
-    textarea {
-      display: block;
-      width: 100%;
-    }
-  }
-}
-
 .bottom-contacts {
   display: flex;
   background: @darkpink;
