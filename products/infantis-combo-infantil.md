@@ -1,5 +1,7 @@
 ---
-category: Infantis
+uid: '1566595240091'
+order: 0
+category: Combos
 name: Combo infantil
 base_value: 0
 discount: 10
@@ -10,7 +12,7 @@ envelope_paper_type: []
 configurables: []
 extras: []
 gallery:
-    - >-
-        https://res.cloudinary.com/dkaanqsro/image/upload/v1566768698/Combo_infantil_iifp7s.jpg
-uid: '1566595240091'
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1566768698/Combo_infantil_iifp7s.jpg
 ---
+
