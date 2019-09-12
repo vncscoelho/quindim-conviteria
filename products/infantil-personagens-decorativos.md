@@ -1,5 +1,6 @@
 ---
 uid: '1567635708959'
+order: 11
 category: Infantil
 name: Personagens decorativos
 base_value: 8.5
