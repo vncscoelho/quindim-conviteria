@@ -3,7 +3,11 @@
     <section class="shop-sidebar__list" v-for="type in Object.keys(categories)" :key="type">
       <h3 class="shop-sidebar__title">{{type}}</h3>
       <ul class="shop-sidebar__categories">
-        <li v-for="category in categories[type]" :key="category.id">
+        <li
+          :class="{'active': category.name === currentCategory}"
+          v-for="category in categories[type]"
+          :key="category.id"
+        >
           <router-link :to="`/categoria/${category.name}` | url" v-if="!hideLinks">{{category.name}}</router-link>
           <button
             type="button"
@@ -36,7 +40,11 @@ export default {
   props: {
     hideLinks: {
       type: Boolean,
-      default: true
+      default: false
+    },
+    currentCategory: {
+      type: String,
+      default: "Combos"
     }
   },
   computed: {
@@ -92,7 +100,20 @@ export default {
       a {
         color: @brown;
       }
+
+      &.active a {
+        font-weight: 800;
+        font-size: 1.2em;
+        color: @darkbrown;
+      }
     }
+  }
+
+  @media @sm {
+    align-items: flex-start;
+    flex-flow: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
   }
 }
 </style>

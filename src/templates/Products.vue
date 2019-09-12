@@ -3,7 +3,7 @@
     <SiteHeader internal/>
     <section class="product-internal__wrapper container-fluid">
       <div class="row">
-        <ShopSidebar class="col-sm-2 col-12" :hideLinks="false"/>
+        <ShopSidebar class="col-sm-2 col-12" currentCategory="null"/>
         <div class="col-sm-10 col-12 row" v-if="product">
           <div class="product-internal__gallery col-sm-7 col-12">
             <ClientOnly>
@@ -331,6 +331,7 @@ export default {
 
   &__description {
     margin-top: 12px;
+    margin-bottom: 40px;
 
     strong {
       display: block;
@@ -350,6 +351,23 @@ export default {
     .VueCarousel-dot.VueCarousel-dot--active {
       border: #ebbda8 solid 8px;
       border-radius: 99px;
+    }
+  }
+
+  @media @sm {
+    &__wrapper {
+      padding-bottom: 0;
+    }
+
+    .row {
+      justify-content: center;
+    }
+
+    .shop-sidebar {
+      background: @lightyellow;
+      order: 3;
+      padding: 40px;
+      margin: 0;
     }
   }
 }

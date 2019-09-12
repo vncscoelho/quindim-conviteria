@@ -1,5 +1,10 @@
 <template>
   <header :class="['header', { 'internal': internal }]">
+    <button class="header__menu--mobile-btn" @click="toggleMenu">
+      <span class="dash"></span>
+      <span class="dash"></span>
+      <span class="dash"></span>
+    </button>
     <a href="/" :class="['logo', { 'logo--inverse': internal }]">
       <svg
         version="1.1"
@@ -164,6 +169,20 @@
       <a href="/contato">Contato</a>
     </nav>
     <ShopCart/>
+    <transition name="header__menu--mobile-transition">
+      <div class="header__menu--mobile" v-if="mobileMenu">
+        <a href="#" class="btn-close" @click.prevent="toggleMenu">
+          <span>x</span> Fechar
+        </a>
+        <nav class="header__menu--mobile-nav">
+          <a href="/">Início</a>
+          <a href="/categoria/casamentos">Catálogo</a>
+          <a href="/sobre-nos">Sobre nós</a>
+          <a href="/como-funciona">Como funciona</a>
+          <a href="/contato">Contato</a>
+        </nav>
+      </div>
+    </transition>
   </header>
 </template>
 
@@ -178,6 +197,16 @@ export default {
     internal: {
       type: Boolean,
       default: false
+    }
+  },
+  data() {
+    return {
+      mobileMenu: false
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.mobileMenu = !this.mobileMenu;
     }
   }
 };
@@ -197,9 +226,14 @@ export default {
   display: flex;
   align-items: center;
   font-family: "Poppins";
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 4vh 8vw;
 
   &.internal {
-    padding: 4vh 8vw;
+    position: relative;
 
     .header__menu a {
       color: @darkbrown;
@@ -217,6 +251,110 @@ export default {
       &:last-of-type {
         margin: 0;
       }
+    }
+  }
+
+  &__menu--mobile {
+    display: none;
+    padding: 40px;
+
+    &-btn {
+      display: none;
+    }
+
+    &-nav {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 2.2em;
+
+      a {
+        margin-bottom: 20px;
+      }
+    }
+
+    .btn-close {
+      float: right;
+
+      span {
+        background: @lightbrown;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 99px;
+      }
+    }
+
+    @media @sm {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: @brown;
+
+      a {
+        color: @pink;
+      }
+
+      &-btn {
+        display: block;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 99px;
+        width: 35px;
+        height: 35px;
+        background-color: #ebbda8;
+        color: #fff;
+        border: 0;
+        display: inline-block;
+
+        .dash {
+          width: 20px;
+          height: 2px;
+          background: #fff;
+          border-radius: 3px;
+          display: block;
+          margin: 4px auto;
+        }
+      }
+    }
+
+    &-transition-enter-active {
+      transition: all 0.3s ease;
+    }
+    &-transition-leave-active {
+      transition: all 0.3s ease;
+    }
+
+    &-transition-enter,
+    &-transition-leave-to {
+      transform: translateX(-1000px);
+      opacity: 0;
+    }
+  }
+
+  @media @sm {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 15;
+    background: #fff;
+
+    .logo {
+      width: 160px;
+      color: @darkbrown;
+    }
+
+    &__menu {
+      display: none;
     }
   }
 }

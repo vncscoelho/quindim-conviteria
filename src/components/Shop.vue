@@ -1,15 +1,16 @@
 <template>
-  <div class="shop container_fluid">
-    <div class="row col-12">
+  <div class="shop container-fluid">
+    <div class="shop__wrapper row">
       <ShopSidebar
-        class="col-12 col-sm-3"
+        class="col-12 col-lg-3"
         @changeCategory="$emit('changeCategory', $event)"
         :hideLinks="onHome"
+        :currentCategory="currentCategory"
       />
-      <div class="col-12 col-sm-9 row">
+      <div class="col-12 col-lg-9 row">
         <template v-for="product in products">
           <transition name="fade" appear :key="product.id">
-            <div class="product col-4" :key="product.id">
+            <div class="product col-6 col-lg-4" :key="product.id">
               <a :href="`/produto/${product.uid}/${url(product.name)}`" class="product__thumbnail">
                 <g-image
                   v-if="product.gallery.length > 0"
@@ -78,6 +79,10 @@ export default {
     onHome: {
       type: Boolean,
       default: false
+    },
+    currentCategory: {
+      type: String,
+      default: "Combos"
     }
   },
   computed: {
@@ -101,11 +106,6 @@ export default {
 </script>
 
 <style lang="less">
-.shop-sidebar {
-  position: sticky;
-  top: 24px;
-}
-
 .product {
   margin-bottom: 20px;
 
@@ -147,6 +147,27 @@ export default {
   &__thumbnail {
     img {
       width: 100%;
+    }
+  }
+}
+
+.shop {
+  @media @sm {
+    padding-bottom: 0;
+
+    &__thumbnail {
+      max-height: none;
+    }
+
+    &__wrapper {
+      justify-content: center;
+    }
+
+    .shop-sidebar {
+      background: @lightyellow;
+      order: 3;
+      padding: 40px;
+      margin: 0;
     }
   }
 }

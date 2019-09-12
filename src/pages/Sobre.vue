@@ -25,7 +25,7 @@
 
             <p>Sejam bem-vinda ou bem-vindo à essa experiência!</p>
           </div>
-          <div class="col-6">
+          <div class="col-12 col-lg-6">
             <g-image src="~/assets/img/desi2.jpg"/>
           </div>
         </div>

@@ -47,6 +47,12 @@ img {
   max-width: 100%;
 }
 
+li,
+p {
+  position: relative;
+  z-index: 2;
+}
+
 .icon {
   background: url("../assets/img/list_icons.png") no-repeat;
   background-position: 0 0;
@@ -128,12 +134,16 @@ input {
   &-title {
     letter-spacing: 1px;
     color: @darkpink;
+    z-index: 2;
+    position: relative;
   }
 
   &-heading {
     font-family: @headfont;
     font-size: 2em;
     color: @darkbrown;
+    z-index: 2;
+    position: relative;
   }
 
   &-list {
@@ -182,6 +192,13 @@ input {
   }
   &__item {
     margin-top: 60px;
+
+    @media @sm {
+      &.row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
   }
   &__author {
     display: flex;

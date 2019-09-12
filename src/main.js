@@ -25,6 +25,6 @@ export default function(Vue, { router, head, isClient }) {
     head.link.push({
         rel: 'stylesheet',
         href:
-            'https://fonts.googleapis.com/css?family=Belleza:400|Poppins:400,600&display=swap'
+            'https://fonts.googleapis.com/css?family=Belleza:400,800|Poppins:400,600&display=swap'
     });
 }

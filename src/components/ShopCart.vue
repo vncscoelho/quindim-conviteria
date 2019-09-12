@@ -1,8 +1,8 @@
 <template>
   <div class="cart">
-    <div class="cart__counter" @click="toggleCart">
-      Carrinho
-      <span class="cart-counter">{{Object.keys(cart).length}}</span>
+    <div class="cart__button" @click="toggleCart">
+      <span class="cart__label">Carrinho</span>
+      <span class="cart__counter">{{Object.keys(cart).length}}</span>
     </div>
 
     <transition name="cart">
@@ -322,13 +322,21 @@ export default {
     }
   }
 
-  &__counter {
+  &__button {
     flex-basis: 200px;
     text-align: right;
     color: @darkpink;
     cursor: pointer;
 
-    .cart-counter {
+    .cart__label {
+      padding-right: 4px;
+
+      @media @sm {
+        display: none;
+      }
+    }
+
+    .cart__counter {
       vertical-align: middle;
       text-align: center;
       line-height: 35px;

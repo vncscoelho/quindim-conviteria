@@ -6,7 +6,7 @@
       <h2>{{$page.categories.name}}</h2>
       <hr>
     </section>
-    <Shop :products="products"/>
+    <Shop :products="products" :currentCategory="$page.categories.name"/>
   </Layout>
 </template>
 
@@ -48,8 +48,10 @@ export default {
   }
 }
 
-.shop {
-  padding-top: 20px;
+@media @sm {
+  .shop {
+    padding-top: 0;
+  }
 }
 </style>
 
@@ -63,7 +65,7 @@ query Categories($page: Int, $id: String!, $name: String!) {
       type
   }
 
-  allProducts(perPage: 15, page: $page filter: { category: { eq: $name }}) @paginate {
+  allProducts(perPage: 15, page: $page, filter: { category: { eq: $name }}) @paginate {
       pageInfo {
         totalPages
         currentPage

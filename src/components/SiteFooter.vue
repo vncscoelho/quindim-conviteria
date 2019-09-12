@@ -1,7 +1,7 @@
 <template>
   <footer class="footer section container-fluid">
     <div class="row col-12">
-      <div class>
+      <div class="footer__content">
         <p class="footer__cta section-heading">
           Ainda não achou o convite perfeito
           <br>para esse dia tão importante na sua vida?
@@ -34,6 +34,7 @@
   padding: 80px 40px 40px 40px;
   background: #fff;
   color: @lightbrown;
+  position: relative;
 
   a {
     display: block;
@@ -59,6 +60,18 @@
 
   &__logo {
     text-align: center;
+
+    @media @sm {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    @media @sm {
+      text-align: center;
+    }
   }
 
   &__sitemap {
