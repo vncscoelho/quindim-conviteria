@@ -1,4 +1,6 @@
 ---
+uid: '1566775305995'
+order: 19
 category: Infantil
 name: Kit de caixas personalizadas - pequeno
 base_value: 135
@@ -8,6 +10,5 @@ description: "30 caixas | 3 modelos\r\n\nCaixas confeccionadas em papel offset (
 gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566773980/Papelaria%20infantil/Kit_caixinhas_personalizadas_pequeno_gque3n.jpg
-uid: '1566775305995'
 ---
 
