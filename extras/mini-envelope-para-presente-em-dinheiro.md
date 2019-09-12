@@ -1,5 +1,5 @@
 ---
 name: Mini envelope para presente em dinheiro
-value: 0.7
+value: 0.6
 ---
 
