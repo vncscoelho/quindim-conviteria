@@ -1,4 +1,6 @@
 ---
+uid: '671566770367062'
+order: 7
 category: Adulto
 name: Caixa convite individual
 base_value: 10
@@ -9,9 +11,9 @@ base_paper_type: []
 configurables: []
 extras: []
 gallery:
-    - >-
-        https://res.cloudinary.com/dkaanqsro/image/upload/v1566769972/Papelaria%20adulto/Caixa_convite_padrinhos_e_madrinhas_-_individual_1_nq3kwd.jpg
-    - >-
-        https://res.cloudinary.com/dkaanqsro/image/upload/v1566769972/Papelaria%20adulto/Caixa_convite_padrinhos_e_madrinhas_-_individual_2_qhz2ik.jpg
-uid: '671566770367062'
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1566769972/Papelaria%20adulto/Caixa_convite_padrinhos_e_madrinhas_-_individual_1_nq3kwd.jpg
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1566769972/Papelaria%20adulto/Caixa_convite_padrinhos_e_madrinhas_-_individual_2_qhz2ik.jpg
 ---
+
