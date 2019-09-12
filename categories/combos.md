@@ -1,6 +1,6 @@
 ---
 name: Combos
-order: 1
-type: Convites
+order: 3
+type: Papelaria
 ---
 
