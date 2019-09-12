@@ -1,6 +1,6 @@
 ---
 uid: '15266770367062'
-order: 9
+order: 10
 category: Infantil
 name: Cardápio prisma
 base_value: 5.5
