@@ -1,4 +1,6 @@
 ---
+uid: '1566775305995'
+order: 17
 category: Infantil
 name: Kit de caixas personalizadas - grande
 base_value: 358
@@ -17,6 +19,5 @@ description: >-
 gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566773978/Papelaria%20infantil/Kit_caixinhas_personalizadas_grande_xsnpqa.jpg
-uid: '1566775305995'
 ---
 
