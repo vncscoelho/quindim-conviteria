@@ -1,5 +1,5 @@
 ---
 name: Convite individual
-value: 0.8
+value: 0.7
 ---
 
