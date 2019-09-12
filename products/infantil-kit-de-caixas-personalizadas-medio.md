@@ -1,4 +1,6 @@
 ---
+uid: '1566775305995'
+order: 18
 category: Infantil
 name: Kit de caixas personalizadas - médio
 base_value: 225
@@ -8,6 +10,5 @@ description: "50 caixas | 5 modelos\n\nCaixas confeccionadas em papel offset (fo
 gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566773989/Papelaria%20infantil/Kit_caixinhas_personalizadas_m%C3%A9dio_dvy7wr.jpg
-uid: '1566775305995'
 ---
 
