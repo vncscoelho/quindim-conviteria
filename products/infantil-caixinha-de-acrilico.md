@@ -1,4 +1,6 @@
 ---
+uid: '1566775305995'
+order: 4
 category: Infantil
 name: Caixinha de acrílico
 base_value: 2.2
@@ -10,6 +12,5 @@ description: >-
 gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566773978/Papelaria%20infantil/Caixa_de_acr%C3%ADlico_bxzaln.jpg
-uid: '1566775305995'
 ---
 
