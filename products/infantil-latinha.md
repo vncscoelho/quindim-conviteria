@@ -1,4 +1,6 @@
 ---
+uid: '1566775305995'
+order: 3
 category: Infantil
 name: Latinha
 base_value: 1.9
@@ -10,6 +12,5 @@ description: >-
 gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566773983/Papelaria%20infantil/Latinha_gd1cr5.jpg
-uid: '1566775305995'
 ---
 
