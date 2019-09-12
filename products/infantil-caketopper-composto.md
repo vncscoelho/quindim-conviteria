@@ -1,4 +1,6 @@
 ---
+uid: '156637703367062'
+order: 15
 category: Infantil
 name: Caketopper composto
 base_value: 25
@@ -9,7 +11,7 @@ base_paper_type: []
 configurables: []
 extras: []
 gallery:
-    - >-
-        https://res.cloudinary.com/dkaanqsro/image/upload/v1566773978/Papelaria%20infantil/Topo_de_bolo_composto_wlhbye.jpg
-uid: '156637703367062'
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1566773978/Papelaria%20infantil/Topo_de_bolo_composto_wlhbye.jpg
 ---
+
