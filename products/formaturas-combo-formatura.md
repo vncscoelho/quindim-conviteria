@@ -5,7 +5,7 @@ category: Combos
 name: Combo formatura
 base_value: 0
 discount: 10
-is_combo: false
+is_combo: true
 description: >-
   Os combos foram desenvolvidos para facilitar a organização do  evento e
   oferecer um conjunto de possibilidades por um preço  mais acessível. Você pode
