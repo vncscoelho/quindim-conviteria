@@ -88,8 +88,9 @@
               >Adicionar ao carrinho</button>
               <p class="product-internal__description">
                 <strong>Descrição do produto:</strong>
-                {{product}}
-                <span>{{product.description.length > 0 ? product.description : product.content}}</span>
+                <span
+                  v-html="product.description.length > 0 ? product.description : product.content"
+                ></span>
               </p>
             </div>
           </div>
