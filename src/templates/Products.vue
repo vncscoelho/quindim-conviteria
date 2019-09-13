@@ -355,6 +355,7 @@ export default {
   &__description {
     margin-top: 12px;
     margin-bottom: 40px;
+    word-break: break-word;
 
     strong {
       display: block;
