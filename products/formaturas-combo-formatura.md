@@ -13,36 +13,29 @@ description: >-
   acordo com a  quantidade final.
 
 
-  \* O convite é peça obrigatória em todos os combos.
+  * O convite é peça obrigatória em todos os combos.
 
-
-  \* O desconto para o combo de formatura é aplicado para compras
-   com no mínimo 3 itens diferentes.
-
-  \* A produção e entrega de todos os itens é feita em uma única remessa.
-  Pedidos de um mesmo evento feitos em períodos distintos de forma avulsa não
-  configuram combo e não garantem desconto.
+  * O desconto para o combo de formatura é aplicado para compras
+     com no mínimo 3 itens diferentes.
+  * A produção e entrega de todos os itens é feita em uma única remessa. Pedidos
+  de um mesmo evento feitos em períodos distintos de forma avulsa não configuram
+  combo e não garantem desconto.
 
 
   Algumas sugestões de itens que podem ser combinados:
 
 
-  Convite
+  * Convite
 
+  * Cardápio
 
-  Cardápio
+  * Marcador de mesa
 
+  * Toppers
 
-  Marcador de mesa
+  * Tags
 
-
-  Toppers
-
-
-  Tags
-
-
-  Adesivos
+  * Adesivos
 base_paper_type: []
 envelope_paper_type: []
 configurables: []
