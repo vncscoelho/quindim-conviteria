@@ -24,8 +24,13 @@
             <span class="product-internal__collection">{{product.collection}}</span>
 
             <p class="product-internal__price">
-              <span class="product-internal__price-currency">R$</span>
-              <span class="product-internal__price-value">{{checkout.finalPrice | money(true)}}</span>
+              <template v-if="!product.is_combo">
+                <span class="product-internal__price-currency">R$</span>
+                <span class="product-internal__price-value">{{checkout.finalPrice | money(true)}}</span>
+              </template>
+              <template v-else>
+                <span class="product-internal__price-combo">Desconto de 10% no total</span>
+              </template>
             </p>
 
             <div class="product-internal__configuration">
@@ -83,7 +88,8 @@
               >Adicionar ao carrinho</button>
               <p class="product-internal__description">
                 <strong>Descrição do produto:</strong>
-                <span>{{product.description}}</span>
+                {{product}}
+                <span>{{product.description.length > 0 ? product.description : product.content}}</span>
               </p>
             </div>
           </div>
@@ -104,6 +110,7 @@ query Product($id: String!) {
       base_value
       discount
       is_combo
+      content
       description
       base_paper_type {
         base_paper_type_option
@@ -331,6 +338,11 @@ export default {
   &__price {
     &-value {
       font-size: 2em;
+    }
+
+    &-combo {
+      font-size: 1.5em;
+      color: @brown;
     }
 
     &-currency {

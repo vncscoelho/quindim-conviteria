@@ -113,6 +113,7 @@ query Data {
             collection
             base_value
             gallery
+            is_combo
         }
     }
   }

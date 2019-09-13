@@ -6,15 +6,6 @@ collection: Casa na Árvore - Rústicos
 base_value: 4.2
 discount: 0
 is_combo: false
-description: >-
-    Convite com semi-envelope tamanho 13cm x 18cm. Interior confeccionado em papel
-    180g e exterior em papel kraft 180g.
-
-
-
-
-    Versão da foto: Interior em papel offset e exterior em papel kraft com laço
-    chanel simples.
 base_paper_type:
     - base_paper_type_option: Offset (fosco)
       value: 0
@@ -46,3 +37,12 @@ gallery:
     - >-
         https://res.cloudinary.com/dkaanqsro/image/upload/v1566516617/Casamentos/Modelo_Diagonal_2_1_fgkvjc.jpg
 ---
+
+    Convite com semi-envelope tamanho 13cm x 18cm. Interior confeccionado em papel
+    180g e exterior em papel kraft 180g.
+
+
+
+
+    Versão da foto: Interior em papel offset e exterior em papel kraft com laço
+    chanel simples.

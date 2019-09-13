@@ -77,8 +77,8 @@ collections:
             required: false
 
           - label: Descrição
-            name: description
-            widget: markdown
+            name: body
+            widget: 'markdown'
             required: false
 
           - label: 'Opções de Base'

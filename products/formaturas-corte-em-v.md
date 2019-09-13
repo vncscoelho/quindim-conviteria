@@ -5,7 +5,6 @@ name: Corte em V
 base_value: 4.5
 discount: 0
 is_combo: false
-description: "Convite com semi-envelope tamanho grande (14cm x 19cm) ou tamanho pequeno (9cm x 14cm) confeccionado em papel 180g e exterior em papel kraft 180g.\r\n\n\r\n\nVersão da foto: Interior em papel glossy e exterior em papel kraft com laço chanel simples e tag com nome do convidado.\r\n\n\r\n\n\\*Para convites com foto recomenda-se o uso do papel glossy fotográfico no interior.\r\n\n\\*A aplicação de foto na arte fica mais adequada e com melhor proporção em convites horizontais"
 base_paper_type:
     - base_paper_type_option: Offset (fosco)
       value: 0
@@ -43,3 +42,5 @@ gallery:
     - >-
         https://res.cloudinary.com/dkaanqsro/image/upload/v1566593395/Formaturas/Corte_em_V_2_s8ywv5.jpg
 ---
+
+Convite com semi-envelope tamanho grande (14cm x 19cm) ou tamanho pequeno (9cm x 14cm) confeccionado em papel 180g e exterior em papel kraft 180g.\r\n\n\r\n\nVersão da foto: Interior em papel glossy e exterior em papel kraft com laço chanel simples e tag com nome do convidado.\r\n\n\r\n\n\\*Para convites com foto recomenda-se o uso do papel glossy fotográfico no interior.\r\n\n\\*A aplicação de foto na arte fica mais adequada e com melhor proporção em convites horizontais

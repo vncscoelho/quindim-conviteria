@@ -5,7 +5,6 @@ collection: Renda Encantada - Vintages
 base_value: 4.1
 discount: 0
 is_combo: false
-description: "Convite com semi-envelope de papel rendado tamanho 12,5cm x 19cm. Interior confeccionado em papel 180g e exterior em papel rendado.\r\n\n\r\n\nVersão da foto: Interior em papel offset e exterior em papel rendado com laço tradicional simples."
 base_paper_type:
     - base_paper_type_option: Offset (fosco)
       value: 0
@@ -30,3 +29,5 @@ gallery:
         https://res.cloudinary.com/dkaanqsro/image/upload/v1566517535/Casamentos/Modelo_Papel_rendado_q4jlzl.jpg
 uid: '156651234063'
 ---
+
+Convite com semi-envelope de papel rendado tamanho 12,5cm x 19cm. Interior confeccionado em papel 180g e exterior em papel rendado.\r\n\n\r\n\nVersão da foto: Interior em papel offset e exterior em papel rendado com laço tradicional simples.

@@ -24,12 +24,28 @@
                   class="product__thumbnail--hover"
                 />
               </a>
-              <span
-                class="product__collection"
-              >{{!product.is_combo ? product.collection : "Combo com desconto"}}</span>
-              <h3 class="product__name">
-                <a :href="`/produto/${product.uid}/${url(product.name)}`">{{product.name}}</a>
-              </h3>
+              <div class="product__info">
+                <div class="product__title">
+                  <span
+                    class="product__collection"
+                  >{{!product.is_combo ? product.collection : "Monte o kit com desconto"}}</span>
+                  <h3 class="product__name">
+                    <a :href="`/produto/${product.uid}/${url(product.name)}`">{{product.name}}</a>
+                  </h3>
+                </div>
+                <p class="product__price">
+                  <template v-if="!product.is_combo">
+                    <span>R$</span>
+                    {{product.base_value | money(true)}}
+                  </template>
+                  <template v-else>
+                    <span class="discount">
+                      10%
+                      <br>desc.
+                    </span>
+                  </template>
+                </p>
+              </div>
             </div>
           </transition>
         </template>
@@ -134,16 +150,47 @@ export default {
     }
   }
 
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    color: @brown;
+    font-size: 0.9em;
+    margin: 0;
+
+    span {
+      font-size: 0.75em;
+    }
+
+    .discount {
+      text-align: center;
+      display: inline-block;
+      background: @darkpink;
+      vertical-align: middle;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding-top: 15px;
+      line-height: 1;
+    }
+  }
+
   &__name {
-    font-size: 1.25em;
+    font-size: 1em;
+    font-weight: bold;
     a {
       color: @darkbrown;
     }
   }
+
   &__collection {
     font-family: @headfont;
     color: @lightbrown;
   }
+
   &__thumbnail {
     img {
       width: 100%;

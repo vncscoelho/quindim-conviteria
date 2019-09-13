@@ -8,14 +8,15 @@
   },
   "dependencies": {
     "@gridsome/source-filesystem": "^0.5.0",
-    "@gridsome/transformer-remark": "^0.3.2",
+    "@gridsome/transformer-remark": "^0.3.3",
     "bootstrap-css-only": "^4.3.1",
     "gridsome": "^0.6.7",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "netlify-cms": "^2.9.7",
-    "vue-carousel": "^0.18.0"
+    "vue-carousel": "^0.18.0",
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
     "style-resources-loader": "^1.2.1"

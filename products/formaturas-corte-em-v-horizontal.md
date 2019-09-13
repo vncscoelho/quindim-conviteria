@@ -5,21 +5,6 @@ name: Corte em V horizontal
 base_value: 4.5
 discount: 0
 is_combo: false
-description: >-
-    Convite com semi-envelope tamanho grande (13cm x 19cm) ou tamanho pequeno (9cm
-    x 14cm) confeccionado em papel 180g e exterior em papel kraft 180g.
-
-
-    Versão da foto: Interior em papel offset e exterior em papel kraft. Acabamento
-    com cordão de juta.
-
-
-    \*Para convites com foto recomenda-se o uso do papel glossy fotográfico no
-    interior.
-
-
-    \*A aplicação de foto na arte fica mais adequada e com melhor proporção em
-    convites horizontais
 base_paper_type:
     - base_paper_type_option: Offset (fosco)
       value: 0
@@ -60,3 +45,18 @@ gallery:
     - >-
         https://res.cloudinary.com/dkaanqsro/image/upload/v1566593529/Formaturas/Corte_em_V_horizontal_2_zhazyx.jpg
 ---
+
+    Convite com semi-envelope tamanho grande (13cm x 19cm) ou tamanho pequeno (9cm
+    x 14cm) confeccionado em papel 180g e exterior em papel kraft 180g.
+
+
+    Versão da foto: Interior em papel offset e exterior em papel kraft. Acabamento
+    com cordão de juta.
+
+
+    \*Para convites com foto recomenda-se o uso do papel glossy fotográfico no
+    interior.
+
+
+    \*A aplicação de foto na arte fica mais adequada e com melhor proporção em
+    convites horizontais

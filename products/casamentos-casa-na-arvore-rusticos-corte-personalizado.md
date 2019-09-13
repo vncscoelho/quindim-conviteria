@@ -5,7 +5,6 @@ collection: Casa na Árvore - Rústicos
 base_value: 6.7
 discount: 0
 is_combo: false
-description: "Convite com semi-envelope vazado tamanho grande (13cm x 18cm) ou pequeno (9cm x 14cm). Interior confeccionado em papel offset 240g e exterior em papel kraft 120g.\r\n\n\n\nVersão da foto: Interior em papel offset e exterior em papel kraft com laço tradicional expeço e tag com nome do convidado"
 base_paper_type:
     - base_paper_type_option: Offset (fosco)
       value: 0
@@ -40,3 +39,5 @@ gallery:
         https://res.cloudinary.com/dkaanqsro/image/upload/v1566517301/Casamentos/Modelo_Corte_Personalizado_2_hkovxc.jpg
 uid: '156652314823403'
 ---
+
+Convite com semi-envelope vazado tamanho grande (13cm x 18cm) ou pequeno (9cm x 14cm). Interior confeccionado em papel offset 240g e exterior em papel kraft 120g.\r\n\n\n\nVersão da foto: Interior em papel offset e exterior em papel kraft com laço tradicional expeço e tag com nome do convidado

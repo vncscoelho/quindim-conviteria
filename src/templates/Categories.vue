@@ -78,6 +78,8 @@ query Categories($page: Int, $id: String!, $name: String!) {
               gallery
               collection
               category
+              base_value
+              is_combo
           }
       }
   }
