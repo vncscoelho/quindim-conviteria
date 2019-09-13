@@ -175,11 +175,11 @@
           <span>x</span> Fechar
         </a>
         <nav class="header__menu--mobile-nav">
-          <a href="/">Início</a>
-          <a href="/categoria/casamentos">Catálogo</a>
-          <a href="/sobre-nos">Sobre nós</a>
-          <a href="/como-funciona">Como funciona</a>
-          <a href="/contato">Contato</a>
+          <a href="/" @click="toggleMenu">Início</a>
+          <a href="/categoria/casamentos" @click="toggleMenu">Catálogo</a>
+          <a href="/sobre-nos" @click="toggleMenu">Sobre nós</a>
+          <a href="/como-funciona" @click="toggleMenu">Como funciona</a>
+          <a href="/contato" @click="toggleMenu">Contato</a>
         </nav>
       </div>
     </transition>
