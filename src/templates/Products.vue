@@ -77,7 +77,10 @@
                   </label>
                 </template>
               </div>
-              <button class="button button-primary" @click="addToCart">Adicionar ao carrinho</button>
+              <button
+                class="product-internal__add-to-cart button button-primary"
+                @click="addToCart"
+              >Adicionar ao carrinho</button>
               <p class="product-internal__description">
                 <strong>Descrição do produto:</strong>
                 <span>{{product.description}}</span>
@@ -295,6 +298,13 @@ export default {
     }
   }
 
+  &__add-to-cart {
+    @media @sm {
+      width: 100%;
+      margin: 16px 0;
+    }
+  }
+
   &__name,
   &__price span {
     font-family: @headfont;
@@ -335,6 +345,7 @@ export default {
 
     strong {
       display: block;
+      margin-bottom: 0.5rem;
     }
   }
 
