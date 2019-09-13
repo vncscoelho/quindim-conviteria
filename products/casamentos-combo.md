@@ -7,8 +7,8 @@ base_value: 0
 discount: 10
 is_combo: true
 gallery:
-    - >-
-        https://res.cloudinary.com/dkaanqsro/image/upload/v1566768697/Combo_casamento_n6hyns.jpg
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1566768697/Combo_casamento_n6hyns.jpg
 ---
 
 Os combos foram desenvolvidos para facilitar a organização do evento e
