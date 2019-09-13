@@ -7,7 +7,9 @@ base_value: 0
 discount: 10
 is_combo: true
 description: >-
-  Os combos foram desenvolvidos para facilitar a organização do  evento e
+
+
+  Os **combos** foram desenvolvidos para facilitar a organização do  evento e
   oferecer um conjunto de possibilidades por um preço  mais acessível. Você pode
   compor o combo com os itens que  preferir e o desconto varia de 5% a 10% de
   acordo com a  quantidade final.
