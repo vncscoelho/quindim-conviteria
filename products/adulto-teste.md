@@ -6,17 +6,8 @@ name: teste
 discount: 0
 is_combo: false
 description: |-
-  **asdsad**
+  **TESTE!!!!**
 
-  **asda_asdsadasd_**
-
-  **_`asasdas`_**
-
-  ## **_`asdasd`_**
-
-  * asdasdasd
-  * adasd
-  * 
-  * asdasd
+  _TESTE_
 ---
 
