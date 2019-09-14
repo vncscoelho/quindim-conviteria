@@ -1,12 +1,27 @@
 <template>
   <div class="cart">
+    <form
+      name="Pedido"
+      class="form"
+      ref="form"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="isSpam"
+    >
+      <input type="hidden" name="Nome" value="form['Nome']">
+      <input type="hidden" name="Email" value="form['Email']">
+      <input type="hidden" name="Telefone" value="form['Telefone']">
+      <input type="hidden" name="Pedido" value="order">
+      <input name="form-name" value="Pedido" type="hidden">
+      <input type="text" name="isSpam" style="display:none" value="form['isSpam']">
+    </form>
     <div class="cart__button" @click="toggleCart">
       <span class="cart__label">Carrinho</span>
       <span class="cart__counter">{{Object.keys(cart).length}}</span>
     </div>
 
     <transition name="cart">
-      <aside class="cart__expanded col-12 col-sm-12 col-md-6" v-show="show">
+      <aside class="cart__expanded col-12 col-sm-12 col-md-6" v-if="show">
         <template v-if="!submitting">
           <div class="cart__wrapper">
             <header class="cart__header">
@@ -70,14 +85,7 @@
               </a>
             </header>
             <p>Preencha seus dados de acordo e como deseja dar continuidade ao seu pedido: via Whatsapp ou E-mail. Escolha o que preferir!</p>
-            <form
-              name="Pedido"
-              class="form"
-              ref="form"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="isSpam"
-            >
+            <div class="form">
               <label>
                 <span>Seu Nome</span>
                 <input type="text" name="Nome" v-model="form['Nome']">
@@ -99,9 +107,7 @@
                   <input type="radio" name="submitType" v-model="submitType" :value="false"> Whatsapp
                 </label>
               </div>
-              <input name="form-name" value="Pedido" type="hidden">
-              <input type="text" name="isSpam" style="display:none" v-model="form['isSpam']">
-            </form>
+            </div>
           </div>
           <a href="#" class="cart__submit" @click.prevent="submitOrder">Enviar</a>
         </template>
@@ -120,7 +126,8 @@ export default {
       form: {
         Nome: "",
         Email: "",
-        Telefone: ""
+        Telefone: "",
+        Pedido: ""
       },
       submitType: true
     };
@@ -202,6 +209,7 @@ export default {
         \n----------\n
         `;
       });
+      this.Pedido = order;
       if (this.submitType) return this.sendMail(order);
 
       return window.open(
