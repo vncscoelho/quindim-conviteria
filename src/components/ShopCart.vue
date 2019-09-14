@@ -6,7 +6,7 @@
     </div>
 
     <transition name="cart">
-      <aside class="cart__expanded col-12 col-sm-12 col-md-6" v-if="show">
+      <aside class="cart__expanded col-12 col-sm-12 col-md-6" v-show="show">
         <template v-if="!submitting">
           <div class="cart__wrapper">
             <header class="cart__header">
@@ -98,9 +98,9 @@
                 <label>
                   <input type="radio" name="submitType" v-model="submitType" :value="false"> Whatsapp
                 </label>
-                <input type="text" name="isSpam" style="display:none" v-model="form['isSpam']">
-                <input name="form-name" value="Pedido" type="hidden">
               </div>
+              <input name="form-name" value="Pedido" type="hidden">
+              <input type="text" name="isSpam" style="display:none" v-model="form['isSpam']">
             </form>
           </div>
           <a href="#" class="cart__submit" @click.prevent="submitOrder">Enviar</a>
