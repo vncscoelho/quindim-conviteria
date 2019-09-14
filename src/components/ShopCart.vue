@@ -214,7 +214,6 @@ export default {
         method: "POST",
         body: this.encode({
           "form-name": "Pedido",
-          Pedido: order,
           ...this.form
         }),
         headers: { "Content-Type": "application/x-www-form-urlencoded" }
