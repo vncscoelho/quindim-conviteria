@@ -166,11 +166,6 @@ input {
   }
 }
 
-.shop {
-  background: @lightpink;
-  padding: 80px 0;
-}
-
 .testimonials {
   background: @lightyellow;
   cursor: grab;

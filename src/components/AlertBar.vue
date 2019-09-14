@@ -29,7 +29,7 @@ export default {
 <style lang="less" scoped>
 .alert-bar {
   position: fixed;
-  z-index: 15;
+  z-index: 200;
   text-align: center;
   width: 100%;
   padding: 20px;

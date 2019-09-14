@@ -4,7 +4,6 @@
     <section class="internal__header">
       <span>{{$page.categories.type}}</span>
       <h2>{{$page.categories.name}}</h2>
-      <hr>
     </section>
     <Shop :products="products" :currentCategory="$page.categories.name"/>
   </Layout>
@@ -45,12 +44,6 @@ export default {
     font-family: @headfont;
     font-size: 3em;
     color: @brown;
-  }
-}
-
-@media @sm {
-  .shop {
-    padding-top: 0;
   }
 }
 </style>

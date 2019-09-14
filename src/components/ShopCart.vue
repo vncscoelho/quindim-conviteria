@@ -70,7 +70,7 @@
               </a>
             </header>
             <p>Preencha seus dados de acordo e como deseja dar continuidade ao seu pedido: via Whatsapp ou E-mail. Escolha o que preferir!</p>
-            <form action class="form">
+            <form data-netlify="true" netlify-honeypot="isSpam" class="form">
               <label>
                 <span>Seu Nome</span>
                 <input type="text" name="Nome" v-model="form['Nome']">
@@ -91,6 +91,8 @@
                 <label>
                   <input type="radio" name="submitType" v-model="submitType" :value="false"> Whatsapp
                 </label>
+                <input type="text" name="isSpam" style="display:none" v-model="form['isSpam']">
+                <input name="form-name" value="Pedido" type="hidden">
               </div>
             </form>
           </div>
@@ -145,6 +147,13 @@ export default {
     toggleCart() {
       this.show = !this.show;
     },
+    formatPrice(value) {
+      const formatedValue = parseFloat(value)
+        .toFixed(2)
+        .replace(".", ",");
+
+      return formatedValue;
+    },
     submitOrder() {
       const order = Object.keys(this.cart).map(index => {
         const item = this.cart[index];
@@ -165,23 +174,57 @@ export default {
                   : key === "envelope_paper_type"
                   ? "envelope_paper_type_option"
                   : "configurable_list_option";
-              return `* ${title}: ${cfg[option]} - R$ ${cfg.price}`;
+              return `* ${title}: ${cfg[option]} - R$ ${this.formatPrice(
+                cfg.price
+              )}`;
             }
           })
           .join("\n");
         const extras = item.configurables.extras
-          .map(extra => `+ ${extra.extra_option}: ${extra.price}`)
+          .map(
+            extra => `+ ${extra.extra_option}: ${this.formatPrice(extra.price)}`
+          )
           .join("\n");
         return `
+        Olá, gostaria de pedir os seguintes produtos: \n
         [${item.category}] ${item.name}\n
         ${configurables}\n
         ${extras}\n
         Qtd: ${item.quantity}\n
-        Total: ${item.finalPrice}\n
+        Total: ${this.formatPrice(item.finalPrice)}\n
         \n----------\n
         `;
       });
-      console.log(order);
+      if (this.submitType) return this.sendMail(order);
+
+      return window.open(
+        "https://api.whatsapp.com/send?phone=55534534535344&text=" + order
+      );
+    },
+    sendMail(order) {
+      const form = this.$refs.form;
+      fetch("/", {
+        method: "POST",
+        body: this.encode({
+          "form-name": "Pedido",
+          Pedido: order,
+          ...this.form
+        }),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+      }).then(({ status }) => {
+        if (status === 200)
+          this.$root.$emit("alert", {
+            type: "success",
+            message: "Mensagem enviada com sucesso."
+          });
+      });
+    },
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
     }
   },
   watch: {
@@ -200,6 +243,10 @@ export default {
     this.$root.$on("addToCart", product => {
       this.$set(this.cart, product.uid, product);
       localStorage.setItem("cart", JSON.stringify(this.cart));
+      this.$root.$emit("alert", {
+        type: "success",
+        message: "Adicionado ao carrinho."
+      });
     });
   }
 };

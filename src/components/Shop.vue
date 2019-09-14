@@ -1,6 +1,6 @@
 <template>
   <div class="shop container-fluid">
-    <div class="shop__wrapper row">
+    <div class="shop__wrapper">
       <ShopSidebar
         class="col-12 col-lg-3"
         @changeCategory="$emit('changeCategory', $event)"
@@ -122,6 +122,11 @@ export default {
 </script>
 
 <style lang="less">
+.shop {
+  background: @lightpink;
+  padding: 40px 0 80px 0;
+}
+
 .product {
   margin-bottom: 20px;
 
@@ -199,6 +204,10 @@ export default {
 }
 
 .shop {
+  &__wrapper {
+    display: flex;
+    width: 100%;
+  }
   @media @sm {
     padding-bottom: 0;
 
@@ -207,7 +216,8 @@ export default {
     }
 
     &__wrapper {
-      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
     .shop-sidebar {
@@ -215,6 +225,7 @@ export default {
       order: 3;
       padding: 40px;
       margin: 0;
+      max-width: 100%;
     }
   }
 }
