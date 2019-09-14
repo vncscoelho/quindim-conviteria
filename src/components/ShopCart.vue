@@ -70,7 +70,14 @@
               </a>
             </header>
             <p>Preencha seus dados de acordo e como deseja dar continuidade ao seu pedido: via Whatsapp ou E-mail. Escolha o que preferir!</p>
-            <form data-netlify="true" netlify-honeypot="isSpam" class="form">
+            <form
+              name="Pedido"
+              class="form"
+              ref="form"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="isSpam"
+            >
               <label>
                 <span>Seu Nome</span>
                 <input type="text" name="Nome" v-model="form['Nome']">
