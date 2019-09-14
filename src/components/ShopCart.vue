@@ -209,14 +209,14 @@ export default {
         \n----------\n
         `;
       });
-      this.Pedido = order;
+      this.form.Pedido = order;
       if (this.submitType) return this.sendMail(order);
 
       return window.open(
         "https://api.whatsapp.com/send?phone=55534534535344&text=" + order
       );
     },
-    sendMail(order) {
+    sendMail() {
       const form = this.$refs.form;
       fetch("/", {
         method: "POST",
