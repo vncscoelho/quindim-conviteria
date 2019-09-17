@@ -2,7 +2,7 @@
   <nav class="shop-sidebar">
     <div class="shop-sidebar__wrapper">
       <section
-        class="shop-sidebar__list col-6 col-lg-12"
+        class="shop-sidebar__list col-6 col-sm-12"
         v-for="type in Object.keys(categories)"
         :key="type"
       >
@@ -15,7 +15,7 @@
           >
             <router-link
               class="category-link"
-              :to="`/categoria/${category.name}` | url"
+              :to="url(`/categoria/${category.name}`)"
               v-if="!hideLinks"
             >{{category.name}}</router-link>
             <ul class="shop-sidebar__collections">
@@ -24,7 +24,7 @@
                 v-for="collection in categoryCollections(category.name)"
                 :key="collection"
               >
-                <router-link :to="`/colecoes/${collection}` | url">{{collection}}</router-link>
+                <router-link :to="url(`/colecoes/${collection}`)">{{collection}}</router-link>
               </li>
             </ul>
           </li>
@@ -59,7 +59,9 @@ query Categories {
 </static-query>
 
 <script>
+import UrlFilter from "../mixins/UrlFilter";
 export default {
+  mixins: [UrlFilter],
   props: {
     hideLinks: {
       type: Boolean,
@@ -93,17 +95,6 @@ export default {
           return acc;
         }, {})
       );
-    }
-  },
-  filters: {
-    url(value) {
-      return value
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .split("-")
-        .map(item => item.trim().replace(/[ ]/g, "-"))
-        .join("-")
-        .toLowerCase();
     }
   },
   methods: {

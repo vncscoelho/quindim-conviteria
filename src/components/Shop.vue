@@ -12,16 +12,21 @@
           <transition name="fade" appear :key="product.id">
             <div class="product col-6 col-lg-4" :key="product.id">
               <a :href="`/produto/${product.uid}/${url(product.name)}`" class="product__thumbnail">
-                <g-image
-                  v-if="product.gallery.length > 0"
-                  :src="product.gallery[0]"
-                  :alt="`${product.name}`"
-                />
+                <transition-group name="fade" appear :key="product.id">
+                  <g-image
+                    v-if="product.gallery.length > 0"
+                    :src="product.gallery[0]"
+                    :alt="`${product.name}`"
+                    :immediate="false"
+                    :key="`mainImg-${product.id}`"
+                  />
+                </transition-group>
                 <g-image
                   v-if="product.gallery.length > 1"
                   :src="product.gallery[1]"
                   :alt="`${product.name}`"
                   class="product__thumbnail--hover"
+                  :key="`hoverImg-${product.id}`"
                 />
               </a>
               <div class="product__info">
@@ -80,11 +85,13 @@ query ProductConfigurations {
 
 <script>
 import ShopSidebar from "../components/ShopSidebar";
+import UrlFilter from "../mixins/UrlFilter";
 
 export default {
   components: {
     ShopSidebar
   },
+  mixins: [UrlFilter],
   props: {
     products: {
       type: Array,
@@ -108,15 +115,6 @@ export default {
     paperTypes() {
       return this.$static.paper_types.edges;
     }
-  },
-  methods: {
-    url(value) {
-      return value
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/[" "]/g, "-")
-        .toLowerCase();
-    }
   }
 };
 </script>
@@ -139,6 +137,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 282px;
+    min-height: 282px;
+    background: @lightyellow;
 
     &:hover {
       .product__thumbnail--hover {
@@ -165,6 +166,7 @@ export default {
     color: @brown;
     font-size: 0.9em;
     margin: 0;
+    white-space: nowrap;
 
     span {
       font-size: 0.75em;

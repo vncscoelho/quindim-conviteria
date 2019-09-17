@@ -3,9 +3,9 @@
     <SiteHeader internal/>
     <section class="product-internal__wrapper container-fluid">
       <div class="row">
-        <ShopSidebar class="col-sm-2 col-12" currentCategory="null"/>
-        <div class="col-sm-10 col-12 row" v-if="product">
-          <div class="product-internal__gallery col-sm-7 col-12">
+        <ShopSidebar class="col-lg-2 col-12" currentCategory="null"/>
+        <div class="col-lg-10 col-12 row" v-if="product">
+          <div class="product-internal__gallery col-lg-7 col-12">
             <ClientOnly>
               <carousel
                 :perPage="1"
@@ -19,7 +19,7 @@
               </carousel>
             </ClientOnly>
           </div>
-          <div class="product-internal__info col-sm-5 col-12">
+          <div class="product-internal__info col-lg-5 col-12">
             <h2 class="product-internal__name">{{product.name}}</h2>
             <span class="product-internal__collection">{{product.collection}}</span>
 
@@ -377,6 +377,10 @@ export default {
       border: #ebbda8 solid 8px;
       border-radius: 99px;
     }
+  }
+
+  .VueCarousel-wrapper {
+    border-radius: 3px;
   }
 
   @media @sm {

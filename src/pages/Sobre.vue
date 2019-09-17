@@ -25,7 +25,7 @@
 
             <p>Sejam bem-vinda ou bem-vindo à essa experiência!</p>
           </div>
-          <div class="col-12 col-lg-6">
+          <div class="col-12 col-lg-6 text-center">
             <g-image src="~/assets/img/desi2.jpg"/>
           </div>
         </div>
@@ -134,6 +134,10 @@ export default {
 
 .testimonials {
   text-align: center;
+
+  &__item {
+    cursor: grab;
+  }
 
   &__text {
     max-width: 680px;

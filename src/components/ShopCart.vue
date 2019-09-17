@@ -20,6 +20,10 @@
       <span class="cart__counter">{{Object.keys(cart).length}}</span>
     </div>
 
+    <transition name="fade" appear v-if="show">
+      <div class="cart__overlay"></div>
+    </transition>
+
     <transition name="cart">
       <aside class="cart__expanded col-12 col-sm-12 col-md-6" v-if="show">
         <template v-if="!submitting">
@@ -171,6 +175,7 @@ export default {
     submitOrder() {
       const order = Object.keys(this.cart).map(index => {
         const item = this.cart[index];
+        const newline = this.submitType ? "\n" : "%0A";
         const configurables = Object.keys(item.configurables)
           .map(key => {
             const cfg = item.configurables[key];
@@ -193,27 +198,27 @@ export default {
               )}`;
             }
           })
-          .join("\n");
+          .join(newline);
         const extras = item.configurables.extras
           .map(
             extra => `+ ${extra.extra_option}: ${this.formatPrice(extra.price)}`
           )
-          .join("\n");
-        return `
-        Olá, gostaria de pedir os seguintes produtos: \n
-        [${item.category}] ${item.name}\n
-        ${configurables}\n
-        ${extras}\n
-        Qtd: ${item.quantity}\n
-        Total: ${this.formatPrice(item.finalPrice)}\n
-        \n----------\n
-        `;
+          .join(newline);
+        return `Olá, gostaria de pedir os seguintes produtos:
+        ${newline}[${item.category}] ${
+          item.name
+        }${newline}${configurables}${newline}${extras}${newline}Qtd: ${
+          item.quantity
+        }${newline}Total: ${this.formatPrice(
+          item.finalPrice
+        )}${newline}${newline}----------${newline}
+`;
       });
       this.form.Pedido = order;
       if (this.submitType) return this.sendMail(order);
 
       return window.open(
-        "https://api.whatsapp.com/send?phone=55534534535344&text=" + order
+        "https://api.whatsapp.com/send?phone=5555981082863&text=" + order
       );
     },
     sendMail() {
@@ -269,6 +274,15 @@ export default {
 <style lang="less" scoped>
 .cart {
   color: @darkbrown;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: fade(@brown, 50%);
+    width: 100%;
+    height: 100%;
+  }
 
   &__header {
     display: flex;

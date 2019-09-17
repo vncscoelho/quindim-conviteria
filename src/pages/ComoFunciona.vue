@@ -7,7 +7,7 @@
     </section>
     <section class="section full-policy">
       <Ornaments/>
-      <div class="container">
+      <div class="container reading-container">
         <p>
           Esclareça suas dúvidas e fique por dentro de todo o processo antes de fechar o pedido.
           Ao efetuar a encomenda, você estará concordando com a nossa política de trabalho.
@@ -132,7 +132,7 @@
     </section>
     <section class="section policy-internal__cta text-center">
       <span class="section-title">PRONTO PARA REALIZAR SEU PEDIDO?</span>
-      <a href="/contato">
+      <a class="call_to_action" href="/contato">
         <h2 class="section-heading">Entre em contato!</h2>
       </a>
     </section>
@@ -162,6 +162,22 @@ export default {
       color: #fff;
     }
     background: @darkpink;
+  }
+
+  .call_to_action {
+    &:hover {
+      color: @darkbrown;
+    }
+  }
+
+  .reading-container {
+    max-width: 672px;
+    line-height: 1.6em;
+    p,
+    li,
+    h3 {
+      margin-bottom: 1.6em;
+    }
   }
 }
 </style>

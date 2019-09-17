@@ -32,6 +32,9 @@ export default {
 <style lang="less">
 main {
   font-family: @textfont;
+  @media @sm {
+    font-size: 90%;
+  }
 }
 
 a {
@@ -168,7 +171,6 @@ input {
 
 .testimonials {
   background: @lightyellow;
-  cursor: grab;
   &__cta {
     margin-top: 80px;
   }
@@ -227,9 +229,13 @@ input {
   }
 }
 
+.fade-leave-active {
+  transition: opacity 250ms ease-out;
+}
+
 .fade-enter-active,
 .fade-leave {
-  transition: opacity 750ms;
+  transition: opacity 450ms ease-in;
 }
 
 .fade-enter,

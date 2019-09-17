@@ -6,15 +6,23 @@
       <h2>{{$page.collections.name}}</h2>
     </section>
     <Shop :products="products" :currentCategory="$page.collections.name"/>
+    <Pagination
+      :pageInfo="$page.allProducts.pageInfo"
+      :url="`colecoes/${url($page.collections.name)}`"
+    />
   </Layout>
 </template>
 
 <script>
+import Pagination from "../components/Pagination";
 import SiteHeader from "../components/SiteHeader";
+import UrlFilter from "../mixins/UrlFilter";
 import Shop from "../components/Shop";
 
 export default {
+  mixins: [UrlFilter],
   components: {
+    Pagination,
     SiteHeader,
     Shop
   },

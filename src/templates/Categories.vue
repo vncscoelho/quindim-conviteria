@@ -6,15 +6,18 @@
       <h2>{{$page.categories.name}}</h2>
     </section>
     <Shop :products="products" :currentCategory="$page.categories.name"/>
+    <Pagination :pageInfo="$page.allProducts.pageInfo" url="categoria/casamentos"/>
   </Layout>
 </template>
 
 <script>
+import Pagination from "../components/Pagination";
 import SiteHeader from "../components/SiteHeader";
 import Shop from "../components/Shop";
 
 export default {
   components: {
+    Pagination,
     SiteHeader,
     Shop
   },
