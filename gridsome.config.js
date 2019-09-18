@@ -12,6 +12,7 @@ function addStyleResource(rule) {
 
 module.exports = {
     siteName: 'Quindim Conviteria - Convites e Papelaria Criativa',
+    siteUrl: 'https://www.quindimconviteria.com',
     icon: {
         favicon: {
             src: './src/assets/img/icon.png',
@@ -34,6 +35,9 @@ module.exports = {
         }
     },
     plugins: [
+        {
+            use: '@gridsome/plugin-sitemap'
+        },
         {
             use: '@gridsome/plugin-google-analytics',
             options: {
