@@ -11,6 +11,7 @@
         <p class="footer__contacts">
           <a href="mailto:contato@quindimconviteria.com.br">contato@quindimconviteria.com.br</a>
           <a href="tel:5555981256350">(55) 98125-6350</a>
+          <a href="https://wa.me/5555981256350">Whatsapp</a>
           <a href="#">Facebook</a>
           <a href="#">Instagram</a>
         </p>
