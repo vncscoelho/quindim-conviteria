@@ -11,7 +11,18 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-    siteName: 'Gridsome',
+    siteName: 'Quindim Conviteria - Convites e Papelaria Criativa',
+    icon: {
+        favicon: {
+            src: './src/assets/img/icon.png',
+            sizes: [16, 32, 96]
+        },
+        touchicon: {
+            src: './src/assets/img/icon.png',
+            sizes: [76, 152, 120, 167],
+            precomposed: true
+        }
+    },
     transformers: {
         remark: {
             externalLinksTarget: '_blank',

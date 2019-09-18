@@ -16,7 +16,7 @@
                   <g-image
                     v-if="product.gallery.length > 0"
                     :src="product.gallery[0]"
-                    :alt="`${product.name}`"
+                    :alt="`${product.name} - ${product.category}`"
                     :immediate="false"
                     :key="`mainImg-${product.id}`"
                   />
@@ -24,7 +24,7 @@
                 <g-image
                   v-if="product.gallery.length > 1"
                   :src="product.gallery[1]"
-                  :alt="`${product.name}`"
+                  :alt="`${product.name} - ${product.category}`"
                   class="product__thumbnail--hover"
                   :key="`hoverImg-${product.id}`"
                 />

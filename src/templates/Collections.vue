@@ -35,6 +35,11 @@ export default {
     products() {
       return this.$page.allProducts.edges.map(product => product.node);
     }
+  },
+  metaInfo() {
+    return {
+      title: `Coleção ${this.$page.collections.name}`
+    };
   }
 };
 </script>

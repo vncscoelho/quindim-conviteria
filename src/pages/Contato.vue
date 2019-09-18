@@ -108,6 +108,11 @@ export default {
         )
         .join("&");
     }
+  },
+  metaInfo() {
+    return {
+      title: "Contato"
+    };
   }
 };
 </script>

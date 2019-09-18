@@ -147,6 +147,11 @@ export default {
   components: {
     SiteHeader,
     Ornaments
+  },
+  metaInfo() {
+    return {
+      title: "Como Funciona"
+    };
   }
 };
 </script>

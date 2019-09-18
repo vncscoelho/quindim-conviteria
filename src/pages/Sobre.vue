@@ -106,6 +106,11 @@ export default {
         .map(testimonial => testimonial.node)
         .sort((a, b) => b.order - a.order);
     }
+  },
+  metaInfo() {
+    return {
+      title: "Sobre"
+    };
   }
 };
 </script>

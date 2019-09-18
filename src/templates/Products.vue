@@ -3,8 +3,8 @@
     <SiteHeader internal/>
     <section class="product-internal__wrapper container-fluid">
       <div class="row">
-        <ShopSidebar class="col-lg-2 col-12" currentCategory="null"/>
-        <div class="col-lg-10 col-12 row" v-if="product">
+        <ShopSidebar class="col-lg-2 col-sm-12 col-12" currentCategory="null"/>
+        <div class="col-lg-10 col-sm-12 col-12 row" v-if="product">
           <div class="product-internal__gallery col-lg-7 col-12">
             <ClientOnly>
               <carousel
@@ -14,7 +14,7 @@
                 :paginationPadding="0"
               >
                 <slide v-for="(image, index) in gallery" :key="index">
-                  <g-image :src="image"/>
+                  <g-image :src="image" :alt="`${product.name} - ${product.category}`"/>
                 </slide>
               </carousel>
             </ClientOnly>
@@ -282,13 +282,27 @@ export default {
   },
   metaInfo() {
     return {
-      title: "teste"
+      title: `${this.product.name} - ${this.product.category}`
     };
   }
 };
 </script>
 
 <style lang="less">
+.col-lg-10 {
+  @media (min-width: 992px) {
+    flex: 0 0 81.333333%;
+    max-width: 81.333333%;
+  }
+}
+
+.col-lg-2 {
+  @media (min-width: 992px) {
+    flex: 0 0 18.666667%;
+    max-width: 18.666667%;
+  }
+}
+
 .product-internal {
   &__wrapper {
     background: @lightpink;

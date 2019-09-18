@@ -137,9 +137,6 @@ import Ornaments from "../components/Ornaments.vue";
 import SiteHeader from "../components/SiteHeader";
 
 export default {
-  metaInfo: {
-    title: "Quindim Conviteria"
-  },
   components: {
     Shop,
     Ornaments,

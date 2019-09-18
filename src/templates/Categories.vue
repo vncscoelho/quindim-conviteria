@@ -30,6 +30,11 @@ export default {
     products() {
       return this.$page.allProducts.edges.map(product => product.node);
     }
+  },
+  metaInfo() {
+    return {
+      title: `${this.$page.categories.type} ${this.$page.categories.name}`
+    };
   }
 };
 </script>
