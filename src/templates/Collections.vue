@@ -70,7 +70,7 @@ query Collections($page: Int, $id: String!, $name: String!) {
       name
   }
 
-  allProducts(perPage: 15, page: $page, filter: { collection: { eq: $name }}) @paginate {
+  allProducts(perPage: 15, page: $page, sort: [{by: "order", order: DESC}, {by: "name", order: DESC}], filter: { collection: { eq: $name }}) @paginate {
       pageInfo {
         totalPages
         currentPage

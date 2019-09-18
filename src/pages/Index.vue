@@ -103,7 +103,7 @@ query Data {
     }
   }
 
-  products: allProducts(filter: { category: { eq: "Combos" }}) {
+  products: allProducts(filter: { category: { eq: "Combos" }},sort: [{by: "order", order: DESC}, {by: "name", order: DESC}]) {
     edges {
         node {
             id

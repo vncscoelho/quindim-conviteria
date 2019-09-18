@@ -66,13 +66,14 @@ query Categories($page: Int, $id: String!, $name: String!) {
       type
   }
 
-  allProducts(perPage: 15, page: $page, filter: { category: { eq: $name }}) @paginate {
+  allProducts(perPage: 15, page: $page, sort: [{by: "order", order: DESC}, {by: "name", order: DESC}], filter: { category: { eq: $name }}) @paginate {
       pageInfo {
         totalPages
         currentPage
       }
       edges {
           node{
+              order
               id
               uid
               name
