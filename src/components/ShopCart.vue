@@ -218,7 +218,7 @@ export default {
       if (this.submitType) return this.sendMail(order);
 
       return window.open(
-        "https://api.whatsapp.com/send?phone=5555981082863&text=" + order
+        "https://api.whatsapp.com/send?phone=55559981256350&text=" + order
       );
     },
     sendMail() {
