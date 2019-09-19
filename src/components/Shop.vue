@@ -126,20 +126,25 @@ export default {
 }
 
 .product {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 
   &__thumbnail {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     border-radius: 3px;
     overflow: hidden;
     position: relative;
-    max-height: 268px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 282px;
-    min-height: 282px;
+    min-width: 100%;
     background: @lightyellow;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
 
     &:hover {
       .product__thumbnail--hover {
