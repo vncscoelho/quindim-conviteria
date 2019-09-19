@@ -6,7 +6,10 @@
       <h2>{{$page.categories.name}}</h2>
     </section>
     <Shop :products="products" :currentCategory="$page.categories.name"/>
-    <Pagination :pageInfo="$page.allProducts.pageInfo" url="categoria/casamentos"/>
+    <Pagination
+      :pageInfo="$page.allProducts.pageInfo"
+      :url="`categoria/${url($page.categories.name)}`"
+    />
   </Layout>
 </template>
 
@@ -14,8 +17,10 @@
 import Pagination from "../components/Pagination";
 import SiteHeader from "../components/SiteHeader";
 import Shop from "../components/Shop";
+import UrlFilter from "../mixins/UrlFilter";
 
 export default {
+  mixins: [UrlFilter],
   components: {
     Pagination,
     SiteHeader,
