@@ -15,7 +15,7 @@ base_paper_type:
 envelope_paper_type:
   - envelope_paper_type_option: Offset (fosco)
     value: 0
-  - envelope_paper_type_option: Linho (texturizado)
+  - envelope_paper_type_option: Linho (texturizado) envelope
 configurables:
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
