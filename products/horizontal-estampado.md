@@ -6,15 +6,6 @@ collection: Chuva de Arroz - Clássicos
 base_value: 4.8
 discount: 0
 is_combo: false
-description: >-
-  Convite com semi-envelope personalizado tamanho 14cm x 19cm confeccionado em
-  papel 180g.
-
-
-
-
-  Versão da foto: Interior e exterior em papel offset com laço chanel duplo com
-  aplicação de meia pérola.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
@@ -46,4 +37,8 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566251928/Casamentos/Modelo_Horizontal_2_heaf0b.jpg
 ---
+Convite com semi-envelope personalizado tamanho 14cm x 19cm confeccionado em papel 180g.
 
+
+
+Versão da foto: Interior e exterior em papel offset com laço chanel duplo com aplicação de meia pérola.
