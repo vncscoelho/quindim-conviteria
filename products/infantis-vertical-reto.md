@@ -1,14 +1,11 @@
 ---
 uid: '1366595240099'
+order: 10
 category: Infantis
 name: Vertical reto
 base_value: 5.5
 discount: 0
 is_combo: false
-description: >-
-  Convite com semi-envelope tamanho grande (14cm x 19cm) ou pequeno (10cm x
-  14cm). Interior e aplique externo em papel glossy fotográfico 180g;
-  semi-envelope e faixa em papel color 180g.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
