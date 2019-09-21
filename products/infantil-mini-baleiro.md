@@ -10,4 +10,6 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566773989/Papelaria%20infantil/Mini_baleiro_xdf8vz.jpg
 ---
+Mini baleiro em pvc (6,5cm x 5,5cm – diâmetro da boca 2,5cm) personalizado em papel glossy (fotográfico) 180g.
 
+Cores de tampa disponíveis: lilás, rosa, azul.
