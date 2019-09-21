@@ -1,18 +1,11 @@
 ---
+uid: '1565446862'
 category: Casamentos
 name: Luva
 collection: Chuva de Arroz - Clássicos
 base_value: 5
 discount: 0
 is_combo: false
-description: >-
-  Convite com envelope luva tamanho 13cm x 18cm confeccionado em papel 180g.
-
-
-
-
-  Versão da foto: Interior em papel offset e envelope em papel linho. Acabamento
-  com impressão no envelope, laço chanel simples com aplicação de meia pérola.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
@@ -46,6 +39,9 @@ gallery:
     https://res.cloudinary.com/dkaanqsro/image/upload/v1565968691/Casamentos/Modelo_Luva_2_mv4kow.jpg
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1565968691/Casamentos/Modelo_Luva_3_br4ovg.jpg
-uid: '1565446862'
 ---
+Convite com envelope luva tamanho 13cm x 18cm confeccionado em papel 180g. 
 
+
+
+Versão da foto: Interior em papel offset e envelope em papel linho. Acabamento com impressão no envelope e laço chanel simples com aplicação de meia pérola.
