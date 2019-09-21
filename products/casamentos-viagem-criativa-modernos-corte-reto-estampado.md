@@ -4,7 +4,7 @@ category: Casamentos
 name: Corte reto estampado
 collection: Viagem Criativa - Modernos
 base_value: 4.8
-discount: 0
+discount: 10
 is_combo: false
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
