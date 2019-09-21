@@ -18,4 +18,4 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566597392/Infantis/Convite_la%C3%A7arote_2_me0wsz.jpg
 ---
-
+Convite tamanho 13cm x 18cm, base confeccionada em papel color 180g + glossy fotográfico 180g. Acabamento com apliques em papel glossy 180g e laço de cetim.
