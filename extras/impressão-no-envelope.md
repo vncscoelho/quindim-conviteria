@@ -1,5 +1,5 @@
 ---
 name: Impressão no envelope
-value: 1
+value: 0.9
 ---
 
