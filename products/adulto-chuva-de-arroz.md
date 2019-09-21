@@ -7,18 +7,17 @@ base_value: 2.5
 discount: 0
 is_combo: false
 base_paper_type:
-    - base_paper_type_option: Offset (fosco)
-      value: 0
-    - base_paper_type_option: Linho (texturizado)
-      value: 0
+  - base_paper_type_option: Offset (fosco)
+    value: 0
+  - base_paper_type_option: Linho (texturizado)
+    value: ''
 configurables: []
 extras:
-    - extra_option: Cordão de juta
-    - extra_option: Laço tradicional simples (5mm)
-    - extra_option: Laço chanel simples com meia pérola
+  - extra_option: Cordão de juta
+  - extra_option: Laço tradicional simples (5mm)
+  - extra_option: Laço chanel simples com meia pérola
 gallery:
-    - >-
-        https://res.cloudinary.com/dkaanqsro/image/upload/v1566769973/Papelaria%20adulto/Chuva_de_arroz_1_gxodsp.jpg
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1566769973/Papelaria%20adulto/Chuva_de_arroz_1_gxodsp.jpg
 ---
-
-Saquinho com arroz envolto em lapela personalizada confeccionada em papel 180g. Acabamento com grampo.\r Tamanho 9cm x 9cm.
+Saquinho com arroz envolto em lapela personalizada confeccionada em papel 180g. Acabamento com grampo. Tamanho 9cm x 9cm.
