@@ -36,4 +36,4 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566596325/Infantis/Convite_vertical_corte_reto_5_cmt0lu.jpg
 ---
-
+Convite com semi-envelope tamanho grande (14cm x 19cm) ou pequeno (10cm x 14cm). Interior e aplique externo em papel glossy fotográfico 180g; semi-envelope e faixa em papel color 180g.
