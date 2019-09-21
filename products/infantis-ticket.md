@@ -26,4 +26,6 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1568135062/Infantis/Convite_ticket_1_xobnhv.jpg
 ---
+Convite em formato personalizado ticket com picote, tamanho grande (20cm x 7cm) ou tamanho pequeno (16,5cm x 5cm). Confeccionado em papel 180g.
 
+Versão da foto: papel glossy.
