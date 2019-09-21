@@ -36,9 +36,9 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1565968702/Casamentos/Modelo_Luva_1_hjgmfb.jpg
   - >-
-    https://res.cloudinary.com/dkaanqsro/image/upload/v1565968691/Casamentos/Modelo_Luva_2_mv4kow.jpg
-  - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1565968691/Casamentos/Modelo_Luva_3_br4ovg.jpg
+  - >-
+    https://res.cloudinary.com/dkaanqsro/image/upload/v1565968691/Casamentos/Modelo_Luva_2_mv4kow.jpg
 ---
 Convite com envelope luva tamanho 13cm x 18cm confeccionado em papel 180g. 
 
