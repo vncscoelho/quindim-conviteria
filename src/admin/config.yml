@@ -59,7 +59,7 @@ collections:
           - label: 'Valor Base'
             name: base_value
             widget: number
-            valueType: float
+            step: 0.1
             default: null
             required: false
 
@@ -253,7 +253,7 @@ collections:
           - label: Preço
             name: value
             widget: number
-            valueType: float
+            step: 0.1
             default: null
 
     - label: 'Depoimentos'
