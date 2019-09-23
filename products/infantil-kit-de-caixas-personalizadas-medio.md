@@ -1,5 +1,5 @@
 ---
-uid: '1566775305995'
+uid: '118566775305995'
 order: 18
 category: Infantil
 name: Kit de caixas personalizadas - médio
@@ -12,7 +12,7 @@ gallery:
 ---
 **50 caixas | 5 modelos**
 
-Caixas confeccionadas em papel offset (fosco) 180g com apliques em papel glossy (fotográfico). 
+Caixas confeccionadas em papel offset (fosco) 180g com apliques em papel glossy (fotográfico).
 
 
 

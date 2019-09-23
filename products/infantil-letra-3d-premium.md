@@ -1,5 +1,5 @@
 ---
-uid: '1566775305995'
+uid: '15667753305995'
 order: 12
 category: Infantil
 name: Letra 3D premium
@@ -12,6 +12,6 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566773983/Papelaria%20infantil/lara_inc18x.jpg
 ---
-Letra 3D com base confeccionada em papel color 180g com apliques em scrap, uso de papeis cintilantes e laminados, acabamento com meia pérola ou strass. 
+Letra 3D com base confeccionada em papel color 180g com apliques em scrap, uso de papeis cintilantes e laminados, acabamento com meia pérola ou strass.
 
 \*Valor da letra, 1 unidade.

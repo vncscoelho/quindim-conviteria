@@ -1,5 +1,5 @@
 ---
-uid: '1566775305995'
+uid: '156767753059956'
 order: 17
 category: Infantil
 name: Kit de caixas personalizadas - grande
@@ -12,7 +12,7 @@ gallery:
 ---
 **80 caixas | 6 modelos**
 
-Caixas confeccionadas em papel offset (fosco) 180g com apliques em papel glossy (fotográfico). 
+Caixas confeccionadas em papel offset (fosco) 180g com apliques em papel glossy (fotográfico).
 
 
 
