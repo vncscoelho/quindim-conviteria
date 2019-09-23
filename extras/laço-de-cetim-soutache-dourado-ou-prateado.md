@@ -1,5 +1,5 @@
 ---
 name: Laço chanel de cetim + renda
-value: 1.5
+value: 1.2
 ---
 
