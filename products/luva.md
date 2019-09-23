@@ -3,7 +3,7 @@ uid: '1565446862'
 category: Casamentos
 name: Luva
 collection: Chuva de Arroz - Clássicos
-base_value: 5
+base_value: 5.3
 discount: 0
 is_combo: false
 base_paper_type:
