@@ -95,7 +95,7 @@ collections:
                 - label: Preço (sobrepõe o valor original)
                   name: value
                   widget: number
-                  valueType: float
+                  valueType: string
                   default: null
                   required: false
 
@@ -114,7 +114,7 @@ collections:
                 - label: Preço (sobrepõe o valor original)
                   name: value
                   widget: number
-                  valueType: float
+                  valueType: string
                   default: null
                   required: false
 
@@ -140,7 +140,7 @@ collections:
                       - label: Preço (sobrepõe o valor original)
                         name: value
                         widget: number
-                        valueType: float
+                        valueType: string
                         default: null
                         required: false
 
@@ -158,7 +158,7 @@ collections:
                 - label: Preço (sobrepõe o valor original)
                   name: value
                   widget: number
-                  valueType: float
+                  valueType: string
                   default: null
                   required: false
 
