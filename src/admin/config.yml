@@ -59,7 +59,7 @@ collections:
           - label: 'Valor Base'
             name: base_value
             widget: number
-            step: 0.1
+            valueType: float
             default: null
             required: false
 
@@ -95,7 +95,6 @@ collections:
                 - label: Preço (sobrepõe o valor original)
                   name: value
                   widget: number
-                  valueType: string
                   default: null
                   required: false
 
@@ -114,7 +113,6 @@ collections:
                 - label: Preço (sobrepõe o valor original)
                   name: value
                   widget: number
-                  valueType: string
                   default: null
                   required: false
 
@@ -140,7 +138,6 @@ collections:
                       - label: Preço (sobrepõe o valor original)
                         name: value
                         widget: number
-                        valueType: string
                         default: null
                         required: false
 
@@ -158,7 +155,6 @@ collections:
                 - label: Preço (sobrepõe o valor original)
                   name: value
                   widget: number
-                  valueType: string
                   default: null
                   required: false
 
@@ -236,7 +232,6 @@ collections:
           - label: Preço
             name: value
             widget: number
-            valueType: string
             default: null
 
     - label: 'Adicionais'
@@ -253,7 +248,7 @@ collections:
           - label: Preço
             name: value
             widget: number
-            step: 0.1
+            valueType: float
             default: null
 
     - label: 'Depoimentos'
