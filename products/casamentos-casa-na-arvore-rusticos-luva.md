@@ -10,9 +10,9 @@ base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
   - base_paper_type_option: Glossy (fotográfico)
-    value: ''
+    value: null
   - base_paper_type_option: Linho (texturizado)
-    value: ''
+    value: null
 envelope_paper_type: []
 configurables:
   - configurable_list:
@@ -36,8 +36,11 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566515865/Casamentos/Modelo_Luva_2_rust_hh7i54.jpg
 ---
-Convite com envelope tamanho 13cm x 18cm. Interior confeccionado em papel 180g e exterior em papel kraft 120g.
+Convite com envelope tamanho 13cm x 18cm. Interior confeccionado em papel 180g
+ e exterior em papel kraft 120g.
 
-
 
-Versão da foto: Interior em papel glossy e envelope em papel vegetal com laço tradicional simples e tag com nome do convidado.
+
+
+Versão da foto: Interior em papel glossy e envelope em papel vegetal com laço
+ tradicional simples e tag com nome do convidado.
