@@ -2,16 +2,14 @@
 uid: '156659020851015'
 category: Formaturas
 name: Corte em V
-base_value: 4.5
+base_value: 4.8
 discount: 0
 is_combo: false
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
   - base_paper_type_option: Glossy (fotográfico)
-    value: null
   - base_paper_type_option: Linho (texturizado)
-    value: null
   - base_paper_type_option: Perolado
 envelope_paper_type: []
 configurables:
@@ -23,13 +21,13 @@ configurables:
     configurable_name: Tamanho
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
+        value: 0
       - configurable_list_option: Laço tradicional expeço (15mm)
       - configurable_list_option: Laço chanel simples com meia pérola
       - configurable_list_option: Laço chanel duplo com meia pérola
       - configurable_list_option: Laço de cetim + soutache dourado ou prateado
       - configurable_list_option: Laço chanel de cetim + renda
       - configurable_list_option: Cordão de juta
-      - configurable_list_option: Cordão de algodão
     configurable_name: Tipo de acabamento
 extras:
   - extra_option: Tag com nome do convidado
