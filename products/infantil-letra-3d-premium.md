@@ -2,7 +2,7 @@
 uid: '15667753305995'
 order: 12
 category: Infantil
-name: Letra 3D premium
+name: Letra premium
 base_value: 11
 discount: 0
 is_combo: false
