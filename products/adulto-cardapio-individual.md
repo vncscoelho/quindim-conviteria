@@ -10,7 +10,7 @@ base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: '0'
   - base_paper_type_option: Glossy (fotográfico)
-    value: 1
+    value: ''
   - base_paper_type_option: Linho (texturizado)
     value: ''
   - base_paper_type_option: Perolado
