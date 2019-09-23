@@ -2,7 +2,7 @@
 uid: '156677033467062'
 order: 12
 category: Adulto
-name: Lágrima de alegria env. luva
+name: Lágrima de alegria luva
 base_value: 3.5
 discount: 0
 is_combo: false
