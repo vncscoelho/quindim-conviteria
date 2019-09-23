@@ -10,7 +10,7 @@ base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
   - base_paper_type_option: Linho (texturizado)
-    value: ''
+    value: null
 configurables: []
 extras:
   - extra_option: Cordão de juta

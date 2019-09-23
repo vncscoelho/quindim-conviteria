@@ -9,9 +9,9 @@ base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
   - base_paper_type_option: Glossy (fotográfico)
-    value: ''
+    value: null
   - base_paper_type_option: Linho (texturizado)
-    value: ''
+    value: null
   - base_paper_type_option: Perolado
 envelope_paper_type: []
 configurables:
@@ -44,14 +44,14 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566593107/Formaturas/Vertical_preto_3_v0do44.jpg
 ---
-Convite com semi-envelope tamanho grande (14cm x 19cm) ou tamanho pequeno (9cm x 14cm) confeccionado em papel 180g. 
+Convite com semi-envelope tamanho grande (14cm x 19cm) ou tamanho pequeno (9cm x 14cm) confeccionado em papel 180g.
 
 
 
-Versão da foto: Interior em papel offset e exterior em papel color preto com laço tradicional simples. 
+Versão da foto: Interior em papel offset e exterior em papel color preto com laço tradicional simples.
 
 
 
-\*Para convites com foto recomenda-se o uso do papel glossy fotográfico no interior. 
+\*Para convites com foto recomenda-se o uso do papel glossy fotográfico no interior.
 
 \*A aplicação de foto na arte fica mais adequada e com melhor proporção em convites horizontais.

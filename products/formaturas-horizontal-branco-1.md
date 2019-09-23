@@ -9,9 +9,9 @@ base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
   - base_paper_type_option: Glossy (fotográfico)
-    value: ''
+    value: null
   - base_paper_type_option: Linho (texturizado)
-    value: ''
+    value: null
   - base_paper_type_option: Perolado
 envelope_paper_type:
   - envelope_paper_type_option: Offset (fosco)
@@ -50,10 +50,10 @@ Convite com semi-envelope tamanho grande (14cm x 19cm) ou tamanho pequeno (9cm x
 
 
 
-Versão da foto: Interior em papel glossy e exterior em papel linho. Acabamento com laço chanel simples e tag com nome do convidado. 
+Versão da foto: Interior em papel glossy e exterior em papel linho. Acabamento com laço chanel simples e tag com nome do convidado.
 
 
 
-\*Para convites com foto do formando ou formanda recomenda-se o uso do papel glossy fotográfico no interior. 
+\*Para convites com foto do formando ou formanda recomenda-se o uso do papel glossy fotográfico no interior.
 
 \*A aplicação de foto na arte fica mais adequada e com melhor proporção em convites horizontais.

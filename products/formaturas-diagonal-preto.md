@@ -9,9 +9,9 @@ base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
   - base_paper_type_option: Glossy (fotográfico)
-    value: ''
+    value: null
   - base_paper_type_option: Linho (texturizado)
-    value: ''
+    value: null
 envelope_paper_type: []
 configurables:
   - configurable_list:
@@ -41,10 +41,10 @@ Convite com semi-envelope tamanho 13cm x 18cm confeccionado em papel 180g.
 
 
 
-Versão da foto: Interior em papel glossy e exterior em papel color preto. Acabamento com laço chanel e tag com símbolo do curso. 
+Versão da foto: Interior em papel glossy e exterior em papel color preto. Acabamento com laço chanel e tag com símbolo do curso.
 
 
 
-\*Para convites com foto recomenda-se o uso do papel glossy fotográfico no interior. 
+\*Para convites com foto recomenda-se o uso do papel glossy fotográfico no interior.
 
 \*A aplicação de foto na arte fica mais adequada e com melhor proporção em convites horizontais

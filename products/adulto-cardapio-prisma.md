@@ -10,11 +10,11 @@ base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
   - base_paper_type_option: Glossy (fotográfico)
-    value: ''
+    value: null
   - base_paper_type_option: Linho (texturizado)
-    value: ''
+    value: null
   - base_paper_type_option: Perolado
-    value: ''
+    value: null
 envelope_paper_type: []
 configurables: []
 extras: []
@@ -22,7 +22,7 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566769924/Papelaria%20adulto/Menu_prisma_kcucdx.jpg
 ---
-Cardápio modelo prisma com 3 lados, cada lado medindo 20cm x 9cm. Confeccionado em papel 180g. 
+Cardápio modelo prisma com 3 lados, cada lado medindo 20cm x 9cm. Confeccionado em papel 180g.
 
 
 
