@@ -3,7 +3,7 @@ uid: '156651234063'
 category: Casamentos
 name: Papel rendado
 collection: Renda Encantada - Vintages
-base_value: 4.1
+base_value: 4.4
 discount: 0
 is_combo: false
 base_paper_type:
@@ -15,11 +15,11 @@ envelope_paper_type: []
 configurables:
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
+        value: 0
       - configurable_list_option: Laço tradicional expeço (15mm)
       - configurable_list_option: Laço chanel simples com meia pérola
       - configurable_list_option: Laço chanel duplo com meia pérola
       - configurable_list_option: Cordão de juta
-      - configurable_list_option: Cordão de algodão
     configurable_name: Tipo de acabamento
 extras:
   - extra_option: Tag com nome do convidado
