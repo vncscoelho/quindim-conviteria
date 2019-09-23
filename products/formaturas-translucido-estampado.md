@@ -41,12 +41,7 @@ gallery:
 ---
 Convite com semi-envelope tamanho grande (14cm x 19cm) ou pequeno (9cm x 14cm). Interior confeccionado em papel 180g e exterior em papel vegetal estampado 95g.
 
-
-
 Versão da foto: Interior em papel glossy e envelope em papel vegetal com laço tradicional simples. 
 
-
-
-\*Para convites com foto recomenda-se o uso do papel glossy fotográfico no interior. 
-
-\*A aplicação de foto na arte fica mais adequada e com melhor proporção em convites horizontais
+* Para convites com foto recomenda-se o uso do papel glossy fotográfico no interior. 
+* A aplicação de foto na arte fica mais adequada e com melhor proporção em convites horizontais
