@@ -2,7 +2,7 @@
 uid: '15667703670562'
 order: 13
 category: Infantil
-name: Letra básica
+name: Letra 3D básica
 base_value: 8.5
 discount: 0
 is_combo: false
