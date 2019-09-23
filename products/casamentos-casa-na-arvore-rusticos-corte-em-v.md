@@ -3,18 +3,15 @@ uid: '156651482333403'
 category: Casamentos
 name: Corte em V
 collection: Casa na Árvore - Rústicos
-base_value: 4.5
+base_value: 4.8
 discount: 0
 is_combo: false
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
   - base_paper_type_option: Glossy (fotográfico)
-    value: null
   - base_paper_type_option: Linho (texturizado)
-envelope_paper_type:
-  - envelope_paper_type_option: Kraft
-    value: 0
+envelope_paper_type: []
 configurables:
   - configurable_list:
       - configurable_list_option: Tamanho grande
@@ -24,13 +21,13 @@ configurables:
     configurable_name: Tamanho
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
+        value: 0
       - configurable_list_option: Laço tradicional expeço (15mm)
       - configurable_list_option: Laço chanel simples com meia pérola
       - configurable_list_option: Laço chanel duplo com meia pérola
       - configurable_list_option: Laço de cetim + soutache dourado ou prateado
       - configurable_list_option: Laço chanel de cetim + renda
       - configurable_list_option: Cordão de juta
-      - configurable_list_option: Cordão de algodão
     configurable_name: Tipo de acabamento
 extras:
   - extra_option: Tag com nome do convidado
