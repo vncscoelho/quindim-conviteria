@@ -1,5 +1,5 @@
 ---
 name: Laço tradicional expeço (15mm)
-value: 0.65
+value: 0.35
 ---
 
