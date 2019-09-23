@@ -2,16 +2,14 @@
 uid: '15665930208510'
 category: Formaturas
 name: Translúcido estampado
-base_value: 6
+base_value: 6.3
 discount: 0
 is_combo: false
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     value: 0
   - base_paper_type_option: Glossy (fotográfico)
-    value: null
   - base_paper_type_option: Linho (texturizado)
-    value: null
 envelope_paper_type: []
 configurables:
   - configurable_list:
@@ -22,11 +20,11 @@ configurables:
     configurable_name: Tamanho
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
+        value: 0
       - configurable_list_option: Laço tradicional expeço (15mm)
       - configurable_list_option: Laço chanel simples com meia pérola
       - configurable_list_option: Laço chanel duplo com meia pérola
       - configurable_list_option: Cordão de juta
-      - configurable_list_option: Cordão de algodão
     configurable_name: Tipo de acabamento
 extras:
   - extra_option: Tag com nome do convidado
@@ -43,5 +41,8 @@ Convite com semi-envelope tamanho grande (14cm x 19cm) ou pequeno (9cm x 14cm). 
 
 Versão da foto: Interior em papel glossy e envelope em papel vegetal com laço tradicional simples.
 
-* Para convites com foto recomenda-se o uso do papel glossy fotográfico no interior.
-* A aplicação de foto na arte fica mais adequada e com melhor proporção em convites horizontais
+
+
+\*Para convites com foto recomenda-se o uso do papel glossy fotográfico no interior.
+
+\*A aplicação de foto na arte fica mais adequada e com melhor proporção em convites horizontais
