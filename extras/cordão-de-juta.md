@@ -1,5 +1,5 @@
 ---
 name: Cordão de juta
-value: 0.5
+value: 0.2
 ---
 
