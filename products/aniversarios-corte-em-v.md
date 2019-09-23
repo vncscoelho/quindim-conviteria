@@ -2,7 +2,7 @@
 uid: '212342334534'
 category: Aniversários
 name: Corte em V
-base_value: 4.5
+base_value: 4.8
 discount: 0
 is_combo: false
 base_paper_type:
@@ -26,13 +26,13 @@ configurables:
     configurable_name: Tamanho
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
+        value: 0
       - configurable_list_option: Laço tradicional expeço (15mm)
       - configurable_list_option: Laço chanel simples com meia pérola
       - configurable_list_option: Laço chanel duplo com meia pérola
       - configurable_list_option: Laço de cetim + soutache dourado ou prateado
       - configurable_list_option: Laço chanel de cetim + renda
       - configurable_list_option: Cordão de juta
-      - configurable_list_option: Cordão de algodão
     configurable_name: Tipo de acabamento
 extras:
   - extra_option: Impressão no envelope
