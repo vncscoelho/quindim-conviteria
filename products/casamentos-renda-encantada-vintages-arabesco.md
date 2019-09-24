@@ -32,6 +32,7 @@ configurables:
     configurable_name: Tamanho
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
+        is_free: true
         value: 0
       - configurable_list_option: Laço tradicional expeço (15mm)
         value: 0
