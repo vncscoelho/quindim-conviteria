@@ -8,6 +8,7 @@ discount: 0
 is_combo: false
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
+    is_free: true
     value: 0
   - base_paper_type_option: Glossy (fotográfico)
     value: 0.55
@@ -21,16 +22,24 @@ configurables:
     configurable_name: Tamanho
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
+        is_free: true
         value: 0
       - configurable_list_option: Laço tradicional expeço (15mm)
+        value: 0
       - configurable_list_option: Laço chanel simples com meia pérola
+        value: 0
       - configurable_list_option: Laço chanel duplo com meia pérola
+        value: 0
       - configurable_list_option: Cordão de juta
+        value: 0
     configurable_name: Tipo de acabamento
 extras:
   - extra_option: Tag com nome do convidado
+    value: 0
   - extra_option: Convite individual
+    value: 0
   - extra_option: Mini envelope para presente em dinheiro
+    value: 0
 gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566519229/Casamentos/Modelo_faixa_transl%C3%BAcida_estampada_1_xuzbgx.jpg
