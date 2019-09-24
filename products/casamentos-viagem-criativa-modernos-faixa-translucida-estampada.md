@@ -16,6 +16,7 @@ envelope_paper_type: []
 configurables:
   - configurable_list:
       - configurable_list_option: Tamanho grande
+        is_free: true
         value: 0
       - configurable_list_option: Tamanho pequeno
         value: -1.2
