@@ -36,7 +36,7 @@ configurables:
       - configurable_list_option: Laço tradicional expeço (15mm)
         value: 0
       - configurable_list_option: Laço chanel simples com meia pérola
-        value: -0.1
+        value: 0
       - configurable_list_option: Laço chanel duplo com meia pérola
         value: 0
       - configurable_list_option: Laço de cetim + soutache dourado ou prateado
