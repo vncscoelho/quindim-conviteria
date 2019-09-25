@@ -11,15 +11,15 @@ description: >-
   (8cm). Confeccionada em papel 180g.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
-    value: 0
+    is_free: true
   - base_paper_type_option: Glossy (fotográfico)
-    value: 0
+    is_free: true
   - base_paper_type_option: Linho (texturizado)
-    value: 0
+    is_free: true
 configurables:
   - configurable_list:
       - configurable_list_option: Tamanho pequeno
-        value: 0
+        is_free: true
       - configurable_list_option: Tamanho médio
         value: 0.3
       - configurable_list_option: Tamanho grande

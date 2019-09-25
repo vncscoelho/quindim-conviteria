@@ -10,7 +10,7 @@ base_paper_type: []
 configurables:
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
-        value: 0
+        is_free: true
       - configurable_list_option: Laço tradicional expeço (15mm)
       - configurable_list_option: Laço chanel simples com meia pérola
       - configurable_list_option: Laço chanel duplo com meia pérola

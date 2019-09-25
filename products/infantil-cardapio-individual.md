@@ -11,7 +11,7 @@ description: >-
   180g.
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
-    value: 0
+    is_free: true
   - base_paper_type_option: Glossy (fotográfico)
   - base_paper_type_option: Linho (texturizado)
 configurables: []

@@ -8,11 +8,11 @@ discount: 0
 is_combo: false
 base_paper_type:
     - base_paper_type_option: Offset (fosco)
-      value: 0
+      is_free: true
     - base_paper_type_option: Glossy (fotográfico)
-      value: 0
+      is_free: true
     - base_paper_type_option: Linho (texturizado)
-      value: 0
+      is_free: true
 configurables: []
 extras: []
 gallery:

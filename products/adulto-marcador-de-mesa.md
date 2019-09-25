@@ -8,7 +8,7 @@ discount: 0
 is_combo: false
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
-    value: 0
+    is_free: true
   - base_paper_type_option: Glossy (fotográfico)
     value: null
   - base_paper_type_option: Linho (texturizado)
@@ -19,7 +19,7 @@ envelope_paper_type: []
 configurables:
   - configurable_list:
       - configurable_list_option: Tamanho grande
-        value: 0
+        is_free: true
       - configurable_list_option: Tamanho pequeno
         value: -0.7
     configurable_name: Tamanho

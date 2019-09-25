@@ -7,24 +7,24 @@ discount: 0
 is_combo: false
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
-    value: 0
+    is_free: true
   - base_paper_type_option: Glossy (fotográfico)
   - base_paper_type_option: Linho (texturizado)
   - base_paper_type_option: Perolado
 envelope_paper_type:
   - envelope_paper_type_option: Offset (fosco)
-    value: 0
+    is_free: true
   - envelope_paper_type_option: Linho (texturizado) envelope
 configurables:
   - configurable_list:
       - configurable_list_option: Tamanho grande
-        value: 0
+        is_free: true
       - configurable_list_option: Tamanho pequeno
         value: -1
     configurable_name: Tamanho
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
-        value: 0
+        is_free: true
       - configurable_list_option: Laço tradicional expeço (15mm)
       - configurable_list_option: Laço chanel simples com meia pérola
       - configurable_list_option: Laço chanel duplo com meia pérola

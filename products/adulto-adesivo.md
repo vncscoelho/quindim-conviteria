@@ -10,7 +10,7 @@ base_paper_type: []
 configurables:
     - configurable_list:
           - configurable_list_option: Tamanho pequeno
-            value: 0
+            is_free: true
           - configurable_list_option: Tamanho médio
             value: 0.3
           - configurable_list_option: Tamanho grande
