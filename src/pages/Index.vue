@@ -85,7 +85,7 @@
         </div>
 
         <div class="text-center testimonials__cta">
-          <a href="/sobre#depoimentos" class="button button-primary">Veja todos os depoimentos</a>
+          <g-link to="/sobre#depoimentos" class="button button-primary">Veja todos os depoimentos</g-link>
         </div>
       </div>
     </section>

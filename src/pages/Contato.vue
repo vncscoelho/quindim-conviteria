@@ -57,9 +57,9 @@
       </div>
       <div class="bottom-contacts__column">
         <p class="section-title">NOSSAS REDES SOCIAIS</p>
-        <a href="#">Facebook</a>
+        <a href="https://facebook.com/quindimconviteria">Facebook</a>
         <br>
-        <a href="#">Instagram</a>
+        <a href="http://instagram.com/quindimconviteria">Instagram</a>
       </div>
     </section>
   </Layout>

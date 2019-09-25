@@ -5,7 +5,7 @@
       <span class="dash"></span>
       <span class="dash"></span>
     </button>
-    <a href="/" :class="['logo', { 'logo--inverse': internal }]">
+    <g-link to="/" :class="['logo', { 'logo--inverse': internal }]">
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -161,25 +161,25 @@
           ></path>
         </g>
       </svg>
-    </a>
+    </g-link>
     <nav class="header__menu">
-      <a href="/categoria/casamentos">Catálogo</a>
-      <a href="/sobre">Sobre nós</a>
-      <a href="/como-funciona">Como funciona</a>
-      <a href="/contato">Contato</a>
+      <g-link to="/categoria/casamentos">Catálogo</g-link>
+      <g-link to="/sobre">Sobre nós</g-link>
+      <g-link to="/como-funciona">Como funciona</g-link>
+      <g-link to="/contato">Contato</g-link>
     </nav>
     <ShopCart/>
     <transition name="header__menu--mobile-transition">
       <div class="header__menu--mobile" v-if="mobileMenu">
-        <a href="#" class="btn-close" @click.prevent="toggleMenu">
+        <button class="btn-close" @click.prevent="toggleMenu">
           <span>x</span> Fechar
-        </a>
+        </button>
         <nav class="header__menu--mobile-nav">
-          <a href="/" @click="toggleMenu">Início</a>
-          <a href="/categoria/casamentos" @click="toggleMenu">Catálogo</a>
-          <a href="/sobre" @click="toggleMenu">Sobre nós</a>
-          <a href="/como-funciona" @click="toggleMenu">Como funciona</a>
-          <a href="/contato" @click="toggleMenu">Contato</a>
+          <g-link to="/" @click="toggleMenu">Início</g-link>
+          <g-link to="/categoria/casamentos" @click="toggleMenu">Catálogo</g-link>
+          <g-link to="/sobre" @click="toggleMenu">Sobre nós</g-link>
+          <g-link to="/como-funciona" @click="toggleMenu">Como funciona</g-link>
+          <g-link to="/contato" @click="toggleMenu">Contato</g-link>
         </nav>
       </div>
     </transition>

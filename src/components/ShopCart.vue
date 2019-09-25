@@ -30,9 +30,9 @@
           <div class="cart__wrapper">
             <header class="cart__header">
               <h3>Carrinho</h3>
-              <a href="#" @click.prevent="toggleCart">
+              <button @click.prevent="toggleCart">
                 <span>x</span> Fechar
-              </a>
+              </button>
             </header>
             <table class="cart__list" v-if="hasProducts">
               <thead>
@@ -84,9 +84,9 @@
           <div class="cart__wrapper submitting">
             <header class="cart__header">
               <h3>Insira seus dados</h3>
-              <a href="#" @click.prevent="submitting = false">
+              <button @click.prevent="submitting = false">
                 <span>&larr;</span> Voltar
-              </a>
+              </button>
             </header>
             <p>Preencha seus dados de acordo e como deseja dar continuidade ao seu pedido: via Whatsapp ou E-mail. Escolha o que preferir!</p>
             <div class="form">
@@ -113,7 +113,7 @@
               </div>
             </div>
           </div>
-          <a href="#" class="cart__submit" @click.prevent="submitOrder">Enviar</a>
+          <button class="cart__submit" @click.prevent="submitOrder">Enviar</button>
         </template>
       </aside>
     </transition>
@@ -289,9 +289,11 @@ export default {
     justify-content: space-between;
     padding-bottom: 20px;
 
-    a {
+    button {
       color: @darkbrown;
       font-weight: bold;
+      background: none;
+      border: 0;
 
       span {
         background: @darkpink;
@@ -389,6 +391,8 @@ export default {
     font-size: 1.2em;
     font-weight: bold;
     transition: background 150ms linear;
+    background: none;
+    border: 0;
 
     &:hover {
       background: @lightpink;

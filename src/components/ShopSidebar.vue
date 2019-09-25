@@ -13,18 +13,18 @@
             v-for="category in categories[type]"
             :key="category.id"
           >
-            <router-link
+            <g-link
               class="category-link"
               :to="url(`/categoria/${category.name}`)"
               v-if="!hideLinks"
-            >{{category.name}}</router-link>
+            >{{category.name}}</g-link>
             <ul class="shop-sidebar__collections">
               <li
                 class="collection-link"
                 v-for="collection in categoryCollections(category.name)"
                 :key="collection"
               >
-                <router-link :to="url(`/colecoes/${collection}`)">{{collection}}</router-link>
+                <g-link :to="url(`/colecoes/${collection}`)">{{collection}}</g-link>
               </li>
             </ul>
           </li>
