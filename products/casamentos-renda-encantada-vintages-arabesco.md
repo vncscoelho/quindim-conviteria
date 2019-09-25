@@ -10,16 +10,16 @@ base_paper_type:
     - base_paper_type_option: Offset (fosco)
       is_free: true
     - base_paper_type_option: Linho (texturizado)
-      is_free: true
+      value: 0
     - base_paper_type_option: Glossy (fotográfico)
-      is_free: true
+      value: 0
     - base_paper_type_option: Perolado
-      is_free: true
+      value: 0
 envelope_paper_type:
     - envelope_paper_type_option: Offset (fosco)
       is_free: true
     - envelope_paper_type_option: Linho (texturizado) envelope
-      is_free: true
+      value: 0
 configurables:
     - configurable_list:
           - configurable_list_option: Tamanho grande
@@ -31,27 +31,27 @@ configurables:
           - configurable_list_option: Laço tradicional simples (5mm)
             is_free: true
           - configurable_list_option: Laço tradicional expeço (15mm)
-            is_free: true
+            value: 0
           - configurable_list_option: Laço chanel simples com meia pérola
-            is_free: true
+            value: 0
           - configurable_list_option: Laço chanel duplo com meia pérola
-            is_free: true
+            value: 0
           - configurable_list_option: Laço de cetim + soutache dourado ou prateado
-            is_free: true
+            value: 0
           - configurable_list_option: Laço chanel de cetim + renda
-            is_free: true
+            value: 0
           - configurable_list_option: Cordão de juta
-            is_free: true
+            value: 0
       configurable_name: Tipo de acabamento
 extras:
     - extra_option: Impressão no envelope
-      is_free: true
+      value: 0
     - extra_option: Tag com nome do convidado
-      is_free: true
+      value: 0
     - extra_option: Convite individual
-      is_free: true
+      value: 0
     - extra_option: Mini envelope para presente em dinheiro
-      is_free: true
+      value: 0
 gallery:
     - >-
         https://res.cloudinary.com/dkaanqsro/image/upload/v1566252574/Casamentos/Modelo_Arabesco_1_rgwnjr.png

@@ -10,11 +10,11 @@ base_paper_type:
     - base_paper_type_option: Offset (fosco)
       is_free: true
     - base_paper_type_option: Glossy (fotográfico)
-      value: null
+      value: 0
     - base_paper_type_option: Linho (texturizado)
-      value: null
+      value: 0
     - base_paper_type_option: Perolado
-      value: null
+      value: 0
 envelope_paper_type: []
 configurables: []
 extras: []
