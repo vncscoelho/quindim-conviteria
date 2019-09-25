@@ -9,7 +9,6 @@ is_combo: false
 base_paper_type:
   - base_paper_type_option: Offset (fosco)
     is_free: true
-    is_free: true
   - base_paper_type_option: Linho (texturizado)
     is_free: true
   - base_paper_type_option: Glossy (fotográfico)
@@ -18,7 +17,6 @@ base_paper_type:
     is_free: true
 envelope_paper_type:
   - envelope_paper_type_option: Offset (fosco)
-    is_free: true
     is_free: true
   - envelope_paper_type_option: Linho (texturizado) envelope
     is_free: true
@@ -32,7 +30,6 @@ configurables:
     configurable_name: Tamanho
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
-        is_free: true
         is_free: true
       - configurable_list_option: Laço tradicional expeço (15mm)
         is_free: true
@@ -62,8 +59,7 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566252586/Casamentos/Modelo_Arabesco_2_xvqeou.jpg
 ---
+
 Convite com semi-envelope tamanho 13cm x 19cm confeccionado em papel 180g.
-
-
 
 Versão da foto: Interior e exterior em papel offset com laço chanel simples e aplicação de meia pérola.
