@@ -24,7 +24,6 @@ configurables:
   - configurable_list:
       - configurable_list_option: Laço tradicional simples (5mm)
         is_free: true
-        is_free: true
       - configurable_list_option: Laço tradicional expeço (15mm)
         is_free: true
       - configurable_list_option: Laço chanel simples com meia pérola
@@ -47,8 +46,7 @@ gallery:
   - >-
     https://res.cloudinary.com/dkaanqsro/image/upload/v1566519229/Casamentos/Modelo_faixa_transl%C3%BAcida_estampada_2_cog8yf.jpg
 ---
+
 Convite em tamanho grande (14cm x 19cm) ou pequeno (10cmx 14cm) confeccionado em papel offset 240g com faixa de papel vegetal 95g.
-
-
 
 Versão da foto: Interior em papel offset e faixa em papel vegetal com laço tradicional simples.
