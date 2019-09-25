@@ -293,15 +293,29 @@ export default {
 <style lang="less">
 .col-lg-10 {
   @media (min-width: 992px) {
-    flex: 0 0 81.333333%;
-    max-width: 81.333333%;
+    flex: 0 0 77%;
+    max-width: 77%;
   }
 }
 
 .col-lg-2 {
   @media (min-width: 992px) {
-    flex: 0 0 18.666667%;
-    max-width: 18.666667%;
+    flex: 0 0 22%;
+    max-width: 22%;
+  }
+}
+
+.col-lg-7 {
+  @media (min-width: 992px) {
+    flex: 0 0 53%;
+    max-width: 53%;
+  }
+}
+
+.col-lg-5 {
+  @media (min-width: 992px) {
+    flex: 0 0 47%;
+    max-width: 47%;
   }
 }
 
