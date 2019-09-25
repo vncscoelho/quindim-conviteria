@@ -85,7 +85,7 @@
             <header class="cart__header">
               <h3>Insira seus dados</h3>
               <a href="#" @click.prevent="submitting = false">
-                <span><</span> Voltar
+                <span>&larr;</span> Voltar
               </a>
             </header>
             <p>Preencha seus dados de acordo e como deseja dar continuidade ao seu pedido: via Whatsapp ou E-mail. Escolha o que preferir!</p>
@@ -173,9 +173,9 @@ export default {
       return formatedValue;
     },
     submitOrder() {
-      const order = Object.keys(this.cart).map(index => {
+      const newline = this.submitType ? "\n" : "%0A";
+      const order = Object.keys(this.cart).map((index, key) => {
         const item = this.cart[index];
-        const newline = this.submitType ? "\n" : "%0A";
         const configurables = Object.keys(item.configurables)
           .map(key => {
             const cfg = item.configurables[key];
@@ -204,21 +204,21 @@ export default {
             extra => `+ ${extra.extra_option}: ${this.formatPrice(extra.price)}`
           )
           .join(newline);
-        return `Olá, gostaria de pedir os seguintes produtos:
-        ${newline}[${item.category}] ${
+        return `${newline}${key + 1}. [${item.category}] ${
           item.name
         }${newline}${configurables}${newline}${extras}${newline}Qtd: ${
           item.quantity
-        }${newline}Total: ${this.formatPrice(
-          item.finalPrice
-        )}${newline}${newline}----------${newline}
-`;
+        }${newline}Total: R$ ${this.formatPrice(
+          item.finalPrice * (item.quantity > 0 ? item.quantity : 1)
+        )}${newline}${newline}----------${newline}`;
       });
       this.form.Pedido = order;
-      if (this.submitType) return this.sendMail(order);
+      const formattedOrder = `Meu pedido:${newline}${order.join(newline)}`;
+      if (this.submitType) return this.sendMail(formattedOrder);
 
       return window.open(
-        "https://api.whatsapp.com/send?phone=5555981256350&text=" + order
+        "https://api.whatsapp.com/send?phone=5555981256350&text=" +
+          formattedOrder
       );
     },
     sendMail() {
@@ -337,7 +337,7 @@ export default {
     }
 
     tbody td {
-      padding-top: 8px;
+      padding: 8px 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     }
 
@@ -362,9 +362,10 @@ export default {
 
     &-item-title {
       font-family: @headfont;
-      font-size: 2em;
-      font-weight: normal;
-      margin-bottom: 8px;
+      font-size: 1.6em;
+      padding: 8px 0;
+      margin: 0;
+      line-height: 1;
     }
 
     .remove-item {

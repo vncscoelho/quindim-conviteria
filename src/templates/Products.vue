@@ -116,16 +116,19 @@ query Product($id: String!) {
       base_paper_type {
         base_paper_type_option
         value
+        is_free
       }
       envelope_paper_type {
         envelope_paper_type_option
         value
+        is_free
       }
       configurables {
         configurable_name
         configurable_list {
           configurable_list_option
           value
+          is_free
         }
       }
       extras {
@@ -202,18 +205,18 @@ export default {
   methods: {
     attachPrices(targets) {
       return targets.map(item => {
-        item.name = "cavalo";
+        item.name = "";
         item.data.forEach(option => {
           const currentExtra = this.allExtras.find(
             extra => extra.name === option[item.key]
           );
-
-          if (option.default_paper) {
+          console.log(option.value);
+          if (option.is_free) {
             option.price = 0;
-          } else if (option.value || option.value === 0) {
-            option.price = option.value;
-          } else if (currentExtra) {
-            option.price = currentExtra.value;
+          } else if (option.value !== 0) {
+            option.price = parseFloat(option.value);
+          } else {
+            option.price = parseFloat(currentExtra.value);
           }
         });
       });

@@ -22,7 +22,7 @@ collections:
       summary: '{{name}} [Cat: {{category}}] [Col: {{collection}}] [Ref: {{uid}}]'
       fields:
           - label: Referência (obrigatório)
-            hint: Deve ser único para cada produto.
+            hint: Ao cadastrar produtos, prestar atenção na hora para que não seja repetida.
             name: uid
             widget: datetime
             format: x
@@ -31,7 +31,7 @@ collections:
             required: true
 
           - label: Ordem
-            hint: Quanto maior o número, primeiro na listagem irá aparecer.
+            hint: Quanto maior o número, primeiro na listagem irá aparecer. Deixar como 0 para que seja ordenado pela ordem de cadastrado.
             name: order
             required: false
             widget: number
@@ -60,15 +60,17 @@ collections:
             name: base_value
             widget: number
             valueType: float
-            default: null
-            required: false
+            default: 0
+            hint: 'Deixar 0 para COMBOS'
+            required: true
 
           - label: 'Desconto (em %)'
             name: discount
             widget: number
+            hint: 'Deixar 0 para produtos sem desconto'
             valueType: int
             default: 0
-            required: false
+            required: true
 
           - label: 'Combo'
             name: is_combo
@@ -92,11 +94,21 @@ collections:
                   valueField: 'name'
                   searchFields: 'name'
 
-                - label: Preço (sobrepõe o valor original)
+                - label: Preço
                   name: value
                   widget: number
                   default: null
+                  hint: 'Deixar 0 para usar o valor definido em Tipos de Papel. Caso digite um valor maior que 0, será utilizado ESTE valor.'
+                  valueType: float
+                  step: 0.1
+                  required: true
+
+                - label: 'Sem preço'
+                  name: is_free
+                  widget: boolean
+                  default: null
                   required: false
+                  hint: 'Ignora o preço e aparecerá sem valor na página de produto.'
 
           - label: 'Opções de Envelope'
             name: envelope_paper_type
@@ -110,11 +122,21 @@ collections:
                   valueField: 'name'
                   searchFields: 'name'
 
-                - label: Preço (sobrepõe o valor original)
+                - label: Preço
                   name: value
                   widget: number
                   default: null
+                  hint: 'Deixar 0 para usar o valor definido em Tipos de Papel. Caso digite um valor maior que 0, será utilizado ESTE valor.'
+                  valueType: float
+                  step: 0.1
+                  required: true
+
+                - label: 'Sem preço'
+                  name: is_free
+                  widget: boolean
+                  default: null
                   required: false
+                  hint: 'Ignora o preço e aparecerá sem valor na página de produto.'
 
           - label: 'Configuráveis'
             name: configurables
@@ -135,11 +157,21 @@ collections:
                         valueField: 'name'
                         searchFields: 'name'
 
-                      - label: Preço (sobrepõe o valor original)
+                      - label: Preço
                         name: value
                         widget: number
                         default: null
+                        hint: 'Deixar 0 para usar o valor definido em Configuráveis. Caso digite um valor maior que 0, será utilizado ESTE valor.'
+                        valueType: float
+                        step: 0.1
+                        required: true
+
+                      - label: 'Sem preço'
+                        name: is_free
+                        widget: boolean
+                        default: null
                         required: false
+                        hint: 'Ignora o preço e aparecerá sem valor na página de produto.'
 
           - label: 'Adicionais'
             name: extras
@@ -152,11 +184,21 @@ collections:
                   valueField: 'name'
                   searchFields: 'name'
 
-                - label: Preço (sobrepõe o valor original)
+                - label: Preço
                   name: value
                   widget: number
                   default: null
+                  hint: 'Deixar 0 para usar o valor definido em Adicionais. Caso digite um valor maior que 0, será utilizado ESTE valor.'
+                  valueType: float
+                  step: 0.1
+                  required: true
+
+                - label: 'Sem preço'
+                  name: is_free
+                  widget: boolean
+                  default: null
                   required: false
+                  hint: 'Ignora o preço e aparecerá sem valor na página de produto.'
 
           - label: 'Imagens do Produto'
             name: 'gallery'
@@ -233,6 +275,9 @@ collections:
             name: value
             widget: number
             default: null
+            required: true
+            valueType: float
+            step: 0.1
 
     - label: 'Adicionais'
       name: extras
@@ -248,7 +293,9 @@ collections:
           - label: Preço
             name: value
             widget: number
+            required: true
             valueType: float
+            step: 0.1
             default: null
 
     - label: 'Depoimentos'
