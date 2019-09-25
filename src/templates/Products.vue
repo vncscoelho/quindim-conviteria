@@ -210,10 +210,9 @@ export default {
           const currentExtra = this.allExtras.find(
             extra => extra.name === option[item.key]
           );
-          console.log(option.value);
           if (option.is_free) {
             option.price = 0;
-          } else if (option.value !== 0) {
+          } else if (option.value > 0 || option.value < 0) {
             option.price = parseFloat(option.value);
           } else {
             option.price = parseFloat(currentExtra.value);
