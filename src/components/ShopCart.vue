@@ -180,7 +180,6 @@ export default {
           .map(key => {
             const cfg = item.configurables[key];
             if (key !== "extras") {
-              console.log(cfg);
               const title =
                 key === "base_paper_type"
                   ? "Base"
