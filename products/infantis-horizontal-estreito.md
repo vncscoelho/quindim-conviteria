@@ -22,7 +22,7 @@ configurables:
         is_free: true
         value: 0
       - configurable_list_option: Tamanho grande
-        value: 5.5
+        value: 1.7
     configurable_name: Tamanho
 extras: []
 gallery:
