@@ -1,34 +1,34 @@
-const path = require('path');
+const path = require("path")
 
 function addStyleResource(rule) {
-    rule.use('style-resource')
-        .loader('style-resources-loader')
+    rule.use("style-resource")
+        .loader("style-resources-loader")
         .options({
             patterns: [
-                path.resolve(__dirname, './src/assets/styles/globals.less')
+                path.resolve(__dirname, "./src/assets/styles/globals.less")
             ]
-        });
+        })
 }
 
 module.exports = {
-    siteName: 'Quindim Conviteria - Convites e Papelaria Criativa',
-    siteUrl: 'https://www.quindimconviteria.com',
+    siteName: "Quindim Conviteria - Convites e Papelaria Criativa",
+    siteUrl: "https://www.quindimconviteria.com",
     icon: {
         favicon: {
-            src: './src/assets/img/icon.png',
+            src: "./src/assets/img/icon.png",
             sizes: [16, 32, 96]
         },
         touchicon: {
-            src: './src/assets/img/icon.png',
+            src: "./src/assets/img/icon.png",
             sizes: [76, 152, 120, 167],
             precomposed: true
         }
     },
     transformers: {
         remark: {
-            externalLinksTarget: '_blank',
-            externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-            anchorClassName: 'icon icon-link',
+            externalLinksTarget: "_blank",
+            externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+            anchorClassName: "icon icon-link",
             plugins: [
                 // ...global plugins
             ]
@@ -36,78 +36,78 @@ module.exports = {
     },
     plugins: [
         {
-            use: '@gridsome/plugin-sitemap'
+            use: "@gridsome/plugin-sitemap"
         },
         {
-            use: '@gridsome/plugin-google-analytics',
+            use: "@gridsome/plugin-google-analytics",
             options: {
-                id: 'UA-26373439-3'
+                id: "UA-26373439-3"
             }
         },
         {
-            use: '@gridsome/source-filesystem',
+            use: "@gridsome/source-filesystem",
             options: {
-                path: 'products/**/*.md',
-                typeName: 'Products',
-                route: '/produto/:uid/:name'
+                path: "products/**/*.md",
+                typeName: "Products",
+                route: "/produto/:uid/:name"
             }
         },
         {
-            use: '@gridsome/source-filesystem',
+            use: "@gridsome/source-filesystem",
             options: {
-                path: 'categories/**/*.md',
-                typeName: 'Categories',
-                route: '/categoria/:name'
+                path: "categories/**/*.md",
+                typeName: "Categories",
+                route: "/categoria/:name"
             }
         },
         {
-            use: '@gridsome/source-filesystem',
+            use: "@gridsome/source-filesystem",
             options: {
-                path: 'settings/**/*.md',
-                typeName: 'Settings'
+                path: "settings/**/*.md",
+                typeName: "Settings"
             }
         },
         {
-            use: '@gridsome/source-filesystem',
+            use: "@gridsome/source-filesystem",
             options: {
-                path: 'collections/**/*.md',
-                typeName: 'Collections',
-                route: '/colecoes/:name'
+                path: "collections/**/*.md",
+                typeName: "Collections",
+                route: "/colecoes/:name"
             }
         },
         {
-            use: '@gridsome/source-filesystem',
+            use: "@gridsome/source-filesystem",
             options: {
-                path: 'extras/**/*.md',
-                typeName: 'Extras'
+                path: "extras/**/*.md",
+                typeName: "Extras"
             }
         },
         {
-            use: '@gridsome/source-filesystem',
+            use: "@gridsome/source-filesystem",
             options: {
-                path: 'paper_types/**/*.md',
-                typeName: 'PaperTypes'
+                path: "paper_types/**/*.md",
+                typeName: "PaperTypes"
             }
         },
         {
-            use: '@gridsome/source-filesystem',
+            use: "@gridsome/source-filesystem",
             options: {
-                path: 'testimonials/**/*.md',
-                typeName: 'Testimonials'
+                path: "testimonials/**/*.md",
+                typeName: "Testimonials"
             }
         },
         {
-            use: `gridsome-plugin-netlify-cms`,
+            use: "gridsome-plugin-netlify-cms",
             options: {
-                publicPath: `/admin`
+                publicPath: "/admin"
             }
         }
     ],
     chainWebpack(config) {
-        const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
+        const types = ["vue-modules", "vue", "normal-modules", "normal"]
 
         types.forEach(type => {
-            addStyleResource(config.module.rule('less').oneOf(type));
-        });
+            addStyleResource(config.module.rule("less").oneOf(type))
+        })
     }
-};
+}
