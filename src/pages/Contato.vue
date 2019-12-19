@@ -33,6 +33,7 @@
           <label>
             <span>Assunto</span>
             <select name="Assunto" v-model="form['Assunto']">
+              <option value="Planner">Planner</option>
               <option value="Dúvida" selected>Dúvida</option>
               <option value="Entrega">Entrega</option>
               <option value="Sugestão">Sugestão</option>
