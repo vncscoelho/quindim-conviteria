@@ -11,6 +11,11 @@ module.exports = function (api) {
   })
 
   api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api
+    createPage({
+      path: '/papelariainfantil',
+      component: './src/pages/Shop.vue',
+      context: {
+        currentCategory: "Infantil"
+    })
   })
 }
