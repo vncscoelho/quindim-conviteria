@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <SiteHeader internal/>
-    <section class="internal__header">
+    <section class="internal__header" v-if="$page.categories">
       <span>{{$page.categories.type}}</span>
       <h2>{{$page.categories.name}}</h2>
     </section>
