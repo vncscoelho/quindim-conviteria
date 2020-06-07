@@ -2,8 +2,8 @@
   <Layout>
     <SiteHeader internal/>
     <section class="internal__header">
-      <span>{{$page.categories.type}}</span>
-      <h2>{{$page.categories.name}}</h2>
+      <!-- <span>{{$page.categories.type}}</span>
+      <h2>{{$page.categories.name}}</h2> -->
     </section>
     <Shop :products="products" :currentCategory="$page.categories.name"/>
     <Pagination
@@ -37,11 +37,9 @@ export default {
     }
   },
   metaInfo() {
-    if (this.$page.categories) {
-      return {
-        title: `${this.$page.categories.type} ${this.$page.categories.name}`
-      };
-    }
+    return {
+      title: `${this.$page.categories.type} ${this.$page.categories.name}`
+    };
     
   }
 };

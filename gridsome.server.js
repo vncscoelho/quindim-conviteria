@@ -14,7 +14,7 @@ module.exports = function (api) {
     createPage({
       path: '/papelariainfantil',
       component: './src/templates/Categories.vue',
-      context: {
+      queryVariables: {
         id: "a3d4e877875654e1bbec815b503813f0",
         name: "Infantil",
         type: "Papelaria"
