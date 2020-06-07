@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <SiteHeader internal/>
-    <!-- <section class="internal__header">
+    <section class="internal__header">
       <span>{{$page.categories.type}}</span>
       <h2>{{$page.categories.name}}</h2>
     </section>
@@ -9,7 +9,7 @@
     <Pagination
       :pageInfo="$page.allProducts.pageInfo"
       :url="`categoria/${url($page.categories.name)}`"
-    /> -->
+    />
   </Layout>
 </template>
 
@@ -37,10 +37,15 @@ export default {
     }
   },
   metaInfo() {
-    return {
-      title: `${this.$page.categories.type} ${this.$page.categories.name}`
-    };
+    if (this.$page.categories) {
+      const { type, name } = this.$page.categories
+
+      return {
+        title: `${type} ${name}`
+      };
+    }
     
+    return {}
   }
 };
 </script>
