@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <SiteHeader internal/>
-    <section class="internal__header">
+    <!-- <section class="internal__header">
       <span>{{$page.categories.type}}</span>
       <h2>{{$page.categories.name}}</h2>
     </section>
@@ -9,7 +9,7 @@
     <Pagination
       :pageInfo="$page.allProducts.pageInfo"
       :url="`categoria/${url($page.categories.name)}`"
-    />
+    /> -->
   </Layout>
 </template>
 
@@ -35,9 +35,6 @@ export default {
     products() {
       return this.$page.allProducts.edges.map(product => product.node);
     }
-  },
-  mounted() {
-    if (!process.isClient) return
   },
   metaInfo() {
     return {
