@@ -2,8 +2,8 @@
   <Layout>
     <SiteHeader internal/>
     <section class="internal__header">
-      <!-- <span>{{$page.categories.type}}</span>
-      <h2>{{$page.categories.name}}</h2> -->
+      <span>{{$page.categories.type}}</span>
+      <h2>{{$page.categories.name}}</h2>
     </section>
     <Shop :products="products" :currentCategory="$page.categories.name"/>
     <Pagination
@@ -35,6 +35,9 @@ export default {
     products() {
       return this.$page.allProducts.edges.map(product => product.node);
     }
+  },
+  mounted() {
+    if (!process.isClient) return
   },
   metaInfo() {
     return {
