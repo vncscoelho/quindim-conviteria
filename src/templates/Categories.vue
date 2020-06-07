@@ -37,7 +37,7 @@ export default {
     }
   },
   metaInfo() {
-    if (this.$page) {
+    if (this.$page.categories) {
       return {
         title: `${this.$page.categories.type} ${this.$page.categories.name}`
       };
