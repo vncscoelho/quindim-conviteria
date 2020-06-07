@@ -13,9 +13,11 @@ module.exports = function (api) {
   api.createPages(({ createPage }) => {
     createPage({
       path: '/papelariainfantil',
-      component: './src/pages/Shop.vue',
+      component: './src/templates/Categories.vue',
       context: {
-        currentCategory: "Infantil"
+        id: "a3d4e877875654e1bbec815b503813f0",
+        name: "Infantil",
+      }
     })
   })
 }

@@ -64,7 +64,7 @@ export default {
 
 
 <page-query>
-query Collections($page: Int, $id: String!, $name: String!) {
+query Collections($page: Int, $id: ID!, $name: String!) {
   collections(id: $id) {
       id
       name

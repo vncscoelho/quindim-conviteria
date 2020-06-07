@@ -101,7 +101,7 @@
 </template>
 
 <page-query>
-query Product($id: String!) {
+query Product($id: ID!) {
   products(id: $id) {
       id
       uid

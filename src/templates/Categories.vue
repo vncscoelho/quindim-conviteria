@@ -64,7 +64,7 @@ export default {
 
 
 <page-query>
-query Categories($page: Int, $id: String!, $name: String!) {
+query Categories($page: Int, $id: ID!, $name: String!) {
   categories(id: $id) {
       id
       name
