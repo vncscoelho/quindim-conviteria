@@ -10,7 +10,7 @@ module.exports = function(api) {
       // Use the Data Store API here: https://gridsome.org/docs/data-store-api
   })
 
-  api.createPages(({ createPage }) => {
+  /* api.createPages(({ createPage }) => {
     createPage({
       path: "/papelariainfantil",
       component: "./src/templates/Categories.vue",
@@ -20,5 +20,5 @@ module.exports = function(api) {
           type: "Papelaria",
       },
     })
-  })
+  }) */
 }
