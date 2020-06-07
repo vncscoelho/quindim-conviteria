@@ -17,6 +17,7 @@ module.exports = function (api) {
       context: {
         id: "a3d4e877875654e1bbec815b503813f0",
         name: "Infantil",
+        type: "Papelaria"
       }
     })
   })
