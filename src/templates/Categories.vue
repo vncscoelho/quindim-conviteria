@@ -37,9 +37,12 @@ export default {
     }
   },
   metaInfo() {
-    return {
-      title: `${this.$page.categories.type} ${this.$page.categories.name}`
-    };
+    if (this.$page) {
+      return {
+        title: `${this.$page.categories.type} ${this.$page.categories.name}`
+      };
+    }
+    
   }
 };
 </script>
