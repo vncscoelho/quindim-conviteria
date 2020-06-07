@@ -5,20 +5,22 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
-  api.loadSource(({ addContentType }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api
-  })
-
-  api.createPages(({ createPage }) => {
-    createPage({
-      path: '/papelariainfantil',
-      component: './src/templates/Categories.vue',
-      queryVariables: {
-        id: "a3d4e877875654e1bbec815b503813f0",
-        name: "Infantil",
-        type: "Papelaria"
-      }
+module.exports = function(api) {
+    api.loadSource(({ addContentType }) => {
+        // Use the Data Store API here: https://gridsome.org/docs/data-store-api
     })
-  })
+
+    if (process.isClient) {
+        api.createPages(({ createPage }) => {
+            createPage({
+                path: "/papelariainfantil",
+                component: "./src/templates/Categories.vue",
+                queryVariables: {
+                    id: "a3d4e877875654e1bbec815b503813f0",
+                    name: "Infantil",
+                    type: "Papelaria",
+                },
+            })
+        })
+    }
 }

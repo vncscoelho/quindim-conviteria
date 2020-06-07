@@ -1,12 +1,10 @@
 <template>
   <Layout>
     <SiteHeader internal/>
-    <ClientOnly/>
-      <section class="internal__header">
-        <span>{{$page.categories.type}}</span>
-        <h2>{{$page.categories.name}}</h2>
-      </section>
-    <ClientOnly/>
+    <section class="internal__header">
+      <span>{{$page.categories.type}}</span>
+      <h2>{{$page.categories.name}}</h2>
+    </section>
     <Shop :products="products" :currentCategory="$page.categories.name"/>
     <Pagination
       :pageInfo="$page.allProducts.pageInfo"
