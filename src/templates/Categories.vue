@@ -1,5 +1,5 @@
 <template>
-  <Layout v-if="$page.categories">
+  <Layout>
     <SiteHeader internal/>
     <section class="internal__header">
       <span>{{$page.categories.type}}</span>
