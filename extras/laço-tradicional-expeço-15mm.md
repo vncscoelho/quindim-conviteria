@@ -1,5 +1,4 @@
 ---
-name: Laço tradicional expeço (15mm)
+name: Laço tradicional espesso (15mm)
 value: 0.35
 ---
-
