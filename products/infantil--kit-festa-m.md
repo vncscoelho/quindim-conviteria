@@ -3,7 +3,7 @@ uid: "1593742922698"
 order: 999
 category: Infantil
 name: Kit festa M
-base_value: 0
+base_value: 95
 discount: 0
 is_combo: false
 gallery:
